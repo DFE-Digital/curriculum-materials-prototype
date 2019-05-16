@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-xl">
+  DfE Sign-in</h1>
+<p class="govuk-body-l">
+  DfE Sign-in is the new way to access your DfE online services and has now replaced Secure Access.
+</p>
+<h2 class="govuk-heading-m">Before you start</h2>
+<p>You'll need:</p>
+<ul class="govuk-list">
+  <li class="govuk-link">An existing DfE Sign-in account. This will be the email address and password you created when you first accessed DfE Sign-in.</li>
+</ul>
+{% from "button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Start now"
+}) }}
+{% from "details/macro.njk" import govukDetails %}
+
+{{ govukDetails({
+  summaryText: "Services accessed using DfE Sign-in",
+  text: "These DfE services are now accessed using your DfE Sign-in account.
+
+Analyse school performance
+Collect
+Get Information About Schools
+Hiring Supply Teachers and Agency Workers
+Information Exchange
+Key to Success (LAs)
+Key to Success (Schools)
+Post 16 Portal
+Publish teacher training courses
+School Experience
+School to School
+Teacher Services - Appropriate Body
+Teacher Services - Employer Access - Agent
+Teacher Services - Employer Access - Schools
+Teacher Services - ITT Provider
+Teaching Vacancies
+Trainee Teacher Portal"
+}) }}
+
+{% endblock %}
