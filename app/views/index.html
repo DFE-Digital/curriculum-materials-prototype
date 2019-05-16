@@ -5,38 +5,94 @@
   Curriculum materials alpha - prototype - Department for Education
 {% endblock %}
 
-{% block content %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "button/macro.njk" import govukButton %}
 
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Curriculum materials</h1>{{releaseVersion | log }}
-      <p>
-        This kit is hard to <a href='https://www.bbc.co.uk'>install</a> and lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+      <h1 class="govuk-heading-xl">Manage key stage 2 and 3 curriculum resources</h1>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+    <p class="govuk-body">This service is for teachers whose school has joined the Department for Education's curriculum materials programme.</p>
 
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+      <p class="govuk-body">Use this service to:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-        <li>
-          <a href="https://design-system.service.gov.uk">
-            GOV.UK Design System
-          </a>
-        </li>
+        <li>manage the content of your units and lessons</li>
+        <li>find new teaching materials that fit your school's curriculum</li>
+        <li>review your lessons' content to ensure teaching is in sequence, without gaps</li>
       </ul>
-    </div>
-</div>
 
+      {{ govukButton({
+        text: "Start now",
+        href: "sign-in",
+        classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+      }) }}
+
+      <h2 class="govuk-heading-m">Before you start</h2>
+
+      <p class="govuk-body">Your school can <a class="govuk-link" href="#">join the curriculum materials programme</a> if it is:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>local authority funded or maintained</li>
+        <li>an academy or academy trust</li>
+        <li>a free school</li>
+      </ul>
+
+      <p class="govuk-body">The online service is only available in England.</p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Further reading
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a class="govuk-link" href="https://www.gov.uk/government/collections/national-curriculum">
+                The National Curriculum
+              </a>
+            </li>
+            <li>
+              <a class="govuk-link" href="https://www.gov.uk/government/news/curriculum-programme-pilots-to-reduce-time-spent-planning-lessons">
+                Curriculum programme pilots to reduce time spent planning lessons
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
 {% endblock %}
