@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Unit page
+{% endblock %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Section",
+      href: "#"
+    },
+    {
+      text: "Subsection"
+    }
+  ]
+}) }}
+  <!--<a class="govuk-back-link" href="/url/of/previous/page">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Unit 2 - Volcanoes, earthquakes and plates
+      </h1>
+
+      <p>A year 6 topic imparting the core knowledge to meet the physical geography part of the key stage 1/2 national curriculum and to stretch knowledge and skills around location and place work learned in previously sequenced units.</p>
+
+      {% from "table/macro.njk" import govukTable %}
+
+{{ govukTable({
+  caption: "Lessons and outcomes",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Lesson"
+    },
+    {
+      text: "Teaching outcome"
+    },
+    {
+      text: ""
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<a href='#'>Lesson 1</a>"
+      },
+      {
+        text: "Understand what the layers of the Earth are"
+      },
+      {
+        text: "change"
+      }
+    ],
+    [
+      {
+        html: "<a href='#'>Lesson 2</a>"
+      },
+      {
+        text: "Understand plate tectonics"
+      },
+      {
+        text: "change"
+      }
+    ],
+    [
+      {
+        html: "<a href='#'>Lesson 3</a>"
+      },
+      {
+        text: "Understand why earthquakes happen"
+      },
+      {
+        text: "change"
+      }
+    ],
+    [
+      {
+        html: "<a href='lesson'>Lesson 4</a>"
+      },
+      {
+        text: "Understand the damage that earthquakes cause"
+      },
+      {
+        text: "change"
+      }
+    ],
+    [
+      {
+        html: "<a href='#'>Lesson 5</a>"
+      },
+      {
+        text: "Understand and distinguish the types of volcano"
+      },
+      {
+        text: "change"
+      }
+    ]
+  ]
+}) }}
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+
+    </div>
+  </div>
+
+{% endblock %}

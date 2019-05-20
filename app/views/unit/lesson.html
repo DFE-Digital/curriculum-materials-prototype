@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Lesson page
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Section",
+      href: "#"
+    },
+    {
+      text: "Subsection"
+    }
+  ]
+}) }}
+  <!--<a class="govuk-back-link" href="/url/of/previous/page">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+      <h1 class="govuk-heading-xl">
+  <span class="govuk-caption-xl">Unit 2 - Volcanoes, earthquakes and plates</span>
+  Knowledge for teaching lesson 4
+</h1>
+{{ govukButton({
+  text: "Plan lesson",
+  href: "/",
+  classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+}) }}
+<div class="tabs">
+
+    <div class="tabs-nav">
+      <ul class="tabs-list">
+        <li><a href="#tab-1">Tab 1</a></li>
+        <li><a href="#tab-2">Tab 2</a></li>
+        <li><a href="#tab-3">Tab 3</a></li>
+      </ul>
+    </div>
+
+    <div class="tabs-content">
+
+      <div class="tabs-panel" id="tab-1">
+        <div class="tabs-panel-inner text">
+          {{ govukInsetText({
+            html: "<h3 class='govuk-heading-m'>Teaching outcomes</h2><ul>
+              <li>To be able to distinguish the volcano types </li>
+              <li>To be able to give an example of each type of volcano</li>
+            </ul>"
+          }) }}
+          <h2 class="govuk-heading-l">Pre-requisite knowledge for the objectives</h2>
+          <h3 class="govuk-heading-m">Vocabulary</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Lava: Red-hot liquid rock.</li>
+<li>Volcanic eruption: An explosion of lava, rock and ash from a volcano.</li>
+<li>Volcano: A mountain that erupts, or has erupted, throwing out lava, rocks and ash.</li>
+<li>Tectonic plate: a piece of the crust of the Earth that moves around incredibly slowly over time pulling apart and crashing against other plates.</li>
+          </ul>
+          <p>Some content would go here for tab 1.</p>
+        </div>
+      </div>
+
+      <div class="tabs-panel" id="tab-2">
+        <div class="tabs-panel-inner text">
+          <h3>Tab 2</h3>
+          <p>Some content would go here for tab 2.</p>
+        </div>
+      </div>
+
+      <div class="tabs-panel" id="tab-3">
+        <div class="tabs-panel-inner text">
+          <h3>Tab 3</h3>
+          <p>Some content would go here for tab 3.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+{% endblock %}
