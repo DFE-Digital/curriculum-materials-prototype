@@ -33,6 +33,21 @@
     </li>
   </ul>
 </nav>
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/dashboard"
+    },
+    {
+      text: "Section",
+      href: "#"
+    },
+    {
+      text: "Subsection"
+    }
+  ]
+}) }}
 {% endblock %}
 
 {% block content %}
