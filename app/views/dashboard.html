@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Curriculum materials alpha - prototype - Department for Education
+{% endblock %}
+
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+
+    <li>
+      <a class="govuk-link" href="/dashboard" data-topnav="Get started">Geography</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="#" data-topnav="Styles">History</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="#" data-topnav="Components">Science</a>
+    </li>
+  </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+      <h1 class="govuk-heading-xl">Dashboard</h1>
+
+
+{% endblock %}

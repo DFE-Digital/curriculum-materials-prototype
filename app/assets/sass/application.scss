@@ -13,3 +13,15 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.app-navigation
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  font-family: "nta",Arial,sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-weight: 700
+  font-size: 16px
+  font-size: 1rem
+  line-height: 1.25
+  width: 100%
+  background: yellow
