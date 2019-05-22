@@ -36,7 +36,7 @@
 {% endblock %}
 
 {% block content %}
-      <h1 class="govuk-heading-xl">Dashboard</h1>
+      <h1 class="govuk-heading-xl">Plan your curriculum</h1>
       <div class="govuk-grid-row">
         <div class="" style="height:300px;width:100%;background:grey;margin-bottom:40px;"></div>
       </div>
@@ -44,7 +44,7 @@
       {% from "table/macro.njk" import govukTable %}
 
       {{ govukTable({
-        caption: "Something title",
+        caption: "",
         firstCellIsHeader: true,
         head: [
           {
@@ -72,13 +72,13 @@
         rows: [
           [
             {
-              html: "<a href='/unit/year'>Year 7</a>"
+             text: "7"
             },
             {
               text: "Summer 2"
             },
             {
-              text: "Volcanoes, earthquakes and migration"
+              text: "Volcanoes, earthquakes and plates"
             },
             {
               text: "3"
@@ -88,46 +88,55 @@
             },
             {
               text: "2"
+            },
+            {
+              html: "<a href='/unit/year'>Plan unit lessons</a>"
             }
           ],
           [
             {
-              html: "<a href='/unit/year'>Year 8</a>"
+              text: "8"
             },
             {
               text: "Summer 2"
             },
             {
-              text: "Volcanoes, earthquakes and migration"
+              text: "Migration"
             },
             {
               text: "3"
             },
             {
-              text: "1"
+              text: "3"
             },
             {
-              text: "2"
+              text: "0"
+            },
+            {
+              html: "<a href='/unit/year'>Update unit lessons</a>"
             }
           ],
           [
             {
-              html: "<a href='/unit/year'>Year 9</a>"
+              text: "9"
             },
             {
               text: "Summer 2"
             },
             {
-              text: "Volcanoes, earthquakes and migration"
+              text: "Climate change"
             },
             {
-              text: "3"
-            },
-            {
-              text: "1"
+              text: "4"
             },
             {
               text: "2"
+            },
+            {
+              text: "0"
+            },
+            {
+              html: "<a href='/unit/year'>Update unit lessons</a>"
             }
           ]
         ]
