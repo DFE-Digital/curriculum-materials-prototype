@@ -61,7 +61,7 @@
 
 
 
-{% set pastDayHtml %}
+{% set objectives %}
 <h2 class="govuk-heading-l">Volcanoes, earthquakes and plates</h2>
 {{ govukInsetText({
   html: "<h3 class='govuk-heading-m'><a href='objective-1'>Objective: to learn the types of volcano</a></h3><ul>
@@ -160,29 +160,26 @@
 {% endset -%}
 
 {% set pastMonthHtml %}
+    <h1 class="govuk-heading-xl">Plan your curriculum</h1>
+<p>You have added 7 teaching materials to this lesson.
+<p><a href="#">Add more materials</a></p>
+<div class="govuk-grid-row">
 {% from "table/macro.njk" import govukTable %}
-
 {{ govukTable({
   caption: "",
   firstCellIsHeader: true,
   head: [
     {
-      text: "Year"
+      text: "Order"
     },
     {
-      text: "Term"
+      text: "Name"
     },
     {
-      text: "Topic"
+      text: ""
     },
     {
-      text: "Taught"
-    },
-    {
-      text: "Planned"
-    },
-    {
-      text: "To plan"
+      text: "Tags"
     },
     {
       text: ""
@@ -191,85 +188,78 @@
   rows: [
     [
       {
-       text: "7"
+       text: "1"
       },
       {
-        text: "Summer 2"
+        text: "Etna erupting"
       },
       {
-        text: "Volcanoes, earthquakes and plates"
+        text: "[thumbnail here]"
       },
       {
-        text: "3"
+        text: "Works for EAL"
       },
       {
-        text: "1"
+        html: "<a href='#'>Re-order</a>"
       },
       {
-        text: "2"
+        text: ""
       },
       {
-        html: "<a href='/unit/year'>Plan unit lessons</a>"
+
       }
     ],
     [
       {
-        text: "8"
+        text: "2"
       },
       {
-        text: "Summer 2"
+        text: "Active, dormant and extinct volcanoes"
       },
       {
-        text: "Migration"
+        text: "[thumbnail here]"
       },
       {
-        text: "3"
+        text: "Scaffolded"
       },
       {
-        text: "3"
+        html: "<a href='#'>Re-order</a>"
       },
       {
-        text: "0"
-      },
-      {
-        html: "<a href='/unit/year'>Update unit lessons</a>"
+        text: ""
       }
     ],
     [
       {
-        text: "9"
+        text: "3"
       },
       {
-        text: "Summer 2"
+        text: "'Make a volcano' instructions"
       },
       {
-        text: "Climate change"
+        text: "[thumbnail here]"
       },
       {
-        text: "4"
+        text: "Activity, enrichment"
       },
       {
-        text: "2"
+        html: "<a href='#'>Re-order</a>"
       },
       {
-        text: "0"
-      },
-      {
-        html: "<a href='/unit/year'>Update unit lessons</a>"
+        text: ""
       }
     ]
   ]
 }) }}
-
 {% endset -%}
 
 {{ govukTabs({
   items: [
     {
       label: "Lesson objectives",
-      id: "past-day",
+      id: "objectives",
       panel: {
-        html: pastDayHtml
+        html: objectives
       }
     },
     {
