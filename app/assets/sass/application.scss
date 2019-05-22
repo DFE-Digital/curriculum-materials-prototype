@@ -13,15 +13,51 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-.app-navigation
-  -webkit-box-sizing: border-box
-  box-sizing: border-box
-  font-family: "nta",Arial,sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  font-weight: 700
-  font-size: 16px
-  font-size: 1rem
-  line-height: 1.25
-  width: 100%
-  background: yellow
+.app-navigation {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  width: 100%;
+  background:#dee0e2;
+}
+.app-navigation__list {
+  padding: 0;
+  list-style: none;
+  > li {
+    box-sizing: border-box;
+    height: 53px;
+    float: right;
+    line-height: 53px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    &:hover {
+      border-bottom: 4px solid #2b8cc4;
+    }
+    &.app-navigation--current-page {
+      border-bottom: 4px solid #005ea5 !important;
+      a:hover {
+        color: #005ea5;
+      }
+    }
+    a {
+      font-weight: 700;
+      display: block;
+      padding: 0 15px;
+      color: #005ea5;
+      text-decoration: none;
+      &:visited {
+        color: #005ea5;
+      }
+      &:hover, &:focus {
+        color: #2b8cc4;
+        background-color: inherit;
+      }
+    }
+  }
+}
