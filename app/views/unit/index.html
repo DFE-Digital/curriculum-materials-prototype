@@ -24,96 +24,134 @@
 {% endblock %}
 
 {% block content %}
+<div class="govuk-width-container">
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-xl">
-        Unit 2 - Volcanoes, earthquakes and plates
-      </h1>
-
-      <p>A year 6 topic imparting the core knowledge to meet the physical geography part of the key stage 1/2 national curriculum and to stretch knowledge and skills around location and place work learned in previously sequenced units.</p>
-
-      {% from "table/macro.njk" import govukTable %}
-
-{{ govukTable({
-  caption: "Lessons and outcomes",
-  firstCellIsHeader: true,
-  head: [
-    {
-      text: "Lesson"
-    },
-    {
-      text: "Teaching outcome"
-    },
-    {
-      text: ""
-    }
-  ],
-  rows: [
-    [
-      {
-        html: "<a href='/unit/lesson'>Lesson 1</a>"
-      },
-      {
-        text: "Understand what the layers of the Earth are"
-      },
-      {
-        text: "change"
-      }
-    ],
-    [
-      {
-        html: "<a href='/unit/lesson'>Lesson 2</a>"
-      },
-      {
-        text: "Understand plate tectonics"
-      },
-      {
-        text: "change"
-      }
-    ],
-    [
-      {
-        html: "<a href='/unit/lesson'>Lesson 3</a>"
-      },
-      {
-        text: "Understand why earthquakes happen"
-      },
-      {
-        text: "change"
-      }
-    ],
-    [
-      {
-        html: "<a href='/unit/lesson'>Lesson 4</a>"
-      },
-      {
-        text: "Understand the damage that earthquakes cause"
-      },
-      {
-        text: "change"
-      }
-    ],
-    [
-      {
-        html: "<a href='#'>Lesson 5</a>"
-      },
-      {
-        text: "Understand and distinguish the types of volcano"
-      },
-      {
-        text: "change"
-      }
-    ]
-  ]
-}) }}
-
-    </div>
-    <div class="govuk-grid-column-one-third">
+  <main class="govuk-main-wrapper">
 
 
-    </div>
-  </div>
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <nav class="app-subnav">
+              <ul class="app-subnav__section">
 
+                <li class="app-subnav__section-item">
+                  <a class="app-subnav__link govuk-link" href="/styles/colour">Map skills</a>
+                </li>
+
+                <li class="app-subnav__section-item">
+                  <a class="app-subnav__link govuk-link" href="/styles/images">Rivers and oceans</a>
+
+                </li>
+
+                <li class="app-subnav__section-item app-subnav__section-item--current">
+                  <a class="app-subnav__link govuk-link" href="/styles/layout">Volcanoes, earthquakes and plates</a>
+
+                </li>
+
+                <li class="app-subnav__section-item">
+                  <a class="app-subnav__link govuk-link" href="/styles/page-template">Ecosystems</a>
+
+                </li>
+
+                <li class="app-subnav__section-item">
+                  <a class="app-subnav__link govuk-link" href="/styles/spacing">Development</a>
+
+                </li>
+
+                <li class="app-subnav__section-item">
+                  <a class="app-subnav__link govuk-link" href="/styles/typography">Africa</a>
+
+                </li>
+
+              </ul>
+    </nav>
+      </div>
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-xl">
+            Unit 2 - Volcanoes, earthquakes and plates
+          </h1>
+
+          <p>A year 6 topic imparting the core knowledge to meet the physical geography part of the key stage 1/2 national curriculum and to stretch knowledge and skills around location and place work learned in previously sequenced units.</p>
+
+          {% from "table/macro.njk" import govukTable %}
+
+    {{ govukTable({
+      caption: "Lessons and outcomes",
+      firstCellIsHeader: true,
+      head: [
+        {
+          text: "Lesson"
+        },
+        {
+          text: "Teaching outcome"
+        },
+        {
+          text: ""
+        }
+      ],
+      rows: [
+        [
+          {
+            html: "<a href='/unit/lesson'>Lesson 1</a>"
+          },
+          {
+            text: "Understand what the layers of the Earth are"
+          },
+          {
+            text: "change"
+          }
+        ],
+        [
+          {
+            html: "<a href='/unit/lesson'>Lesson 2</a>"
+          },
+          {
+            text: "Understand plate tectonics"
+          },
+          {
+            text: "change"
+          }
+        ],
+        [
+          {
+            html: "<a href='/unit/lesson'>Lesson 3</a>"
+          },
+          {
+            text: "Understand why earthquakes happen"
+          },
+          {
+            text: "change"
+          }
+        ],
+        [
+          {
+            html: "<a href='/unit/lesson'>Lesson 4</a>"
+          },
+          {
+            text: "Understand the damage that earthquakes cause"
+          },
+          {
+            text: "change"
+          }
+        ],
+        [
+          {
+            html: "<a href='#'>Lesson 5</a>"
+          },
+          {
+            text: "Understand and distinguish the types of volcano"
+          },
+          {
+            text: "change"
+          }
+        ]
+      ]
+    }) }}
+
+        </div>
+</div>
+
+
+  </main>
+</div>
 {% endblock %}

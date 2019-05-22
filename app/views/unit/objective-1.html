@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Lesson page
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+
+    <li>
+      <a class="govuk-link" href="/dashboard" data-topnav="Get started">Geography</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="#" data-topnav="Styles">History</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="#" data-topnav="Components">Science</a>
+    </li>
+  </ul>
+</nav>
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/dashboard"
+    },
+    {
+      text: "Section",
+      href: "#"
+    },
+    {
+      text: "Subsection"
+    }
+  ]
+}) }}
+  <!--<a class="govuk-back-link" href="/url/of/previous/page">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+      <h1 class="govuk-heading-xl">
+  <!--<span class="govuk-caption-xl">Unit 2 - Volcanoes, earthquakes and plates</span>-->
+  Objectives ROCK!
+</h1>
+
+
+
+
+
+
+
+{% endblock %}
