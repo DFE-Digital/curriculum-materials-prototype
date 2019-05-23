@@ -41,26 +41,19 @@
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
 {% block beforeContent %}
 {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
-
-{{ govukPhaseBanner({
-  tag: {
-    text: "alpha"
-  },
-  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
-}) }}
 <nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list govuk-width-container">
 
     <li>
-      <a class="govuk-link" href="#" data-topnav="Get started">Year 9</a>
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Year 9</a>
     </li>
 
     <li>
-      <a class="govuk-link" href="#" data-topnav="Styles">Year 8</a>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">Year 8</a>
     </li>
 
     <li class="app-navigation--current-page">
-      <a class="govuk-link" href="/dashboard" data-topnav="Components">Year 7</a>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Year 7</a>
     </li>
   </ul>
 </nav>
