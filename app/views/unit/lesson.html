@@ -52,15 +52,15 @@
   <ul class="app-navigation__list govuk-width-container">
 
     <li>
-      <a class="govuk-link" href="#" data-topnav="Get started">Science</a>
+      <a class="govuk-link" href="#" data-topnav="Get started">Year 9</a>
     </li>
 
     <li>
-      <a class="govuk-link" href="#" data-topnav="Styles">History</a>
+      <a class="govuk-link" href="#" data-topnav="Styles">Year 8</a>
     </li>
 
-    <li>
-      <a class="govuk-link" href="/dashboard" data-topnav="Components">Geography</a>
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="/dashboard" data-topnav="Components">Year 7</a>
     </li>
   </ul>
 </nav>
@@ -83,8 +83,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper">
+<a href="/unit" class="govuk-back-link">Back</a>
 
 
 
@@ -94,6 +93,8 @@
 </h1>
 
 
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
 
 {% set objectives %}
 <h2 class="govuk-heading-l">Volcanoes, earthquakes and plates</h2>
