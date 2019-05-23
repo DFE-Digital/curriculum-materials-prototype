@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Curriculum materials",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "/dashboard",
+        text: "Geography",
+        active: true
+      },
+      {
+        href: "#",
+        text: "History"
+      },
+      {
+        href: "#",
+        text: "Science"
+      },
+      {
+        href: "../",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Unit page
+{% endblock %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% block beforeContent %}
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Year 9</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">Year 8</a>
+    </li>
+
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Year 7</a>
+    </li>
+  </ul>
+</nav>
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/dashboard"
+    },
+    {
+      text: "Section",
+      href: "#"
+    },
+    {
+      text: "Subsection"
+    }
+  ]
+}) }}
+<a class="govuk-back-link" href="/unit/lesson#content">Back</a>
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-xl">Etna erupting</h1>
+<h2 class="govuk-heading-m">Mount Etna, Sicily (active, stratovolcano) erupting at night in 2019.</h2>
+<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+
+  </main>
+</div>
+{% endblock %}
