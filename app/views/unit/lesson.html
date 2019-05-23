@@ -8,10 +8,6 @@
     serviceUrl: "#",
     containerClasses: "govuk-width-container",
     navigation: [
-    {
-      href: "/dashboard",
-      text: "Home"
-    },
       {
         href: "/dashboard",
         text: "Geography",
@@ -410,7 +406,7 @@
 
 {% set outline %}
 <p>You have added 7 teaching materials to this lesson.
-<p><a href="#">Add more materials</a></p>
+<p><a href="/unit/lesson#content">Add more materials</a></p>
 <div class="govuk-grid-row">
 {% from "table/macro.njk" import govukTable %}
 {{ govukTable({
