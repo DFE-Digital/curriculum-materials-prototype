@@ -17,11 +17,17 @@ $govuk-global-styles: true;
   .card-wrapper {
     padding: 0 20px 20px;
   }
+  h3.govuk-link{
+    text-decoration: none;
+  }
   background-color: #f8f8f8;
   border-bottom: 4px solid #005ea5;
   position: relative;
   margin-top: 20px;
   overflow: hidden;
+}
+.add-to-lesson {
+  margin-top: 20px;
 }
 .app-navigation {
   -webkit-box-sizing: border-box;
