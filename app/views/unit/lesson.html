@@ -197,8 +197,8 @@
         </div>
 
         {{ govukCheckboxes({
-          idPrefix: "organisation",
-          name: "organisation",
+          idPrefix: "content-type",
+          name: "content-type",
           classes: "govuk-checkboxes--small",
           fieldset: {
             legend: {
@@ -209,30 +209,30 @@
           },
           items: [
             {
-              value: "hmrc",
+              value: "audio",
               text: "Audio"
             },
             {
-              value: "employment-tribunal",
+              value: "video",
               text: "Video"
             },
             {
-              value: "MOD",
+              value: "image",
               text: "Image"
             },
             {
-              value: "DfT",
+              value: "slide",
               text: "Slide"
             },
             {
-              value: "employment-tribunal",
+              value: "text",
               text: "Text"
             }
           ]
         }) }}
         {{ govukCheckboxes({
-          idPrefix: "organisation",
-          name: "organisation",
+          idPrefix: "element-type",
+          name: "element-type",
           classes: "govuk-checkboxes--small",
           fieldset: {
             legend: {
@@ -243,27 +243,27 @@
           },
           items: [
             {
-              value: "haversack",
+              value: "activity",
               text: "Activity"
             },
             {
-              value: "osprey",
+              value: "learning",
               text: "Assessment for learning"
             },
             {
-              value: "rubs",
+              value: "enrichment",
               text: "Enrichment"
             },
             {
-              value: "piffle",
+              value: "scaffold",
               text: "Scaffolded activities for SEN"
             },
             {
-              value: "trent",
+              value: "stretch",
               text: "Stretch activities"
             },
             {
-              value: "severn",
+              value: "eal",
               text: "Works for EAL"
             }
           ]
