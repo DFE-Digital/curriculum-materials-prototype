@@ -205,7 +205,7 @@
 {% endset -%}
 
 
-{% set pastWeekHtml %}
+{% set content %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
         <p class="govuk-body">Use only the filters to show only the content you want</p>
@@ -316,7 +316,7 @@
 <img src="/public/images/lesson-content-image.jpg" alt="">
 {% endset -%}
 
-{% set pastMonthHtml %}
+{% set outline %}
     <h1 class="govuk-heading-xl">Plan your curriculum</h1>
 <p>You have added 7 teaching materials to this lesson.
 <p><a href="#">Add more materials</a></p>
@@ -421,16 +421,16 @@
     },
     {
       label: "Teaching materials",
-      id: "past-week",
+      id: "content",
       panel: {
-        html: pastWeekHtml
+        html: content
       }
     },
     {
       label: "Lesson outline",
-      id: "past-month",
+      id: "outline",
       panel: {
-        html: pastMonthHtml
+        html: outline
       }
     }
   ]
