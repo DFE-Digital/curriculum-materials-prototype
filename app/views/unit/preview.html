@@ -81,21 +81,18 @@
 <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
-            <div class="meta">
-            <p class="govuk-body govuk-!-font-size-16">Published 19 April 2019</p>
+            <div class="meta" style="margin:20px 0;">
+            <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-0">Published 19 April 2019</p>
             <p class="govuk-body govuk-!-font-size-16">Last updated 19 April 2019 &nbsp; <a href="#">See all updates</a></p>
             </div>
-            {% from "panel/macro.njk" import govukPanel %}
-
-{{ govukPanel({
-  titleText: "Supports KS2 national curriculum for geography",
-  headingLevel: 4,
-  html: "<ul class='govuk-list'>
+            <div class="blue-panel" style="padding:40px;background-color:#005ea5;color:#fff;">
+    <h3 class="govuk-heading-m" style="color:#fff;">Supports KS2 national curriculum for geography</h3>
+    <ul class="govuk-list govuk-list--bullet" style="color:#fff;">
     <li>locational knowledge</li>
-    <li>physical geography</lI>
-      <li>plate tectonics</li>
-  </ul>"
-}) }}
+    <li>physical geography</li>
+    <li>plate tectonics</li>
+    </ul>
+    </div>
 
             <img src="/public/images/01-lava-flow.jpg" style="width:100%" alt="">
 <h2 class="govuk-heading-m">Materials</h2>
