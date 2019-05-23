@@ -7,6 +7,7 @@
 
 {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
 {% from "button/macro.njk" import govukButton %}
+{% from "select/macro.njk" import govukSelect %}
 
 {% block beforeContent %}
 {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
@@ -51,8 +52,74 @@
 {% endblock %}
 
 {% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
       <h1 class="govuk-heading-xl">Year 7</h1>
+      <div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <h2 class="govuk-heading-l">Units</h2>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
 
+
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: ""
+  },
+  items: [
+    {
+      value: "published",
+      text: "All",
+      selected: true
+    },
+    {
+      value: "updated",
+      text: "Taught"
+    },
+    {
+      value: "views",
+      text: "Planned"
+    },
+    {
+      value: "comments",
+      text: "Unplanned"
+    }
+  ]
+}) }}
+    </div>
+</div>
+
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
 <a class="govuk-link" href="/unit" data-topnav="Styles">Unit 2</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="card" style="background-color:#f8f8f8;padding:20px;border-bottom:4px solid #005ea5;position:relative;">
+      <div class="card-wrapper">
+      <h3 class="govuk-heading-m"><a href="#" class="govuk-link">Map skills</a></h3>
+      <p class="govuk-body govuk-!-font-size-16">A unit that introduces the core map-reading concepts and map-making skills to underpin units in the rest of year 7.</p>
+<ul class="govuk-list govuk-list--bullet govuk-!-font-size-16"><li>Physical map features</li>
+<li>Human map features</li>
+<li>Grid references</li>
+<li>Compass points</li>
+<li>Scale and distance</li>
+<li>Latitude, longitude and projection</li>
+</ul>
+<a href="#" class="govuk-link">Review unit</a>
+<p class="tag card-tag govuk-!-font-weight-bold" style="position:absolute;top:0px;right:0px;background:#005ea5;color:#ffffff;padding:4px;">Taught</p>
+    </div>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <p>govuk-grid-column-one-third</p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <p>govuk-grid-column-one-third</p>
+  </div>
+</div>
 <img src="/public/images/year-unit-image.jpg" />
+
+  </main>
+</div>
 {% endblock %}
