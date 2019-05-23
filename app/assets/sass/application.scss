@@ -13,6 +13,16 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.card {
+  .card-wrapper {
+    padding: 0 20px 20px;
+  }
+  background-color: #f8f8f8;
+  border-bottom: 4px solid #005ea5;
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+}
 .app-navigation {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
