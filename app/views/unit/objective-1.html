@@ -10,14 +10,6 @@
 {% from "tabs/macro.njk" import govukTabs %}
 {% from "table/macro.njk" import govukTable %}
 {% block beforeContent %}
-{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
-
-{{ govukPhaseBanner({
-  tag: {
-    text: "alpha"
-  },
-  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
-}) }}
 <nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list govuk-width-container">
 
@@ -60,6 +52,18 @@
 </h1>
 <p>To know the characterstics of different types of volcanoes, and distinguish one type from another based on its eruption style.</p>
 <p>To locate volcanoes on a map using grid coordinates.</p>
+
+{% from "panel/macro.njk" import govukPanel %}
+
+{{ govukPanel({
+titleText: "Supports KS2 NC Geography",
+headingLevel: 4,
+html: "<ul class='govuk-list'>
+<li>locational knowledge</li>
+<li>physical geography and plate tectonics</li>
+</ul>"
+}) }}
+<img src="/public/images/objective.jpg" style="width:100%" alt="">
 
 
 
