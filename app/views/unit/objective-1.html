@@ -9,20 +9,25 @@
 {% from "accordion/macro.njk" import govukAccordion %}
 {% from "tabs/macro.njk" import govukTabs %}
 {% from "table/macro.njk" import govukTable %}
+
 {% block beforeContent %}
 <nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list govuk-width-container">
 
-    <li>
-      <a class="govuk-link" href="/dashboard" data-topnav="Get started">Geography</a>
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Year 6</a>
     </li>
 
     <li>
-      <a class="govuk-link" href="#" data-topnav="Styles">History</a>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">Year 5</a>
     </li>
 
     <li>
-      <a class="govuk-link" href="#" data-topnav="Components">Science</a>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Year 4</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Year 3</a>
     </li>
   </ul>
 </nav>
@@ -41,20 +46,26 @@
     }
   ]
 }) }}
-  <!--<a class="govuk-back-link" href="/url/of/previous/page">Back</a>-->
+  <a class="govuk-back-link" href="/unit/lesson">Back</a>
 {% endblock %}
 
 {% block content %}
-
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-  <!--<span class="govuk-caption-xl">Unit 2 - Volcanoes, earthquakes and plates</span>-->
+  <span class="govuk-caption-xl">Volcanoes, earthquakes and plates</span>
   Objective: to learn the types of volcano
 </h1>
-<p>To know the characterstics of different types of volcanoes, and distinguish one type from another based on its eruption style.</p>
-<p>To locate volcanoes on a map using grid coordinates.</p>
-
+<ul class='govuk-list govuk-list--bullet'>
+<li>To know the characterstics of different types of volcanoes, and distinguish one type from another based on its eruption style.</li>
+<li>To locate volcanoes on a map using grid coordinates.</li>
+</ul>
+</div>
+</div>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 {% from "panel/macro.njk" import govukPanel %}
-
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 {{ govukPanel({
 titleText: "Supports KS2 NC Geography",
 headingLevel: 4,
@@ -63,6 +74,8 @@ html: "<ul class='govuk-list'>
 <li>physical geography and plate tectonics</li>
 </ul>"
 }) }}
+</div>
+</div>
 <img src="/public/images/objective.jpg" style="width:100%" alt="">
 
 
