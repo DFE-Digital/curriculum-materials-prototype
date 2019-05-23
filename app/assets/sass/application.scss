@@ -13,6 +13,14 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.search-box {
+  background-color: #dfe0e2;
+  padding:20px 10px;
+  margin-bottom: 40px;
+  label {
+    font-weight:bold;
+  }
+}
 .card {
   .card-wrapper {
     padding: 0 20px 20px;
