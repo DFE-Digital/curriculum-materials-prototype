@@ -38,27 +38,20 @@
 {% from "select/macro.njk" import govukSelect %}
 
 {% block beforeContent %}
-{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
 
-{{ govukPhaseBanner({
-  tag: {
-    text: "alpha"
-  },
-  html: 'This is a new service - your <a href="/unit" class="govuk-link">feedback</a> will help us to improve it.'
-}) }}
 <nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list govuk-width-container">
 
     <li>
-      <a class="govuk-link" href="/unit" data-topnav="Get started">Year 9</a>
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Year 9</a>
     </li>
 
     <li>
-      <a class="govuk-link" href="/unit" data-topnav="Styles">Year 8</a>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">Year 8</a>
     </li>
 
     <li class="app-navigation--current-page">
-      <a class="govuk-link" href="/dashboard" data-topnav="Components">Year 7</a>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Year 7</a>
     </li>
   </ul>
 </nav>
@@ -80,9 +73,10 @@
 {% endblock %}
 
 {% block content %}
+<h1 class="govuk-heading-xl">Year 7</h1>
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
-      <h1 class="govuk-heading-xl">Year 7</h1>
+
       <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
     <h2 class="govuk-heading-l">Units</h2>
