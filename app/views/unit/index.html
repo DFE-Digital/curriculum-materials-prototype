@@ -1,5 +1,33 @@
 {% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
 
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Curriculum materials",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "/dashboard",
+        text: "Geography",
+        active: true
+      },
+      {
+        href: "#",
+        text: "History"
+      },
+      {
+        href: "#",
+        text: "Science"
+      },
+      {
+        href: "../",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
 {% block pageTitle %}
   Unit page
 {% endblock %}
@@ -17,15 +45,15 @@
   <ul class="app-navigation__list govuk-width-container">
 
     <li>
-      <a class="govuk-link" href="#" data-topnav="Get started">Science</a>
+      <a class="govuk-link" href="#" data-topnav="Get started">Year 9</a>
     </li>
 
     <li>
-      <a class="govuk-link" href="#" data-topnav="Styles">History</a>
+      <a class="govuk-link" href="#" data-topnav="Styles">Year 8</a>
     </li>
 
-    <li>
-      <a class="govuk-link" href="/dashboard" data-topnav="Components">Geography</a>
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="/dashboard" data-topnav="Components">Year 7</a>
     </li>
   </ul>
 </nav>
@@ -59,31 +87,31 @@
               <ul class="app-subnav__section">
 
                 <li class="app-subnav__section-item">
-                  <a class="app-subnav__link govuk-link" href="/styles/colour">Map skills</a>
+                  <a class="app-subnav__link govuk-link" href="#">Map skills</a>
                 </li>
 
                 <li class="app-subnav__section-item">
-                  <a class="app-subnav__link govuk-link" href="/styles/images">Rivers and oceans</a>
+                  <a class="app-subnav__link govuk-link" href="#">Rivers and oceans</a>
 
                 </li>
 
                 <li class="app-subnav__section-item app-subnav__section-item--current">
-                  <a class="app-subnav__link govuk-link" href="/styles/layout">Volcanoes, earthquakes and plates</a>
+                  <a class="app-subnav__link govuk-link" href="#">Volcanoes, earthquakes and plates</a>
 
                 </li>
 
                 <li class="app-subnav__section-item">
-                  <a class="app-subnav__link govuk-link" href="/styles/page-template">Ecosystems</a>
+                  <a class="app-subnav__link govuk-link" href="#">Ecosystems</a>
 
                 </li>
 
                 <li class="app-subnav__section-item">
-                  <a class="app-subnav__link govuk-link" href="/styles/spacing">Development</a>
+                  <a class="app-subnav__link govuk-link" href="#">Development</a>
 
                 </li>
 
                 <li class="app-subnav__section-item">
-                  <a class="app-subnav__link govuk-link" href="/styles/typography">Africa</a>
+                  <a class="app-subnav__link govuk-link" href="#">Africa</a>
 
                 </li>
 

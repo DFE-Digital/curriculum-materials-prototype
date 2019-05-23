@@ -1,6 +1,34 @@
 
 {% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
 
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Curriculum materials",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "/dashboard",
+        text: "Geography",
+        active: true
+      },
+      {
+        href: "#",
+        text: "History"
+      },
+      {
+        href: "#",
+        text: "Science"
+      },
+      {
+        href: "../",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
 {% block pageTitle %}
   Curriculum materials alpha - prototype - Department for Education
 {% endblock %}
@@ -21,15 +49,15 @@
   <ul class="app-navigation__list govuk-width-container">
 
     <li>
-      <a class="govuk-link" href="/dashboard" data-topnav="Get started">Science</a>
+      <a class="govuk-link" href="/dashboard" data-topnav="Get started">Year 9</a>
     </li>
 
     <li>
-      <a class="govuk-link" href="#" data-topnav="Styles">History</a>
+      <a class="govuk-link" href="#" data-topnav="Styles">Year 8</a>
     </li>
 
     <li>
-      <a class="govuk-link app-navigation--current-page" href="#" data-topnav="Components">Geography</a>
+      <a class="govuk-link" href="#" data-topnav="Components">Year 7</a>
     </li>
   </ul>
 </nav>

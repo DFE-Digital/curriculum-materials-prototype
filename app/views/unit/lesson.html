@@ -1,5 +1,33 @@
 {% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
 
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Curriculum materials",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "/dashboard",
+        text: "Geography",
+        active: true
+      },
+      {
+        href: "#",
+        text: "History"
+      },
+      {
+        href: "#",
+        text: "Science"
+      },
+      {
+        href: "../",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
 {% block pageTitle %}
   Lesson page
 {% endblock %}
