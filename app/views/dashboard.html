@@ -9,17 +9,26 @@
     serviceUrl: "#",
     containerClasses: "govuk-width-container",
     navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
       {
-        href: "/unit/year",
-        text: "Geography"
+        href: "#",
+        text: "Year 3"
       },
       {
         href: "#",
-        text: "History"
+        text: "Year 4"
       },
       {
         href: "#",
-        text: "Science"
+        text: "Year 5"
+      },
+      {
+        href: "#",
+        text: "Year 6",
+        active: true
       },
       {
         href: "/dfe-sign-in/username",
@@ -39,21 +48,20 @@
 
 <nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list govuk-width-container">
-
-    <li class="app-navigation--current-page">
-      <a class="govuk-link" href="/dashboard" data-topnav="Get started">Year 6</a>
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Geography</a>
     </li>
 
     <li>
-      <a class="govuk-link" href="/dashboard" data-topnav="Styles">Year 5</a>
+      <a class="govuk-link" href="/dashboard" data-topnav="Styles">History</a>
     </li>
 
     <li>
-      <a class="govuk-link" href="/dashboard" data-topnav="Components">Year 4</a>
+      <a class="govuk-link" href="/dashboard" data-topnav="Components">Science</a>
     </li>
 
     <li>
-      <a class="govuk-link" href="/dashboard" data-topnav="Components">Year 3</a>
+      <a class="govuk-link" href="/dashboard" data-topnav="Components">All subjects</a>
     </li>
   </ul>
 </nav>
