@@ -7,19 +7,14 @@ Sign in - Curriculum materials service - Department for Education
 {% from "inset-text/macro.njk" import govukInsetText %}
 {% from "details/macro.njk" import govukDetails %}
 {% block content %}
-<h1 class="govuk-heading-xl">  DfE Sign-in</h1>
+<h1 class="govuk-heading-xl">  Sign in to the curriculum materials service</h1>
 <p class="govuk-body-l">
-  DfE Sign-in is the new way to access some specific education sector services. To use DfE Sign-in you will need to <a href="#">create an account.</a>
+If you have not used this service before you will need to <a href="#">create a teacher account</a>.
 </p>
 {% from "input/macro.njk" import govukInput %}
 {% from "fieldset/macro.njk" import govukFieldset %}
 
 {% call govukFieldset({
-  legend: {
-    text: "Sign in",
-    classes: "govuk-fieldset__legend--l",
-    isPageHeading: true
-  }
 }) %}
 
   {{ govukInput({
@@ -40,12 +35,8 @@ Sign in - Curriculum materials service - Department for Education
     name: "password"
   }) }}
 
+  <p class="govuk-body-l">By continuing you agree to our <a href="#">terms and conditions</a>.</p>
 
-{{ govukInsetText({
-  text: "By continuing you accept the terms and conditions.",
-  html: "By continuing you accept the terms and conditions."
-
-}) }}
 {{ govukButton({
   text: "Sign in",
   href: "/dashboard",
@@ -53,9 +44,4 @@ Sign in - Curriculum materials service - Department for Education
 }) }}
 {% endcall %}
 
-
-{{ govukDetails({
-  summaryText: "Having problems?",
-  text: "If you are having problems using the DfE Sign-in service, follow DfE Sign-in Help. You will be able to request further assistance if required."
-}) }}
 {% endblock %}
