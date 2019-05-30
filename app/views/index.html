@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Curriculum materials alpha - prototype - Department for Education
+Start - Curriculum materials - Department for Education
 {% endblock %}
 
 {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
@@ -16,23 +16,7 @@
     text: "alpha"
   },
   html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
-}) }}
-
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Home",
-        href: "#"
-      },
-      {
-        text: "Section",
-        href: "#"
-      },
-      {
-        text: "Subsection"
-      }
-    ]
-  }) }}
+    }) }}
 {% endblock %}
 
 {% block content %}
@@ -47,12 +31,12 @@
       <ul class="govuk-list govuk-list--bullet">
         <li>manage the content of your units and lessons</li>
         <li>find new teaching materials that fit your school's curriculum</li>
-        <li>review your lessons' content to ensure teaching is in sequence, without gaps</li>
+        <li>review your lessons' content to ensure teaching is in sequence/li>
       </ul>
 
       {{ govukButton({
         text: "Start now",
-        href: "dfe-sign-in/sign-in",
+        href: "dfe-sign-in/username",
         classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
       }) }}
 

@@ -1,14 +1,13 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Blank page
+Sign in - Curriculum materials service - Department for Education
 {% endblock %}
 {% from "button/macro.njk" import govukButton %}
 {% from "inset-text/macro.njk" import govukInsetText %}
 {% from "details/macro.njk" import govukDetails %}
 {% block content %}
-<h1 class="govuk-heading-xl">
-  DfE Sign-in</h1>
+<h1 class="govuk-heading-xl">  DfE Sign-in</h1>
 <p class="govuk-body-l">
   DfE Sign-in is the new way to access some specific education sector services. To use DfE Sign-in you will need to <a href="#">create an account.</a>
 </p>
@@ -43,7 +42,9 @@
 
 
 {{ govukInsetText({
-  text: "By continuing you accept the terms and conditions."
+  text: "By continuing you accept the terms and conditions.",
+  html: "By continuing you accept the terms and conditions."
+
 }) }}
 {{ govukButton({
   text: "Sign in",
