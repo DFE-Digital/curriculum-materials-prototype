@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% from 'header/macro.njk' import govukHeader %}
+{% from "button/macro.njk" import govukButton %}
 
 {% block header %}
   {{ govukHeader({
@@ -192,234 +193,16 @@
 {% endset -%}
 
 
-{% set content %}
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <p class="govuk-body">Use only the filters to show only the content you want</p>
-        <div class="search-box">
-
-
-          {{ govukInput({
-            label: {
-              text: "Search"
-            },
-            id: "event-name",
-            name: "event-name"
-          }) }}
-
-        </div>
-
-        {{ govukCheckboxes({
-          idPrefix: "content-type",
-          name: "content-type",
-          classes: "govuk-checkboxes--small",
-          fieldset: {
-            legend: {
-              text: "Content type",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--m"
-            }
-          },
-          items: [
-            {
-              value: "audio",
-              text: "Audio"
-            },
-            {
-              value: "video",
-              text: "Video"
-            },
-            {
-              value: "image",
-              text: "Image"
-            },
-            {
-              value: "slide",
-              text: "Slide"
-            },
-            {
-              value: "text",
-              text: "Text"
-            }
-          ]
-        }) }}
-        {{ govukCheckboxes({
-          idPrefix: "element-type",
-          name: "element-type",
-          classes: "govuk-checkboxes--small",
-          fieldset: {
-            legend: {
-              text: "Lesson element type",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--m"
-            }
-          },
-          items: [
-            {
-              value: "activity",
-              text: "Activity"
-            },
-            {
-              value: "learning",
-              text: "Assessment for learning"
-            },
-            {
-              value: "enrichment",
-              text: "Enrichment"
-            },
-            {
-              value: "scaffold",
-              text: "Scaffolded activities for SEN"
-            },
-            {
-              value: "stretch",
-              text: "Stretch activities"
-            },
-            {
-              value: "eal",
-              text: "Works for EAL"
-            }
-          ]
-        }) }}
-      </div>
-      <div class="govuk-grid-column-two-thirds">
-
-        <p class="govuk-body"><span class="govuk-!-font-size-36 govuk-!-font-weight-bold">37</span> results shown</p>
-
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-            <div class="card">
-              <img src="/public/images/01-lava-flow.jpg" style="width:100%" alt="">
-              <div class="card-wrapper">
-            <h3 class='govuk-heading-m'><a href="preview">Lava flow from vent on Kilaeua</a></h3>
-            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">image</a></p>
-            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
-            </div>
-            </div>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <div class="card">
-              <img src="/public/images/02-Volcano-unlabelled.jpg" style="width:100%" alt="">
-              <div class="card-wrapper">
-            <h3 class='govuk-heading-m'><a href="preview">Unlabelled volcano cross-section diagram</a></h3>
-            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">image</a>, <a href="#" class="govuk-link">activity</a></p>
-            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-            <div class="card">
-              <img src="/public/images/etna.jpg" style="width:100%" alt="">
-              <div class="card-wrapper">
-            <h3 class='govuk-heading-m'><a href="preview">Etna erupts</a></h3>
-            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">image</a></p>
-            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
-            </div>
-            </div>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <div class="card">
-              <img src="/public/images/04-exit-ticket.jpg" style="width:100%" alt="">
-              <div class="card-wrapper">
-            <h3 class='govuk-heading-m'><a href="preview">Volcano types exit ticket</a></h3>
-            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">image</a>, <a href="#" class="govuk-link">text</a>, <a href="#" class="govuk-link">activity</a></p>
-            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-            <div class="card">
-              <img src="/public/images/active-dormant-extinct.jpg" style="width:100%" alt="">
-              <div class="card-wrapper">
-            <h3 class='govuk-heading-m'><a href="preview">Active, dormant and extinct volcanoes</a></h3>
-            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">slides</a>, <a href="#" class="govuk-link">scaffolded</a></p>
-            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
-            </div>
-            </div>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <div class="card">
-              <img src="/public/images/06-volcanocross.jpg" style="width:100%" alt="">
-              <div class="card-wrapper">
-            <h3 class='govuk-heading-m'><a href="preview">Volcano types crossword</a></h3>
-            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">assessment</a>, <a href="#" class="govuk-link">stretch activities</a>, <a href="#" class="govuk-link">Image</a></p>
-            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-            <div class="card">
-              <img src="/public/images/07-volcano_recipe.jpg" style="width:100%" alt="">
-              <div class="card-wrapper">
-            <h3 class='govuk-heading-m'><a href="preview">Homemade volcano instructions</a></h3>
-            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">enrichment</a>, <a href="#" class="govuk-link">scaffolded</a>, <a href="#" class="govuk-link">activity</a></p>
-            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
-            </div>
-            </div>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <div class="card">
-              <img src="/public/images/types-of-volcano.jpg" style="width:100%" alt="">
-              <div class="card-wrapper">
-                <h3 class='govuk-heading-m'><a href="preview">How to distinguish volcanoes</a></h3>
-                <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">slides</a>, <a href="#" class="govuk-link">scaffolded</a></p>
-                <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-            <div class="card">
-              <img src="/public/images/shield-strato-dome.jpg" style="width:100%" alt="">
-              <div class="card-wrapper">
-            <h3 class='govuk-heading-m'><a href="preview">Shield, dome and strato volcanoes</a></h3>
-            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">slides</a>, <a href="#" class="govuk-link">scaffolded</a></p>
-            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
-            </div>
-            </div>
-          </div>
-          <div class="govuk-grid-column-one-half">
-            <div class="card">
-              <img src="/public/images/10-destruction.jpg" style="width:100%" alt="">
-              <div class="card-wrapper">
-            <h3 class='govuk-heading-m'><a href="preview">Lava flow from Kilauea</a></h3>
-            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">image</a></p>
-            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
-            </div>
-            </div>
-          </div>
-        </div>
-
-
-
-        <nav class="page-numbers-container pagination-container" aria-label="Pagination">
-        <div class="next">
-          <a href="#" rel="next">
-            Next <span class="hidden-mobile">page</span>
-          </a>
-        </div><div class="pagination"><ul class="list-inline">
-      <li class="active"><a href="#"><span class="visuallyhidden">Page </span>1</a></li>
-      <li><a href="#"><span class="visuallyhidden">Page </span>2</a></li>
-      <li><a href="#"><span class="visuallyhidden">Page </span>3</a></li>
-      <li><a href="#"><span class="visuallyhidden">Page </span>4</a></li>
-      </ul></div>
-      </nav>
-      </div>
-
-
-    </div>
-{% endset -%}
 
 {% set outline %}
 <p>You have added 7 teaching materials to this lesson.
-<p><a href="/unit/lesson#content">Add more materials</a></p>
+  {% from "button/macro.njk" import govukButton %}
+</p>
+  {{ govukButton({
+    text: "Add materials",
+    href: "/unit/materialrepo"
+  }) }}
+
 <div class="govuk-grid-row">
 {% from "table/macro.njk" import govukTable %}
 {{ govukTable({
@@ -436,7 +219,7 @@
       text: ""
     },
     {
-      text: "Tags"
+      text: "Actions"
     },
     {
       text: ""
@@ -448,22 +231,22 @@
        text: "1"
       },
       {
-        text: "Etna erupting"
+        html: "
+        Etna erupting<br>
+          <span class='govuk-caption-m'>#image</span>
+        "
       },
       {
         html: "<img src='/public/images/etna.jpg' style='width:100px' alt=''>"
       },
       {
-        text: "image"
+        html: "
+          <a href='#' class='govuk-!-margin-right-2'>change</a>
+          <a href='#'>delete</a>
+        "
       },
       {
         html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-      },
-      {
-        text: ""
-      },
-      {
-
       }
     ],
     [
@@ -471,19 +254,22 @@
         text: "2"
       },
       {
-        text: "Active, dormant and extinct volcanoes"
+        html: "
+        Active, dormant and extinct volcanoes<br>
+          <span class='govuk-caption-m'>#slides, #scaffolded</span>
+        "
       },
       {
         html: "<img src='/public/images/active-dormant-extinct.jpg' style='width:100px' alt=''>"
       },
       {
-        text: "slides, scaffolded"
+        html: "
+          <a href='#' class='govuk-!-margin-right-2'>change</a>
+          <a href='#'>delete</a>
+        "
       },
       {
         html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-      },
-      {
-        text: ""
       }
     ],
     [
@@ -491,19 +277,22 @@
         text: "3"
       },
       {
-        text: "Shield, dome and strato volcanoes"
+        html: "
+        Shield, dome and strato volcanoes<br>
+          <span class='govuk-caption-m'>#slides, #scaffolded</span>
+        "
       },
       {
         html: "<img src='/public/images/shield-strato-dome.jpg' style='width:100px' alt=''>"
       },
       {
-        text: "slides, scaffolded"
+        html: "
+          <a href='#' class='govuk-!-margin-right-2'>change</a>
+          <a href='#'>delete</a>
+        "
       },
       {
         html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-      },
-      {
-        text: ""
       }
     ],
     [
@@ -511,19 +300,22 @@
         text: "4"
       },
       {
-        text: "How to distinguish volcanoes"
+        html: "
+        How to distinguish volcanoes<br>
+          <span class='govuk-caption-m'>#slides, #scaffolded</span>
+        "
       },
       {
         html: "<img src='/public/images/types-of-volcano.jpg' style='width:100px' alt=''>"
       },
       {
-        text: "slides, scaffolded"
+        html: "
+          <a href='#' class='govuk-!-margin-right-2'>change</a>
+          <a href='#'>delete</a>
+        "
       },
       {
         html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-      },
-      {
-        text: ""
       }
     ],
     [
@@ -531,19 +323,22 @@
         text: "5"
       },
       {
-        text: "'Make a volcano' instructions"
+        html: "
+        'Make a volcano' instructions<br>
+          <span class='govuk-caption-m'>#enrichment, #scaffolded, #activity</span>
+        "
       },
       {
         html: "<img src='/public/images/07-volcano_recipe.jpg' style='width:100px' alt=''>"
       },
       {
-        text: "enrichment, scaffolded, activity"
+        html: "
+          <a href='#' class='govuk-!-margin-right-2'>change</a>
+          <a href='#'>delete</a>
+        "
       },
       {
         html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-      },
-      {
-        text: ""
       }
     ],
     [
@@ -551,19 +346,22 @@
         text: "6"
       },
       {
-        text: "Unlabelled volcano cross-section diagram"
+        html: "
+        Unlabelled volcano cross-section diagram<br>
+          <span class='govuk-caption-m'>#image, #activity</span>
+        "
       },
       {
         html: "<img src='/public/images/02-Volcano-unlabelled.jpg' style='width:100px' alt=''>"
       },
       {
-        text: "image, activity"
+        html: "
+          <a href='#' class='govuk-!-margin-right-2'>change</a>
+          <a href='#'>delete</a>
+        "
       },
       {
         html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-      },
-      {
-        text: ""
       }
     ],
     [
@@ -571,29 +369,36 @@
         text: "7"
       },
       {
-        text: "Volcano types exit ticket"
+        html: "
+      Volcano types exit ticket<br>
+          <span class='govuk-caption-m'>#image, #text, #activity</span>
+        "
       },
       {
         html: "<img src='/public/images/04-exit-ticket.jpg' style='width:100px' alt=''>"
       },
       {
-        text: "image, text, activity"
+        html: "
+          <a href='#' class='govuk-!-margin-right-2'>change</a>
+          <a href='#'>delete</a>
+        "
       },
       {
         html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-      },
-      {
-        text: ""
       }
     ]
   ]
 }) }}
 </div>
-{% from "button/macro.njk" import govukButton %}
-
 {{ govukButton({
-  text: "Download lesson"
+  text: "Add materials",
+  href: "/unit/materialrepo"
 }) }}
+<h2 class="govuk-heading-l govuk-!-margin-top-9">Use this lesson</h2>
+<p><a href="#">Download lesson</a></p>
+<p><a href="#">Print lesson</a></p>
+<p><a href="#">Share lesson</a></p>
+
 {% endset -%}
 
 {{ govukTabs({
@@ -606,13 +411,6 @@
       }
     },
     {
-      label: "Teaching materials",
-      id: "content",
-      panel: {
-        html: content
-      }
-    },
-    {
       label: "Lesson outline",
       id: "outline",
       panel: {
@@ -621,4 +419,30 @@
     }
   ]
 }) }}
+<nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+  <ul class="gem-c-pagination__list">
+      <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+        <a href="#" class="gem-c-pagination__link"><span class="gem-c-pagination__link-title"><svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+              <path fill="currentColor" d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg><span class="gem-c-pagination__link-text">Previous
+            </span>
+          </span>
+            <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+            <span class="gem-c-pagination__link-label">Lesson 3</span>
+        </a>
+      </li>
+      <li class="gem-c-pagination__item gem-c-pagination__item--next">
+        <a href="#" class="gem-c-pagination__link">
+          <span class="gem-c-pagination__link-title">
+            <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+              <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg><span class="gem-c-pagination__link-text">Next
+            </span>
+          </span>
+            <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+            <span class="gem-c-pagination__link-label">Lesson 5</span>
+        </a>
+      </li>
+  </ul>
+</nav>
 {% endblock %}

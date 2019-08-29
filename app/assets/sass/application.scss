@@ -11,6 +11,7 @@ $govuk-global-styles: true;
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
+@import "components/pagination-list";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 .search-box {
@@ -95,6 +96,8 @@ $govuk-global-styles: true;
   font-size: .875rem;
   line-height: 1.14286;
 }
+
+
 
 @media print {
   .app-subnav {
