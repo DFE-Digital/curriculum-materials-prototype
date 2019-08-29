@@ -195,9 +195,19 @@
 
 
 {% set outline %}
-<p>You have added 7 teaching materials to this lesson.
+<div id="onfirst" class="">
+
+  <p>Here you can add teaching materials to create this lesson.</p>
+  <p>You can:</p>
+  <ul>
+    <li><a class="start" href="#">start from scratch</a></li>
+    <li><a class="start" href="#">use a pre-made lesson</a></li>
+  </ul>
+</div>
+<div id="onsecond" class="visually-hidden">
+  <p>You have added 7 teaching materials to this lesson.</p>
   {% from "button/macro.njk" import govukButton %}
-</p>
+
   {{ govukButton({
     text: "Add materials",
     href: "/unit/materialrepo"

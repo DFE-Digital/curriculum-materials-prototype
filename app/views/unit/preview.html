@@ -1,47 +1,18 @@
-{% extends "layout.html" %}
-{% from 'header/macro.njk' import govukHeader %}
-
-{% block header %}
-  {{ govukHeader({
-    homepageUrl: "/dfe-sign-in/username",
-    serviceName: "Curriculum materials",
-    serviceUrl: "#",
-    containerClasses: "govuk-width-container",
-    navigation: [
-    {
-      href: "#",
-      text: "All Key Stage 2"
-    },
-      {
-        href: "#",
-        text: "Year 3"
-      },
-      {
-        href: "#",
-        text: "Year 4"
-      },
-      {
-        href: "#",
-        text: "Year 5"
-      },
-      {
-        href: "/dashboard",
-        text: "Year 6",
-        active: true
-      }
-    ]
-  }) }}
-{% endblock %}
-{% block pageTitle %}
-  Lava flow from Kilauea: pPreview  - Curriculum materials alpha - Department for Education
-{% endblock %}
-{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
-{% block beforeContent %}
+{% extends "layout.html" %} {% from 'header/macro.njk' import govukHeader %} {%
+block header %} {{ govukHeader({ homepageUrl: "/dfe-sign-in/username",
+serviceName: "Curriculum materials", serviceUrl: "#", containerClasses:
+"govuk-width-container", navigation: [ { href: "#", text: "All Key Stage 2" }, {
+href: "#", text: "Year 3" }, { href: "#", text: "Year 4" }, { href: "#", text:
+"Year 5" }, { href: "/dashboard", text: "Year 6", active: true } ] }) }} {%
+endblock %} {% block pageTitle %} Lava flow from Kilauea: pPreview - Curriculum
+materials alpha - Department for Education {% endblock %} {% from
+"breadcrumbs/macro.njk" import govukBreadcrumbs %} {% block beforeContent %}
 <nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list govuk-width-container">
-
     <li class="app-navigation--current-page">
-      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Geography</a>
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started"
+        >Geography</a
+      >
     </li>
 
     <li>
@@ -49,75 +20,112 @@
     </li>
 
     <li>
-      <a class="govuk-link" href="/unit/year" data-topnav="Components">Science</a>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components"
+        >Science</a
+      >
     </li>
 
     <li>
-      <a class="govuk-link" href="/unit/year" data-topnav="Components">All subjects</a>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components"
+        >All subjects</a
+      >
     </li>
   </ul>
 </nav>
-{{ govukBreadcrumbs({
-  items: [
-  {
-    text: "Year 6",
-    href: "/dashboard"
-  },
-  {
-    text: "Geography",
-    href: "/unit/year"
-  },
-  {
-    text: "Summer 2",
-    href: "/unit"
-  },
-  {
-    text: "Lesson 4"
-  }
-  ]
-}) }}
-<a class="govuk-back-link" href="/unit/lesson#content">Back</a>
-{% endblock %}
-
+{{ govukBreadcrumbs({ items: [ { text: "Year 6", href: "/dashboard" }, { text:
+"Geography", href: "/unit/year" }, { text: "Summer 2", href: "/unit" }, { text:
+"Lesson 4" } ] }) }}
+<a class="govuk-back-link" href="/unit/lesson#content">Back</a> {% endblock %}
 {% block content %}
 <h1 class="govuk-heading-xl">Lava flow from Kilauea</h1>
-<h2 class="govuk-heading-m">Mount Kilauea, Hawaii (active, shield volcano) erupting in 2019.</h2>
-<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <div class="meta" style="margin:20px 0;">
-            <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-0">Published 19 April 2019</p>
-            <p class="govuk-body govuk-!-font-size-16">Last updated 19 April 2019 &nbsp; <a href="#">See all updates</a></p>
-            </div>
-            <div class="blue-panel" style="padding:40px;background-color:#005ea5;color:#fff;">
-    <h3 class="govuk-heading-m" style="color:#fff;">Supports KS2 national curriculum for geography</h3>
-    <ul class="govuk-list govuk-list--bullet" style="color:#fff;">
-    <li>locational knowledge</li>
-    <li>physical geography</li>
-    <li>plate tectonics</li>
-    </ul>
-    </div>
-
-            <img src="/public/images/01-lava-flow.jpg" style="width:100%" alt="">
-<h2 class="govuk-heading-m">Materials</h2>
+<h2 class="govuk-heading-m">
+  Mount Kilauea, Hawaii (active, shield volcano) erupting in 2019.
+</h2>
+<hr
+  class="govuk-section-break govuk-section-break--s govuk-section-break--visible"
+/>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
-    <img src="/public/images/01-lava-flow.jpg" style="width:100%" alt="">
-    </div>
   <div class="govuk-grid-column-two-thirds">
-    <h3 class="govuk-heading-m"><a href="govuk-link">Image of Mount Kilaeua during eruption</a></h3>
-    <p>Taken:</p>
-    <p>JPG, 3028kb</p>
+    <div class="meta" style="margin:20px 0;">
+      <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-0">
+        Published 19 April 2019
+      </p>
+      <p class="govuk-body govuk-!-font-size-16">
+        Last updated 19 April 2019 &nbsp; <a href="#">See all updates</a>
+      </p>
     </div>
+    <div
+      class="blue-panel"
+      style="padding:40px;background-color:#005ea5;color:#fff;"
+    >
+      <h3 class="govuk-heading-m" style="color:#fff;">
+        Supports KS2 national curriculum for geography
+      </h3>
+      <ul class="govuk-list govuk-list--bullet" style="color:#fff;">
+        <li>locational knowledge</li>
+        <li>physical geography</li>
+        <li>plate tectonics</li>
+      </ul>
     </div>
-<h2 class="govuk-heading-m">Supports learning objectives</h2>
-<ul class="govuk-list">
-  <li>Understand and distinguish types of volcanoes</li>
-</ul>
-          </div>
-          <div class="govuk-grid-column-one-third">
 
-          </div>
-        </div>
+    <img src="/public/images/01-lava-flow.jpg" style="width:100%" alt="" />
+    <h2 class="govuk-heading-m govuk-!-margin-top-9">Supports learning objectives</h2>
+    <ul class="govuk-list">
+      <li>Understand and distinguish types of volcanoes</li>
+    </ul>
+    <h2 class="govuk-heading-m govuk-!-margin-top-9">Materials</h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <img src="/public/images/01-lava-flow.jpg" style="width:100%" alt="" />
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">
+          <a href="/public/images/01-lava-flow.jpg">Download Image of Mount Kilaeua during eruption</a>
+        </h3>
+        <p>Taken:</p>
+        <p>JPG, 3028kb</p>
+      </div>
+    </div>
+    <h2 class="govuk-heading-m govuk-!-margin-top-9">Alternatives</h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <img src="/public/images/01-lava-flow.jpg" style="width:100%" alt="" />
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">
+          <a href="govuk-link">Image of Mount Kilaeua during eruption</a>
+        </h3>
+        <p>Taken:</p>
+        <p>JPG, 3028kb</p>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <img src="/public/images/01-lava-flow.jpg" style="width:100%" alt="" />
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">
+          <a href="govuk-link">Image of Mount Kilaeua during eruption</a>
+        </h3>
+        <p>Taken:</p>
+        <p>JPG, 3028kb</p>
+      </div>
+    </div>
+    <h2 class="govuk-heading-m govuk-!-margin-top-9">Up next</h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <img src="/public/images/01-lava-flow.jpg" style="width:100%" alt="" />
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">
+          <a href="govuk-link">Image of Mount Kilaeua during eruption</a>
+        </h3>
+        <p>Taken:</p>
+        <p>JPG, 3028kb</p>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third"></div>
+</div>
 
 {% endblock %}

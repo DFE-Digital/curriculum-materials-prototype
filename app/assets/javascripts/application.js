@@ -7,4 +7,8 @@ if (window.console && window.console.info) {
 
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
+  $('.start').click(function(){
+    $('#onsecond').removeClass('visually-hidden');
+    $('#onfirst').addClass('visually-hidden');
+  })
 })
