@@ -52,19 +52,15 @@
 {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
 <nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list govuk-width-container">
-
-    <li class="app-navigation--current-page">
+    <li>
       <a class="govuk-link" href="/unit/year" data-topnav="Get started">Geography</a>
     </li>
-
-    <li>
+    <li class="app-navigation--current-page">
       <a class="govuk-link" href="/unit/year" data-topnav="Styles">History</a>
     </li>
-
     <li>
       <a class="govuk-link" href="/unit/year" data-topnav="Components">Science</a>
     </li>
-
     <li>
       <a class="govuk-link" href="/unit/year" data-topnav="Components">All subjects</a>
     </li>
@@ -77,7 +73,7 @@
     href: "/dashboard"
   },
   {
-    text: "Geography",
+    text: "History",
     href: "/unit/year"
   },
   {
@@ -98,9 +94,12 @@
 </h1>
 {% set objectives %}
 {{ govukInsetText({
-  html: "<h3 class='govuk-heading-m'><a href='objective-1'>Objective: to learn the types of volcano</a></h3><ul>
-    <p>To know the characterstics of different types of volcanoes, and distinguish one type from another based on its eruption style.</P>
-      <p>To locate volcanoes on a map using grid coordinates.</p>"
+  html: "<h3 class='govuk-heading-m'><a href='objective-1'>Objective: to explain why Henry VII’s methods for raising money succeeded
+</a></h3>
+<ul>
+    <li>to know three different reasons why Henry VII’s methods for raising money were successful.</li>
+      <li>to understand why war was expensive in the middle ages.</li>
+      </ul>"
 }) }}
 
 <div class="govuk-grid-row govuk-!-margin-bottom-9">
@@ -108,25 +107,27 @@
   <div class="govuk-grid-column-one-half">
     <h3>Core knowledge for all pupils</h3>
     <ul>
-      <li>volcanoes occur at a destructive plate boundary</li>
-      <li>a lava flow is molten rock only</li>
-      <li>a pyroclastic flow is a mixture of molten rock, ash and gases</li>
-</ul>
+      <li>he used the Court of Star Chamber to fine his enemies. </li>
+      <li>he confiscated land from some nobles.</li>
+      <li>when he made treaties with foreign countries, he often demanded payment from those countries. </li>
+      <li>he forced wealthy people to give him loans and gifts. </li>
+      <li>Henry employed two clever officials – Sir Richard Empson and Sir Edmund Dudley – to do all this.</li>
+    </ul>
   </div>
   <div class="govuk-grid-column-one-half">
     <h3>Vocabulary for this learning objective</h3>
 <div class="govuk-grid-column-one-half">
     <ul>
-      <li>cone</li>
-      <li>vent</li>
-      <li>magma chamber</li>
+      <li>coffer</li>
+      <li>treaty</li>
+      <li>sovereign</li>
       </ul>
       </div>
       <div class="govuk-grid-column-one-half">
       <ul>
-      <li>dome</li>
-      <li>shield</li>
-      <li>strato</li>
+        <li>confiscate</li>
+        <li>appoint</li>
+        <li>judicial</li>
     </ul>
     </div>
   </div>
@@ -139,10 +140,11 @@
   items: [
     {
       heading: {
-        text: "All volcanoes erupt violently"
+        text: "Henry VII was fat, had six wives and loved jousting and hunting "
       },
       content: {
-        html: "<p class='govuk-body'>This misconception arises from media coverage which is biased by location and death tolls.
+        html: "<p class='govuk-body'>That was Henry VIII.
+
 </p>"
       }
     },
@@ -156,18 +158,18 @@
     },
       {
       heading: {
-        text: "Volcanoes only form on land, not underwater"
+        text: "Kings always have lots of money"
       },
       content: {
-        html: "<p class='govuk-body'>Actually, there are numerous oceanic fault lines with volcanoes forming along these without breaking the surface of the water.</p>"
+        html: "<p class='govuk-body'>Not necessarily.</p>"
       }
     },
       {
       heading: {
-        text: "Magma comes from deep within the Earth’s mantle"
+        text: "The best way to make money is to go to war and win some spoils"
       },
       content: {
-        html: "<p class='govuk-body'>This comes from textbooks’ saying that the magma is ‘deep’ down - in reality, virtually all magma originates in the upper portion of the mantle and crust because of plate friction.</p>"
+        html: "<p class='govuk-body'>Actually, war is quite expensive.</p>"
       }
     }
   ]
@@ -175,16 +177,15 @@
 </div>
 <h2 class="govuk-heading-l">Building on previous knowledge</h2>
 <div class="govuk-grid-row govuk-!-margin-bottom-9">
-  <div class="govuk-grid-column-one-half">
-<h3 class="govuk-heading-m">Vocabulary</h3>
-<p>Pupils should already know:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>lava: red-hot liquid rock</li>
-  <li>volcano: a mountain that erupts, or has erupted</li>
-  <li>volcanic eruption: an explosion or outpouring of lava, rock or as from a volcano</li>
-</ul>
-</ul>
-</div>
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-m">Vocabulary</h3>
+    <p>Pupils should already know:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Tudor: relating to the English royal dynasty which held the throne from the accession of Henry VII in 1485 until the death of Elizabeth I in 1603.</li>
+      <li>noble: belonging by rank, title, or birth to the aristocracy.</li>
+      <li>accession: the attainment or acquisition of a position of rank or power.</li>
+    </ul>
+  </div>
 </div>
   <h2 class="govuk-heading-l">Downloads</h2>
   <ul class="govuk-list govuk-list--bullet">
@@ -212,7 +213,7 @@
       text: ""
     },
     {
-      text: "Actions"
+      text: "Action"
     },
     {
       text: ""
@@ -225,12 +226,12 @@
       },
       {
         html: "
-        Etna erupting<br>
+        Image: Henry VII learning objectives<br>
           <span class='govuk-caption-m'>#image</span>
         "
       },
       {
-        html: "<img src='/public/images/etna.jpg' style='width:100px' alt=''>"
+        html: "<img src='/public/images/HenryVII.jpeg' style='width:100px' alt=''>"
       },
       {
         html: "
@@ -247,12 +248,12 @@
       },
       {
         html: "
-        Active, dormant and extinct volcanoes<br>
-          <span class='govuk-caption-m'>#slides, #scaffolded</span>
+        The purpose of the Star Chamber<br>
+          <span class='govuk-caption-m'>#image, #activity</span>
         "
       },
       {
-        html: "<img src='/public/images/active-dormant-extinct.jpg' style='width:100px' alt=''>"
+        html: "<img src='/public/images/starchamber.jpeg' style='width:100px' alt=''>"
       },
       {
         html: "
@@ -269,12 +270,12 @@
       },
       {
         html: "
-        Shield, dome and strato volcanoes<br>
-          <span class='govuk-caption-m'>#slides, #scaffolded</span>
+        Oral task: Why was war expensive<br>
+          <span class='govuk-caption-m'>#activity</span>
         "
       },
       {
-        html: "<img src='/public/images/shield-strato-dome.jpg' style='width:100px' alt=''>"
+        html: "<img src='/public/images/henrywar.jpeg' style='width:100px' alt=''>"
       },
       {
         html: "
@@ -291,12 +292,12 @@
       },
       {
         html: "
-        How to distinguish volcanoes<br>
-          <span class='govuk-caption-m'>#slides, #scaffolded</span>
+        Why did Henry VII's methods succeed<br>
+          <span class='govuk-caption-m'>#image, #text, #activity</span>
         "
       },
       {
-        html: "<img src='/public/images/types-of-volcano.jpg' style='width:100px' alt=''>"
+        html: "<img src='/public/images/methods.jpeg' style='width:100px' alt=''>"
       },
       {
         html: "
@@ -313,56 +314,12 @@
       },
       {
         html: "
-        'Make a volcano' instructions<br>
-          <span class='govuk-caption-m'>#enrichment, #scaffolded, #activity</span>
+        Recap: Why did Henry VII's methods succeed<br>
+          <span class='govuk-caption-m'>#recap, #text</span>
         "
       },
       {
-        html: "<img src='/public/images/07-volcano_recipe.jpg' style='width:100px' alt=''>"
-      },
-      {
-        html: "
-          <a href='./materialrepo' class='govuk-!-margin-right-2'>change</a>
-        "
-      },
-      {
-        html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-      }
-    ],
-    [
-      {
-        text: "6"
-      },
-      {
-        html: "
-        Unlabelled volcano cross-section diagram<br>
-          <span class='govuk-caption-m'>#image, #activity</span>
-        "
-      },
-      {
-        html: "<img src='/public/images/02-Volcano-unlabelled.jpg' style='width:100px' alt=''>"
-      },
-      {
-        html: "
-          <a href='./materialrepo' class='govuk-!-margin-right-2'>change</a>
-        "
-      },
-      {
-        html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-      }
-    ],
-    [
-      {
-        text: "7"
-      },
-      {
-        html: "
-      Volcano types exit ticket<br>
-          <span class='govuk-caption-m'>#image, #text, #activity</span>
-        "
-      },
-      {
-        html: "<img src='/public/images/04-exit-ticket.jpg' style='width:100px' alt=''>"
+        html: "<img src='/public/images/recap.jpeg' style='width:100px' alt=''>"
       },
       {
         html: "
@@ -400,30 +357,4 @@
     }
   ]
 }) }}
-<nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
-  <ul class="gem-c-pagination__list">
-      <li class="gem-c-pagination__item gem-c-pagination__item--previous">
-        <a href="#" class="gem-c-pagination__link"><span class="gem-c-pagination__link-title"><svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
-              <path fill="currentColor" d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-            </svg><span class="gem-c-pagination__link-text">Previous
-            </span>
-          </span>
-            <span class="gem-c-pagination__link-divider visually-hidden">:</span>
-            <span class="gem-c-pagination__link-label">Lesson 3</span>
-        </a>
-      </li>
-      <li class="gem-c-pagination__item gem-c-pagination__item--next">
-        <a href="#" class="gem-c-pagination__link">
-          <span class="gem-c-pagination__link-title">
-            <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
-              <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-            </svg><span class="gem-c-pagination__link-text">Next
-            </span>
-          </span>
-            <span class="gem-c-pagination__link-divider visually-hidden">:</span>
-            <span class="gem-c-pagination__link-label">Lesson 5</span>
-        </a>
-      </li>
-  </ul>
-</nav>
 {% endblock %}
