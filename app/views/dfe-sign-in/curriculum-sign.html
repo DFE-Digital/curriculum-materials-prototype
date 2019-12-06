@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Sign in - Curriculum materials service - Department for Education
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "details/macro.njk" import govukDetails %}
+{% block content %}
+<h1 class="govuk-heading-xl">  Sign in to the curriculum materials service</h1>
+<p class="govuk-body-m">
+If you have not used this service before you will need to <a href="#">create a teacher account</a>.
+</p>
+{% from "input/macro.njk" import govukInput %}
+{% from "fieldset/macro.njk" import govukFieldset %}
+
+{% call govukFieldset({
+}) %}
+
+  {{ govukInput({
+    label: {
+      text: "Email address"
+    },
+    id: "",
+    classes:"govuk-!-width-one-third",
+    name: "email"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Password"
+    },
+    id: "",
+    classes:"govuk-!-width-one-third",
+    name: "password"
+  }) }}
+
+  <p class="govuk-body-m">By continuing you agree to our <a href="#">terms and conditions</a>.</p>
+
+
+
+{{ govukButton({
+  text: "Sign in",
+  href: "/keystage3",
+  classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+}) }}
+{% endcall %}
+{% endblock %}
