@@ -1,0 +1,156 @@
+
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/index",
+    serviceName: "Curriculum materials",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
+      {
+        href: "#",
+        text: "Year 3"
+      },
+      {
+        href: "#",
+        text: "Year 4"
+      },
+      {
+        href: "#",
+        text: "Year 5"
+      },
+      {
+        href: "#",
+        text: "Year 6",
+        active: true
+      },
+      {
+        href: "/dfe-sign-in/username",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Curriculum materials alpha - prototype - Department for Education
+{% endblock %}
+
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Geography</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/dashboard" data-topnav="Styles">History</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/dashboard" data-topnav="Components">Science</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/dashboard" data-topnav="Components">All subjects</a>
+    </li>
+  </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Your key stage 3 curriculum</h1>
+
+
+<h2 class="govuk-heading-m">Welcome Veronica</h2>
+<p class="govuk-body-l" style="color:#6f777b;">Godalming Junior School - your school is signed up to the Cornerstones curriculum</p>
+
+
+
+<h2 class="govuk-heading-m">Your key stage 3 curriculum by year</h2>
+
+<p class='govuk-body'><a href='/unit'>Year 7</a></p>
+<p class='govuk-body'><a href='/unit'>Year 8</a></p>
+<p class='govuk-body'><a href='/unit'>Year 9</a></p>
+
+
+<h2 class="govuk-heading-m">Your key stage 3 curriculum by subject</h2>
+</div>
+        </div>
+
+      {% from "table/macro.njk" import govukTable %}
+
+      {{ govukTable({
+        caption: "",
+        firstCellIsHeader: true,
+        head: [
+          {
+            text: "Subject"
+          },
+          {
+            text: "Year"
+          },
+          {
+            text: "Unit to plan next"
+          }
+        ],
+        rows: [
+          [
+            {
+              html: "<p class='govuk-body govuk-!-font-weight-bold'>Geography</p>"
+            },
+            {
+              html: "<p class='govuk-body'>Year&nbsp;7</p><p class='govuk-body'>Year&nbsp;7</p><p class='govuk-body'>Year&nbsp;8</p><p class='govuk-body'>Year&nbsp;8</p><p class='govuk-body'>Year&nbsp;9</p><p class='govuk-body'>Year&nbsp;9</p>"
+            },
+            {
+              html: "<p class='govuk-body'><a href='/unit'>Volcanoes, earthquakes and plates</a></p><a href='/unit'>Africa</a></p><a href='/unit'>Development</a></p><a href='/unit'>Ecosystems</a></p><a href='/unit'>Rivers and coasts</p><a href='/unit'>Map skills</a></p>"
+            }
+          ],
+					[
+            {
+             html: "<p class='govuk-body govuk-!-font-weight-bold'>History</p>"
+            },
+            {
+              html: "<p class='govuk-body'>Year&nbsp;7</p><p class='govuk-body'>Year&nbsp;7</p><p class='govuk-body'>Year&nbsp;8</p><p class='govuk-body'>Year&nbsp;8</p><p class='govuk-body'>Year&nbsp;9</p><p class='govuk-body'>Year&nbsp;9</p>"
+            },
+            {
+            html: "<p class='govuk-body'><a href='/unit'>World War 2</a></p><a href='/unit'>Empire</a></p><a href='/unit'>Slavery</a></p><a href='/unit'>The Victorians</a></p><a href='/unit'>The Tudors</a></p><a href='/unit'>Medieval monarchs</a></p>"
+          }
+          ],
+          [
+            {
+              html: "<p class='govuk-body govuk-!-font-weight-bold'>Science</p>"
+            },
+            {
+              html: "<p class='govuk-body'>Year&nbsp;7</p><p class='govuk-body'>Year&nbsp;7</p><p class='govuk-body'>Year&nbsp;8</p><p class='govuk-body'>Year&nbsp;8</p><p class='govuk-body'>Year&nbsp;9</p><p class='govuk-body'>Year&nbsp;9</p>"
+            },
+            {
+              html: "<p class='govuk-body'><a href='/unit'>Reproduction</a></p></a></p><a href='/unit'>Circulation and the heart</a></p><a href='/unit'>Habitats and their inhabitants</a></p><a href='/unit'>Electricity</a></p><a href='/unit'>Classification of life</a></p><a href='/unit'>Light</a></p>"
+            }
+          ]
+        ]
+      }) }}
+
+<hr class="govuk-section-break govuk-section-break--l">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+              <div><h2 class="govuk-heading-m">Get help using this service</h2><p class="font-small" style="margin-bottom:0px;"><span class="govuk-!-font-weight-bold">Call&nbsp;</span>0800 100 900 or <a style="white-space:nowrap;" href="#" target="'_blank'">use webchat</a></p>
+                <p class="govuk-body govuk-!-font-size-16" style="color: grey;">8am to 10pm, 7 days a week<br></p><p>More ways to <a href="#">contact us</a></p></div>
+            </div>
+          </div>
+{% endblock %}
