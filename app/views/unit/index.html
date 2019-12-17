@@ -80,6 +80,105 @@
 
 
 
+
+        <div class="govuk-grid-column-two-thirds">
+
+          <h2 class="govuk-heading-l">Volcanoes, earthquakes and plates</h2>
+        <p>A unit focussed on the physical processes that create and destroy our landscape - and their effects on humans.</p>
+
+          {% from "table/macro.njk" import govukTable %}
+
+    {{ govukTable({
+      caption: "",
+      firstCellIsHeader: true,
+      head: [
+        {
+          text: "Lesson"
+        },
+        {
+          text: "Teaching outcome"
+        },
+        {
+          text: ""
+        }
+      ],
+      rows: [
+        [
+          {
+            html: "<a href='/unit/lesson'>Lesson 1</a>"
+          },
+          {
+            text: "Understand what the layers of the Earth are"
+          },
+          {
+            text: "60 min"
+          }
+        ],
+        [
+          {
+            html: "<a href='/unit/lesson'>Lesson 2</a>"
+          },
+          {
+            text: "Understand plate tectonics"
+          },
+          {
+            text: "90 min"
+          }
+        ],
+        [
+          {
+            html: "<a href='/unit/lesson'>Lesson 3</a>"
+          },
+          {
+            text: "Understand why earthquakes happen"
+          },
+          {
+            text: "60 min"
+          }
+        ],
+        [
+          {
+            html: "<a href='/unit/lesson'>Lesson 4</a>"
+          },
+          {
+            text: "Understand and distinguish the types of volcano"
+          },
+          {
+            text: "60 min"
+          }
+        ],
+        [
+          {
+            html: "<a href='/unit/lesson'>Lesson 5</a>"
+          },
+          {
+            text: "Volcano locations (map skills)"
+          },
+          {
+            text: "30 min"
+          }
+        ],
+        [
+          {
+            html: "<a href='/unit/lesson'>Lesson 6</a>"
+          },
+          {
+            text: "Understand the damage that earthquakes cause"
+          },
+          {
+            text: "60 min"
+          }
+        ]
+      ]
+    }) }}
+		
+<br>
+<br>
+<br>
+
+        </div>
+</div>
+
 <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
         <nav class="app-subnav">
@@ -116,100 +215,5 @@
               </ul>
     </nav>
       </div>
-        <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-xl">Plan this unit</h1>
-          <h2 class="govuk-heading-l">Summer 2: Volcanoes, earthquakes and plates</h2>
-        <p>A unit focussed on the physical processes that create and destroy our landscape - and their effects on humans.</p>
-
-          {% from "table/macro.njk" import govukTable %}
-
-    {{ govukTable({
-      caption: "",
-      firstCellIsHeader: true,
-      head: [
-        {
-          text: "Lesson"
-        },
-        {
-          text: "Teaching outcome"
-        },
-        {
-          text: ""
-        }
-      ],
-      rows: [
-        [
-          {
-            html: "<a href='/unit/lesson'>Lesson 1</a>"
-          },
-          {
-            text: "Understand what the layers of the Earth are"
-          },
-          {
-            html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-          }
-        ],
-        [
-          {
-            html: "<a href='/unit/lesson'>Lesson 2</a>"
-          },
-          {
-            text: "Understand plate tectonics"
-          },
-          {
-            html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-          }
-        ],
-        [
-          {
-            html: "<a href='/unit/lesson'>Lesson 3</a>"
-          },
-          {
-            text: "Understand why earthquakes happen"
-          },
-          {
-            html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-          }
-        ],
-        [
-          {
-            html: "<a href='/unit/lesson'>Lesson 4</a>"
-          },
-          {
-            text: "Understand and distinguish the types of volcano"
-          },
-          {
-            html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-          }
-        ],
-        [
-          {
-            html: "<a href='/unit/lesson'>Lesson 5</a>"
-          },
-          {
-            text: "Volcano locations (map skills)"
-          },
-          {
-            html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-          }
-        ],
-        [
-          {
-            html: "<a href='/unit/lesson'>Lesson 6</a>"
-          },
-          {
-            text: "Understand the damage that earthquakes cause"
-          },
-          {
-            html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
-          }
-        ]
-      ]
-    }) }}
-        <h2 class="govuk-heading-l">How to teach this unit</h2>
-          <p>See the <a href="">full teaching notes and pedagogy</a> to meet the learning objectives for the volcanoes, earthquakes and plates unit.</p>
-        </div>
-</div>
-
 
 {% endblock %}
