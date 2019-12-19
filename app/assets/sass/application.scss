@@ -452,3 +452,23 @@ $govuk-global-styles: true;
     margin-top: 15px;
   }
 }
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.slide {
+	flex: 1 0 33%;
+	flex-basis: 30%;
+	border: 1px gray;
+	padding: 8px;
+}
+
+.red {
+	border: 1px dotted red;
+}
+
+.blue {
+	border: 1px dotted blue;
+}
