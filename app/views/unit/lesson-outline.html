@@ -1,0 +1,348 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/dfe-sign-in/username",
+    serviceName: "Curriculum materials",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
+      {
+        href: "#",
+        text: "Year 3"
+      },
+      {
+        href: "#",
+        text: "Year 4"
+      },
+      {
+        href: "#",
+        text: "Year 5"
+      },
+      {
+        href: "/dashboard",
+        text: "Year 6",
+        active: true
+      },
+      {
+        href: "/dfe-sign-in/username",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Plan lesson 4 - Curriculum materials alpha - Department for Education
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+{% from "input/macro.njk" import govukInput %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Geography</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">History</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Science</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">All subjects</a>
+    </li>
+  </ul>
+</nav>
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 6",
+    href: "/dashboard"
+  },
+  {
+    text: "Geography",
+    href: "/unit/year"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 1"
+  }
+  ]
+}) }}
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+
+
+<span class="govuk-caption-xl">1hr : 00min</span>
+<h1 class="govuk-heading-xl">
+  Lesson 1: types of Volcano
+</h1>
+
+<p class="govuk-body">You can view the lesson summary and change its contents by browsing the alternative resources available.</p>
+
+<h1 class="govuk-heading-m">Lesson Summary</h1>
+
+<h3 class='govuk-heading-s'><a href='objective-1'>Objective: to learn the types of volcano</a></h3>
+
+<p>By the end of the lesson pupils should:</p> 
+
+    <ul class="govuk-list govuk-list--bullet">
+    <li>know the characteristics of different types of volcanoes, and distinguish one type from another based on its eruption style</li>
+    <li>be able to locate volcanoes on a map using grid coordinates</li>
+		</ul>
+			
+<h3 class='govuk-heading-m'>Core knowledge for all pupils</h3>
+
+
+		<p class="govuk-body">Pupils should know that:</p>
+			
+      <ul class="govuk-list govuk-list--bullet">
+        <li>volcanoes occur at a destructive plate boundary</li>
+        <li>a lava flow is molten rock only</li>
+        <li>a pyroclastic flow is a mixture of molten rock, ash and gases</li>				
+      </ul>
+
+
+<h3 class='govuk-heading-m'>Vocabulary for this learning objective</h3>
+
+		<p class="govuk-body">Pupils should know the words:</p>
+			
+      <ul class="govuk-list govuk-list--bullet">
+        <li>cone</li>
+        <li>vent</li>
+        <li>magma chamber</li>
+        <li>dome</li>
+        <li>shield</li>
+        <li>strato</li>								
+      </ul>
+
+
+
+<h3 class='govuk-heading-m'>Misconceptions to address</h3>
+
+
+		<p class="govuk-body">The following misconceptions should be addressed:</p>
+			
+      <ul class="govuk-list govuk-list--bullet">
+        <li>all volcanoes erupt violently (this misconception arises from media coverage which is biased by location and death tolls)</li>
+        <li>if a volcano doesn’t erupt for a hundred years, it’s extinct (in fact, the volcano is probably just dormant)</li>
+        <li>volcanoes only form on land, not under water (actually, there are numerous oceanic fault lines with volcanoes forming along these without breaking the surface of the water)</li>
+        <li>magma comes from deep within the Earth’s mantle (this comes from textbooks’ saying that the magma is ‘deep’ down - in reality, virtually all magma originates in the upper portion of the mantle and crust because of plate friction)</li>					
+      </ul>
+
+
+<h3 class='govuk-heading-m'>Building on previous knowledge</h3>
+
+		<p class="govuk-body"><strong>Vocabulary</p>
+
+		<p class="govuk-body">Pupils should already know:</p>
+			
+      <ul class="govuk-list govuk-list--bullet">
+        <li>lava: red-hot liquid rock</li>
+        <li>volcano: a mountain that erupts, or has erupted</li>
+        <li>volcanic eruption: an explosion or outpouring of lava, rock or as from a volcano</li>							
+      </ul>
+
+
+<h3 class='govuk-heading-m'>Lesson Contents</h3>
+
+<p class="govuk-body">This lesson includes 6 resources. If you want to change these resources, you can browse for alternatives. </p>
+
+
+
+	<div class="govuk-grid-column-full-width">
+		{% from "table/macro.njk" import govukTable %}
+		{{ govukTable({
+		  caption: "",
+		  firstCellIsHeader: true,
+		  head: [
+		    {
+		      text: "Lesson stage"
+		    },
+		    {
+		      text: "Description"
+		    },
+		    {
+		      text: "Thumbnail"
+		    },
+		    {
+		      text: "Time"
+		    },
+		    {
+		      text: ""
+		    }
+		  ],
+		  rows: [
+		    [
+		      {
+		       text: "Starter"
+		      },
+		      {
+		        text: "Etna erupting"
+		      },
+		      {
+		        html: "<img src='/public/images/etna.jpg' style='width:100px' alt=''>"
+		      },
+		      {
+		        text: "5 min"
+		      },
+		      {
+		        html: "<a href='/unit/lesson-grid'>Change</a>"
+		      },
+		      {
+		        text: ""
+		      },
+		      {
+
+		      }
+		    ],
+		    [
+		      {
+		        text: "Activity - pair reading"
+		      },
+		      {
+		        text: "Active, dormant and extinct volcanoes"
+		      },
+		      {
+		        html: "<img src='/public/images/active-dormant-extinct.jpg' style='width:100px' alt=''>"
+		      },
+		      {
+		        text: "10 min"
+		      },
+		      {
+		        html: "<a href='/unit/lesson-grid'>Change</a>"
+		      },
+		      {
+		        text: ""
+		      }
+		    ],
+		    [
+		      {
+		        text: "Activity - worksheet"
+		      },
+		      {
+		        text: "Shield, dome and strato volcanoes"
+		      },
+		      {
+		        html: "<img src='/public/images/shield-strato-dome.jpg' style='width:100px' alt=''>"
+		      },
+		      {
+		        text: "5 min"
+		      },
+		      {
+		        html: "<a href='/unit/lesson-grid'>Change</a>"
+		      },
+		      {
+		        text: ""
+		      }
+		    ],
+		    [
+		      {
+		        text: "Activity - practical"
+		      },
+		      {
+		        text: "How to distinguish volcanoes"
+		      },
+		      {
+		        html: "<img src='/public/images/types-of-volcano.jpg' style='width:100px' alt=''>"
+		      },
+		      {
+		        text: "10 min"
+		      },
+		      {
+		        html: "<a href='/unit/lesson-grid'>Change</a>"
+		      },
+		      {
+		        text: ""
+		      }
+		    ],
+		    [
+		      {
+		        text: "Activity - group reading"
+		      },
+		      {
+		        text: "Unlabelled volcano cross-section diagram"
+		      },
+		      {
+		        html: "<img src='/public/images/02-Volcano-unlabelled.jpg' style='width:100px' alt=''>"
+		      },
+		      {
+		        text: "15 min"
+		      },
+		      {
+		        html: "<a href='/unit/lesson-grid'>Change</a>"
+		      },
+		      {
+		        text: ""
+		      }
+		    ],
+		    [
+		      {
+		        text: "Assessment - whole class"
+		      },
+		      {
+		        text: "Test"
+		      },
+		      {
+		        html: "<img src='/public/images/04-exit-ticket.jpg' style='width:100px' alt=''>"
+		      },
+		      {
+		        text: "15 min"
+		      },
+		      {
+		        html: "<a href='/unit/lesson-grid'>Change</a>"
+		      },
+		      {
+		        text: ""
+		      }
+		    ]
+		  ]
+		}) }}
+
+</div>
+
+<h3 class='govuk-heading-m'>Lesson guidance</h3>
+
+
+<p class="govuk-body">You can download <a class="govuk-link" href="">Lesson guidance</a> to understand more about how to teach this lesson effectively. </p>
+
+
+<br>
+
+
+<button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+  Download presentation
+</button>
+
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Download pupil resources to print
+</button>
+
+
+
+
+{% endblock %}
+
+
+
+
