@@ -1,0 +1,433 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/dfe-sign-in/username",
+    serviceName: "Curriculum materials",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
+      {
+        href: "#",
+        text: "Year 3"
+      },
+      {
+        href: "#",
+        text: "Year 4"
+      },
+      {
+        href: "#",
+        text: "Year 5"
+      },
+      {
+        href: "/dashboard",
+        text: "Year 6",
+        active: true
+      },
+      {
+        href: "/dfe-sign-in/username",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Plan lesson 4 - Curriculum materials alpha - Department for Education
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+{% from "input/macro.njk" import govukInput %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Geography</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">History</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Science</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">All subjects</a>
+    </li>
+  </ul>
+</nav>
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 6",
+    href: "/dashboard"
+  },
+  {
+    text: "Geography",
+    href: "/unit/year"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 1"
+  }
+  ]
+}) }}
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+      <h1 class="govuk-heading-xl">
+Lesson contents: types of volcano
+</h1>
+
+<p class="govuk-body">There are 6 parts to this lesson. If you'd like to make any changes, you can browse for and choose from alternative resources.</p>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<h1 class="govuk-heading-m">Starter</h1>
+
+<div class="govuk-grid-column-full-width">
+    <div class="grid">
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+			      video 1min 30s
+			    </strong>
+            <img src="/public/images/etna.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Etna erupts</a></h3>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="volcano1">
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="volcano1" name="volcano1" type="checkbox" value="volcano1" checked>
+                                <label class="govuk-label govuk-checkboxes__label" for="volcano1">
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+			      video 1min 
+			    </strong>
+            <img src="/public/images/flow.jpg" style="width:100%" alt="">
+            <h3 class='govuk-heading-s'><a href="preview">Lava flow from vent on Kilaeua</a></h3>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="volcano2">
+                    <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="volcano2" name="volcano2" type="checkbox" value="volcano2">
+                            <label class="govuk-label govuk-checkboxes__label" for="volcano2">
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview"></a></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h1 class="govuk-heading-m">Activity - pair reading</h1>
+    <div class="grid">
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image & text
+		    </strong>
+            <img src="/public/images/dormant.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Active, dormant and extinct volcanoes</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano4" name="volcano4" type="checkbox" value="volcano4" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano4">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image & text
+		    </strong>
+            <img src="/public/images/active.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Active volcano</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano5" name="volcano5" type="checkbox" value="volcano5">
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano5">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image & text
+		    </strong>
+            <img src="/public/images/extinct.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Extinct volcano</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano4" name="volcano6" type="checkbox" value="volcano6">
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano6">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h1 class="govuk-heading-m">Activity - worksheet</h1>
+
+    <div class="grid">
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image & text
+		    </strong>
+            <img src="/public/images/shield-strato-dome.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Shield, dome and strato volcanoes</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano8" name="volcano8" type="checkbox" value="volcano8" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano8">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image & text
+		    </strong>
+            <img src="/public/images/06-volcanocross.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Volcano types crossword</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano7" name="volcano7" type="checkbox" value="volcano7">
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano7">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image & text
+		    </strong>
+            <img src="/public/images/types-of-volcano.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">How to distinguish volcanoes</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano9" name="volcano9" type="checkbox" value="volcano9">
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano9">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h1 class="govuk-heading-m">Activity - practical</h1>
+
+    <div class="grid">
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image & instructions
+		    </strong>
+            <img src="/public/images/model.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Make a volcano</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano9" name="volcano9" type="checkbox" value="volcano9" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano9">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image & text
+		    </strong>
+            <img src="/public/images/feature.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Learn volcano features</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano8" name="volcano8" type="checkbox" value="volcano8">
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano8">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image & instructions
+		    </strong>
+            <img src="/public/images/chemistry.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Volcano chemistry set</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano9" name="volcano9" type="checkbox" value="volcano9">
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano9">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h1 class="govuk-heading-m">Activity - group reading</h1>
+
+    <div class="grid">
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image
+		    </strong>
+            <img src="/public/images/unlabelled2.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Unlabelled volcano diagram</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano3" name="volcano3" type="checkbox" value="volcano3" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano3">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image 
+		    </strong>
+            <img src="/public/images/cross-section.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Volcano illustrated cross section</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano8" name="volcano8" type="checkbox" value="volcano8">
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano8">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      image 
+		    </strong>
+            <img src="/public/images/colour-in.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Volcano label activity</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano9" name="volcano9" type="checkbox" value="volcano9">
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano9">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <h1 class="govuk-heading-m">Activity - whole class</h1>
+
+    <div class="grid">
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      text
+		    </strong>
+            <img src="/public/images/exam.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Volcano chemistry exam</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano5" name="volcano5" type="checkbox" value="volcano5" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano5">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      text
+		    </strong>
+            <img src="/public/images/exam2.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Volcano labelling exam</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano5" name="volcano5" type="checkbox" value="volcano5">
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano5">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+		      text
+		    </strong>
+            <img src="/public/images/exam3.jpg" style="width:100%" alt="">
+            <div class="card-wrapper">
+                <h3 class='govuk-heading-s'><a href="preview">Volcano cross section exam</a></h3>
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="volcano5" name="volcano5" type="checkbox" value="volcano5">
+                    <label class="govuk-label govuk-checkboxes__label" for="volcano5">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<br>
+
+
+<a class="govuk-button" href="/unit/lesson-outline">Save selected content to lesson</a>
+
+
+
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Download selected content to print
+</button>
+
+<br>
+
+
+{% endblock %}
+
+
+
+
