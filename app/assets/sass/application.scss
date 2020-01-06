@@ -471,3 +471,17 @@ $govuk-global-styles: true;
 .blue {
 	border: 1px dotted blue;
 }
+
+.key-stage-subject-list {
+  .govuk-summary-list__row.summary-list__row--heading {
+    dt.govuk-summary-list__key, dd.govuk-summary-list__value {
+      font-weight: bold;
+      border-bottom: 1px solid #bfc1c3;
+    }
+  }
+  .govuk-summary-list__row {
+    dt.govuk-summary-list__key, dd.govuk-summary-list__value {
+      font-weight: normal;
+    }
+  }
+}
