@@ -487,12 +487,20 @@ $govuk-global-styles: true;
 }
 
 .unit-card-heading {
-  .govuk-grid-column-one-quarter {
+  padding-top: 5px;
+
+  .unit-card-heading-number {
+    @extend .govuk-grid-column-one-quarter;
+    width: 20%;
+    padding-right: 0;
     h3.govuk-heading-xl {
       margin-bottom: 0;
     }
   }
-  .govuk-grid-column-three-quarters {
+
+  .unit-card-heading-name {
+    @extend .govuk-grid-column-one-quarter;
+    width: 80%;
     padding-left: 0;
     h3.govuk-heading-m {
       padding-left: 0;
