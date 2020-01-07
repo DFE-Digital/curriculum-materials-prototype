@@ -7,31 +7,6 @@
     serviceUrl: "#",
     containerClasses: "govuk-width-container",
     navigation: [
-    {
-      href: "#",
-      text: "All Key Stage 2"
-    },
-      {
-        href: "#",
-        text: "Year 3"
-      },
-      {
-        href: "#",
-        text: "Year 4"
-      },
-      {
-        href: "#",
-        text: "Year 5"
-      },
-      {
-        href: "#",
-        text: "Year 6",
-        active: true
-      },
-      {
-        href: "/dfe-sign-in/username",
-        text: "Sign out"
-      }
     ]
   }) }}
 {% endblock %}
@@ -41,22 +16,6 @@
 {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
 {% from "button/macro.njk" import govukButton %}
 {% block beforeContent %}
-<nav class="app-navigation govuk-clearfix">
-  <ul class="app-navigation__list govuk-width-container">
-    <li>
-      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Geography</a>
-    </li>
-    <li>
-      <a class="govuk-link" href="/dashboard" data-topnav="Styles">History</a>
-    </li>
-    <li>
-      <a class="govuk-link" href="/dashboard" data-topnav="Components">Science</a>
-    </li>
-    <li>
-      <a class="govuk-link" href="/dashboard" data-topnav="Components">All subjects</a>
-    </li>
-  </ul>
-</nav>
 {% endblock %}
 {% block content %}
 <div class="govuk-grid-row">
