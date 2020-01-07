@@ -29,7 +29,7 @@ $govuk-global-styles: true;
     text-decoration: none;
   }
   background-color: #f8f8f8;
-  border-top: 4px solid #005ea5;
+  border-top: 10px solid #f499be;
   position: relative;
   margin-top: 20px;
   overflow: hidden;
@@ -487,7 +487,7 @@ $govuk-global-styles: true;
 }
 
 .unit-card-heading {
-  padding-top: 5px;
+  padding-top: 10px;
 
   .unit-card-heading-number {
     @extend .govuk-grid-column-one-quarter;
