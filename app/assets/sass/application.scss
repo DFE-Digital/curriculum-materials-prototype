@@ -485,3 +485,17 @@ $govuk-global-styles: true;
     }
   }
 }
+
+.unit-card-heading {
+  .govuk-grid-column-one-quarter {
+    h3.govuk-heading-xl {
+      margin-bottom: 0;
+    }
+  }
+  .govuk-grid-column-three-quarters {
+    padding-left: 0;
+    h3.govuk-heading-m {
+      padding-left: 0;
+    }
+  }
+}
