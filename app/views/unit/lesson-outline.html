@@ -49,6 +49,8 @@
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
 {% block beforeContent %}
 {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+<!--
 <nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list govuk-width-container">
 
@@ -69,6 +71,8 @@
     </li>
   </ul>
 </nav>
+-->
+
 {{ govukBreadcrumbs({
   items: [
   {
@@ -354,9 +358,20 @@
 
 <p><img src='/public/images/icon-download.png' style='width:30px' alt=''><a class="govuk-link" href="">Download pupil resources</a></p> 
 
-<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Plan next lesson
-</button>
+
+<hr class="govuk-section-break govuk-section-break--visible">
+<br>
+<br>
+
+<h3 class='govuk-heading-m'>Plan the next lesson</h3>
+
+
+<p class="govuk-body">Once you’ve downloaded this lesson plan and all its resources, you can continue to plan the next lesson. </p>
+
+
+<a href="/unit" button class="govuk-button govuk-button" data-module="govuk-button">
+  Plan the next lesson
+</button></a>
 
 
 
