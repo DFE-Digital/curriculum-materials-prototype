@@ -46,10 +46,10 @@
 {% from "tabs/macro.njk" import govukTabs %}
 {% from "table/macro.njk" import govukTable %}
 {% from "input/macro.njk" import govukInput %}
-{% from "checkboxes/macro.njk" import govukCheckboxes %}
-{% block beforeContent %}
-{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+{% from "radios/macro.njk" import govukRadios %}
 
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+{% block beforeContent %}
 <!--
 <nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list govuk-width-container">
@@ -118,10 +118,10 @@ Lesson contents: types of volcano
 								<p>A visual exercise in which pupils watch a video of Mount Kilauea, Hawaii erupting in 2019</p>
                 <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" aria-describedby="volcano1">
-                        <div class="govuk-checkboxes">
-                            <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="volcano1" name="volcano1" type="checkbox" value="volcano1" checked>
-                                <label class="govuk-label govuk-checkboxes__label" for="volcano1">
+                        <div class="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="volcano1" name="volcano1" type="radio" value="volcano1" checked>
+                                <label class="govuk-label govuk-radios__label" for="volcano1">
                                 </label>
                             </div>
                         </div>
@@ -136,13 +136,13 @@ Lesson contents: types of volcano
 			    </strong>
             <img src="/public/images/flow.jpg" style="width:100%" alt="">
             <h3 class='govuk-heading-s'><a href="preview">Lava flow from vent on Kilaeua</a></h3>
-						<p>text.</p>
+						<p>A visual exercise in which pupils watch a video of Mount Kilauea and note what they notice about the vent. </p>
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="volcano2">
-                    <div class="govuk-checkboxes">
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="volcano2" name="volcano2" type="checkbox" value="volcano2">
-                            <label class="govuk-label govuk-checkboxes__label" for="volcano2">
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="volcano2" name="volcano1" type="radio" value="volcano2">
+                            <label class="govuk-label govuk-radios__label" for="volcano2">
                             </label>
                         </div>
                     </div>
@@ -170,9 +170,9 @@ Lesson contents: types of volcano
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Active, dormant and extinct volcanoes</a></h3>
 								<p>A worksheet explaining the differences between active, dormant, and extinct volcanoes.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano4" name="volcano4" type="checkbox" value="volcano4" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano4">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano3" name="pair" type="radio" value="volcano3" checked>
+                    <label class="govuk-label govuk-radios__label" for="volcano3">
                     </label>
                 </div>
             </div>
@@ -185,10 +185,10 @@ Lesson contents: types of volcano
             <img src="/public/images/active.jpg" style="width:100%" alt="">
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Active volcano</a></h3>
-								<p>text.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano5" name="volcano5" type="checkbox" value="volcano5">
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano5">
+								<p>A worksheet to enable pupils to determine and understand what defines an active volcano. </p>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano4" name="pair" type="radio" value="volcano4">
+                    <label class="govuk-label govuk-radios__label" for="volcano4">
                     </label>
                 </div>
             </div>
@@ -201,10 +201,10 @@ Lesson contents: types of volcano
             <img src="/public/images/extinct.jpg" style="width:100%" alt="">
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Extinct volcano</a></h3>
-								<p>text.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano4" name="volcano6" type="checkbox" value="volcano6">
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano6">
+								<p>A worksheet to enable pupils to determine and understand what defines an extinct volcano. </p>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano5" name="pair" type="radio" value="volcano5">
+                    <label class="govuk-label govuk-radios__label" for="volcano5">
                     </label>
                 </div>
             </div>
@@ -225,9 +225,9 @@ Lesson contents: types of volcano
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Shield, dome and strato volcanoes</a></h3>
 								<p>A worksheet task to distinguish between shield, dome, and strato volcanoes.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano8" name="volcano8" type="checkbox" value="volcano8" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano8">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano6" name="worksheet" type="radio" value="volcano6" checked>
+                    <label class="govuk-label govuk-radios__label" for="volcano6">
                     </label>
                 </div>
             </div>
@@ -240,10 +240,10 @@ Lesson contents: types of volcano
             <img src="/public/images/06-volcanocross.jpg" style="width:100%" alt="">
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Volcano types crossword</a></h3>
-								<p>text.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano7" name="volcano7" type="checkbox" value="volcano7">
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano7">
+								<p>A crossword to cement the vocabulary pupils should have acquired relating to the different types of volcanoes. </p>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano7" name="worksheet" type="radio" value="volcano7">
+                    <label class="govuk-label govuk-radios__label" for="volcano7">
                     </label>
                 </div>
             </div>
@@ -256,10 +256,10 @@ Lesson contents: types of volcano
             <img src="/public/images/types-of-volcano.jpg" style="width:100%" alt="">
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">How to distinguish volcanoes</a></h3>
-								<p>text.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano9" name="volcano9" type="checkbox" value="volcano9">
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano9">
+								<p>A diagram to be annotated by pupils with their knowledge of different volcano types.</p>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano8" name="worksheet" type="radio" value="volcano8">
+                    <label class="govuk-label govuk-radios__label" for="volcano8">
                     </label>
                 </div>
             </div>
@@ -279,9 +279,9 @@ Lesson contents: types of volcano
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Make a volcano</a></h3>
 								<p>A practical exercise in which pupils work in groups, using a chemistry set, to create a model volcano.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano9" name="volcano9" type="checkbox" value="volcano9" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano9">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano9" name="practical" type="radio" value="volcano9" checked>
+                    <label class="govuk-label govuk-radios__label" for="volcano9">
                     </label>
                 </div>
             </div>
@@ -294,10 +294,10 @@ Lesson contents: types of volcano
             <img src="/public/images/feature.jpg" style="width:100%" alt="">
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Learn volcano features</a></h3>
-								<p>text.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano8" name="volcano8" type="checkbox" value="volcano8">
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano8">
+								<p>A practical exercise in which pupils work in groups to create an annotated poster of a volcano. </p>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano10" name="practical" type="radio" value="volcano10">
+                    <label class="govuk-label govuk-radios__label" for="volcano10">
                     </label>
                 </div>
             </div>
@@ -310,10 +310,10 @@ Lesson contents: types of volcano
             <img src="/public/images/chemistry.jpg" style="width:100%" alt="">
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Volcano chemistry set</a></h3>
-								<p>text.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano9" name="volcano9" type="checkbox" value="volcano9">
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano9">
+								<p>A practical exercise in which pupils work in groups to label a diagram of a volcano chemistry set.</p>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano11" name="practical" type="radio" value="volcano11">
+                    <label class="govuk-label govuk-radios__label" for="volcano11">
                     </label>
                 </div>
             </div>
@@ -334,9 +334,9 @@ Lesson contents: types of volcano
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Unlabelled volcano diagram</a></h3>
 								<p>A reading exercise in which pupils work in groups to condense their knowledge of volcano features.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano3" name="volcano3" type="checkbox" value="volcano3" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano3">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano12" name="group" type="radio" value="volcano12" checked>
+                    <label class="govuk-label govuk-radios__label" for="volcano12">
                     </label>
                 </div>
             </div>
@@ -349,10 +349,10 @@ Lesson contents: types of volcano
             <img src="/public/images/cross-section.jpg" style="width:100%" alt="">
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Volcano illustrated cross section</a></h3>
-								<p>text.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano8" name="volcano8" type="checkbox" value="volcano8">
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano8">
+								<p>A reading exercise in which pupils work in groups to test each other’s knowledge of volcano types.</p>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano13" name="group" type="radio" value="volcano13">
+                    <label class="govuk-label govuk-radios__label" for="volcano13">
                     </label>
                 </div>
             </div>
@@ -365,10 +365,10 @@ Lesson contents: types of volcano
             <img src="/public/images/colour-in.jpg" style="width:100%" alt="">
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Volcano label activity</a></h3>
-								<p>text.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano9" name="volcano9" type="checkbox" value="volcano9">
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano9">
+								<p>A reading exercise in which pupils work in groups to create a diagram of a designated volcano type.</p>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano14" name="group" type="radio" value="volcano14">
+                    <label class="govuk-label govuk-radios__label" for="volcano14">
                     </label>
                 </div>
             </div>
@@ -388,9 +388,9 @@ Lesson contents: types of volcano
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Volcano chemistry exam</a></h3>
 								<p>An assessment to test whole-class knowledge of the different types of volcanoes.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano5" name="volcano5" type="checkbox" value="volcano5" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano5">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano15" name="class" type="radio" value="volcano15" checked>
+                    <label class="govuk-label govuk-radios__label" for="volcano15">
                     </label>
                 </div>
             </div>
@@ -403,10 +403,10 @@ Lesson contents: types of volcano
             <img src="/public/images/exam2.jpg" style="width:100%" alt="">
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Volcano labelling exam</a></h3>
-								<p>text.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano5" name="volcano5" type="checkbox" value="volcano5">
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano5">
+								<p>An assessment to test whole-class knowledge of shield, dome, and strato volcanoes.</p>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano16" name="class" type="radio" value="volcano16">
+                    <label class="govuk-label govuk-radios__label" for="volcano16">
                     </label>
                 </div>
             </div>
@@ -419,10 +419,10 @@ Lesson contents: types of volcano
             <img src="/public/images/exam3.jpg" style="width:100%" alt="">
             <div class="card-wrapper">
                 <h3 class='govuk-heading-s'><a href="preview">Volcano cross section exam</a></h3>
-								<p>text.</p>
-                <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="volcano5" name="volcano5" type="checkbox" value="volcano5">
-                    <label class="govuk-label govuk-checkboxes__label" for="volcano5">
+								<p>An assessment to test pupils’ vocabulary on the different types of volcanoes and their features. </p>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="volcano17" name="class" type="radio" value="volcano17">
+                    <label class="govuk-label govuk-radios__label" for="volcano17">
                     </label>
                 </div>
             </div>
