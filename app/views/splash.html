@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+  <a class="govuk-back-link" href="#" onclick="history.back(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<form action="/candidate-search/search" method="post" class="form">
+			<div class="govuk-se-masthead">
+				<h1 class="govuk-heading-l">How the service works</h1>
+				<p class="govuk-body">
+				<p>Access your school’s curriculum online is a service for teachers. It enables them to access their school’s curriculum, including all lessons and their accompanying resources.
+
+				<p>The Department for Education has collaborated with educational experts and cultural institutions to develop a knowledge-rich curriculum and service that aims to enhance the quality of learning in schools and reduce teacher workloads.</p>
+
+
+
+
+				<a href="dfe-sign-in/curriculum-sign" class="govuk-button govuk-se-button--start">
+					Continue
+				</a>
+				<br>
+				<br>
+				<br>
+			
+				<img src="/public/images/logos.png" style='width:322px' alt="dfe and cabinet office logos">
+
+				
+			</div>
+	</div>
+</div>
+
+
+{% endblock %}
