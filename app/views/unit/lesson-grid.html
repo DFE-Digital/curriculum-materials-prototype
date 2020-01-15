@@ -104,353 +104,111 @@ Lesson contents: types of volcano
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-<h1 class="govuk-heading-m" id="activity1">Starter</h1>
-<p>You can choose one resource to replace the suggested one.</p>
+
+{% macro slide(
+	length,
+	image,
+	title,
+	synopsis,
+	rowNumber,
+	optionNumber,
+	checked=false
+	) %}
+	<div class="slide">
+		<header>
+			<span class="govuk-tag govuk-!-margin-bottom-1">
+				{{ length }}
+			</span>
+		</header>
+
+		<section>
+			<img src="/public/images/{{ image }}" style="width:100%" alt="">
+		</section>
+
+		<section class="card-wrapper">
+			<h3 class='govuk-heading-s'><a href="preview">{{ title }}</a></h3>
+			<p>{{ synopsis }}</p>
+		</section>
+
+		<footer>
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="volcano1">
+					<div class="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="{{ rowNumber }}_{{ optionNumber }}" name="{{ rowNumber }}" type="radio" value="{{ optionNumber }}" {% if checked %}checked{% endif %}>
+							<label class="govuk-label govuk-radios__label" for="{{ rowNumber }}_{{ optionNumber }}">
+							</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</footer>
+	</div>
+{% endmacro %}
+
+
 <div class="govuk-grid-column-full-width">
+
+	<h1 class="govuk-heading-m" id="activity1">Starter</h1>
+	<p>You can choose one resource to replace the suggested one.</p>
+
     <div class="grid">
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-			      video 1min 30s
-			    </strong>
-            <img src="/public/images/etna.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Etna erupts</a></h3>
-								<p>A visual exercise in which pupils watch a video of Mount Kilauea, Hawaii erupting in 2019</p>
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="volcano1">
-                        <div class="govuk-radios">
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="volcano1" name="volcano1" type="radio" value="volcano1" checked>
-                                <label class="govuk-label govuk-radios__label" for="volcano1">
-                                </label>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
-        </div>
+		{{ slide('video 1min 30s', 'etna.jpg', 'Etna Erupts', 'A visual exercise in which pupils watch a video of Mount Kilauea, Hawaii erupting in 2019', 1, 1, true) }}
+		{{ slide('video 1min', 'flow.jpg', 'Lava flow from vent on Kilaeua', 'A visual exercise in which pupils watch a video of Mount Kilauea and note what they notice about the vent. ', 1, 2) }}
+	</div>
 
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-			      video 1min 
-			    </strong>
-            <img src="/public/images/flow.jpg" style="width:100%" alt="">
-            <h3 class='govuk-heading-s'><a href="preview">Lava flow from vent on Kilaeua</a></h3>
-						<p>A visual exercise in which pupils watch a video of Mount Kilauea and note what they notice about the vent. </p>
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="volcano2">
-                    <div class="govuk-radios">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="volcano2" name="volcano1" type="radio" value="volcano2">
-                            <label class="govuk-label govuk-radios__label" for="volcano2">
-                            </label>
-                        </div>
-                    </div>
-                </fieldset>
-            </div>
-        </div>
-
-        <div class="slide">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview"></a></h3>
-            </div>
-        </div>
-
-    </div>
-
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     <h1 class="govuk-heading-m" id="activity2">Pair reading</h1>
-		<p>You can choose one resource to replace the suggested one.</p>
+	<p>You can choose one resource to replace the suggested one.</p>
+
     <div class="grid">
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image & text
-		    </strong>
-            <img src="/public/images/dormant.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Active, dormant and extinct volcanoes</a></h3>
-								<p>A worksheet explaining the differences between active, dormant, and extinct volcanoes.</p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano3" name="pair" type="radio" value="volcano3" checked>
-                    <label class="govuk-label govuk-radios__label" for="volcano3">
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image & text
-		    </strong>
-            <img src="/public/images/active.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Active volcano</a></h3>
-								<p>A worksheet to enable pupils to determine and understand what defines an active volcano. </p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano4" name="pair" type="radio" value="volcano4">
-                    <label class="govuk-label govuk-radios__label" for="volcano4">
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image & text
-		    </strong>
-            <img src="/public/images/extinct.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Extinct volcano</a></h3>
-								<p>A worksheet to enable pupils to determine and understand what defines an extinct volcano. </p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano5" name="pair" type="radio" value="volcano5">
-                    <label class="govuk-label govuk-radios__label" for="volcano5">
-                    </label>
-                </div>
-            </div>
-        </div>
+		{{ slide('image and text', 'dormant.jpg', 'Active, dormant and extinct volcanoes', 'A worksheet explaining the differences between active, dormant, and extinct volcanoes.', 2, 1, true) }}
+		{{ slide('image and text', 'active.jpg', 'Active volcano', 'A worksheet to enable pupils to determine and understand what defines an active volcano.', 2, 2) }}
+		{{ slide('image and text', 'extinct.jpg', 'Extinct volcano', 'A worksheet to enable pupils to determine and understand what defines an extinct volcano.', 2, 3) }}
     </div>
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     <h1 class="govuk-heading-m" id="activity3">Worksheet</h1>
-		<p>You can choose one resource to replace the suggested one.</p>
+	<p>You can choose one resource to replace the suggested one.</p>
 
     <div class="grid">
-
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image & text
-		    </strong>
-            <img src="/public/images/shield-strato-dome.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Shield, dome and strato volcanoes</a></h3>
-								<p>A worksheet task to distinguish between shield, dome, and strato volcanoes.</p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano6" name="worksheet" type="radio" value="volcano6" checked>
-                    <label class="govuk-label govuk-radios__label" for="volcano6">
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image & text
-		    </strong>
-            <img src="/public/images/06-volcanocross.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Volcano types crossword</a></h3>
-								<p>A crossword to cement the vocabulary pupils should have acquired relating to the different types of volcanoes. </p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano7" name="worksheet" type="radio" value="volcano7">
-                    <label class="govuk-label govuk-radios__label" for="volcano7">
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image & text
-		    </strong>
-            <img src="/public/images/types-of-volcano.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">How to distinguish volcanoes</a></h3>
-								<p>A diagram to be annotated by pupils with their knowledge of different volcano types.</p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano8" name="worksheet" type="radio" value="volcano8">
-                    <label class="govuk-label govuk-radios__label" for="volcano8">
-                    </label>
-                </div>
-            </div>
-        </div>
+		{{ slide('image and text', 'shield-strato-dome.jpg', 'Shield, dome and strato volcanoes', 'A worksheet task to distinguish between shield, dome, and strato volcanoes.', 3, 1, true) }}
+		{{ slide('image and text', '06-volcanocross.jpg', 'Volcano types crossword', 'A crossword to cement the vocabulary pupils should have acquired relating to the different types of volcanoes. ', 3, 2) }}
+		{{ slide('image and text', 'types-of-volcano.jpg', 'How to distinguish volcanoes', 'A diagram to be annotated by pupils with their knowledge of different volcano types.', 3, 3) }}
     </div>
 
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     <h1 class="govuk-heading-m" id="activity4">Practical</h1>
-		<p>You can choose one resource to replace the suggested one.</p>
+	<p>You can choose one resource to replace the suggested one.</p>
 
     <div class="grid">
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image & instructions
-		    </strong>
-            <img src="/public/images/model.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Make a volcano</a></h3>
-								<p>A practical exercise in which pupils work in groups, using a chemistry set, to create a model volcano.</p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano9" name="practical" type="radio" value="volcano9" checked>
-                    <label class="govuk-label govuk-radios__label" for="volcano9">
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image & text
-		    </strong>
-            <img src="/public/images/feature.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Learn volcano features</a></h3>
-								<p>A practical exercise in which pupils work in groups to create an annotated poster of a volcano. </p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano10" name="practical" type="radio" value="volcano10">
-                    <label class="govuk-label govuk-radios__label" for="volcano10">
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image & instructions
-		    </strong>
-            <img src="/public/images/chemistry.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Volcano chemistry set</a></h3>
-								<p>A practical exercise in which pupils work in groups to label a diagram of a volcano chemistry set.</p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano11" name="practical" type="radio" value="volcano11">
-                    <label class="govuk-label govuk-radios__label" for="volcano11">
-                    </label>
-                </div>
-            </div>
-        </div>
-
+		{{ slide('image and text', 'model.jpg', 'Make a volcano', 'A practical exercise in which pupils work in groups, using a chemistry set, to create a model volcano.', 4, 1, true) }}
+		{{ slide('image and text', 'feature.jpg', 'Learn volcano features', 'A practical exercise in which pupils work in groups to create an annotated poster of a volcano. ', 4, 2) }}
+		{{ slide('image and text', 'chemistry.jpg', 'Volcano chemistry set', 'A practical exercise in which pupils work in groups to label a diagram of a volcano chemistry set.', 4, 3) }}
     </div>
-
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     <h1 class="govuk-heading-m" id="activity5">Group reading</h1>
-		<p>You can choose one resource to replace the suggested one.</p>
+	<p>You can choose one resource to replace the suggested one.</p>
 
     <div class="grid">
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image
-		    </strong>
-            <img src="/public/images/unlabelled2.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Unlabelled volcano diagram</a></h3>
-								<p>A reading exercise in which pupils work in groups to condense their knowledge of volcano features.</p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano12" name="group" type="radio" value="volcano12" checked>
-                    <label class="govuk-label govuk-radios__label" for="volcano12">
-                    </label>
-                </div>
-            </div>
-        </div>
+		{{ slide('image', 'unlabelled2.jpg', 'Unlabelled volcano diagram', 'A reading exercise in which pupils work in groups to condense their knowledge of volcano features.', 5, 1, true) }}
+		{{ slide('image', 'cross-section.jpg', 'Volcano illustrated cross section', 'A reading exercise in which pupils work in groups to test each other’s knowledge of volcano types.', 5, 2) }}
+		{{ slide('image', 'colour-in.jpg', 'Volcano label activity', 'A reading exercise in which pupils work in groups to create a diagram of a designated volcano type.', 5, 3) }}
+	</div>
 
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image 
-		    </strong>
-            <img src="/public/images/cross-section.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Volcano illustrated cross section</a></h3>
-								<p>A reading exercise in which pupils work in groups to test each other’s knowledge of volcano types.</p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano13" name="group" type="radio" value="volcano13">
-                    <label class="govuk-label govuk-radios__label" for="volcano13">
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      image 
-		    </strong>
-            <img src="/public/images/colour-in.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Volcano label activity</a></h3>
-								<p>A reading exercise in which pupils work in groups to create a diagram of a designated volcano type.</p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano14" name="group" type="radio" value="volcano14">
-                    <label class="govuk-label govuk-radios__label" for="volcano14">
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     <h1 class="govuk-heading-m" id="activity6">Whole class</h1>
-		<p>You can choose one resource to replace the suggested one.</p>
+	<p>You can choose one resource to replace the suggested one.</p>
 
     <div class="grid">
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      text
-		    </strong>
-            <img src="/public/images/exam.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Volcano chemistry exam</a></h3>
-								<p>An assessment to test whole-class knowledge of the different types of volcanoes.</p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano15" name="class" type="radio" value="volcano15" checked>
-                    <label class="govuk-label govuk-radios__label" for="volcano15">
-                    </label>
-                </div>
-            </div>
-        </div>
+		{{ slide('image', 'unlabelled2.jpg', 'Volcano chemistry exam', 'An assessment to test whole-class knowledge of the different types of volcanoes.', 6, 1, true) }}
+		{{ slide('image', 'exam2.jpg', 'Volcano labelling exam', 'An assessment to test whole-class knowledge of shield, dome, and strato volcanoes.', 6, 2) }}
+		{{ slide('image', 'exam3.jpg', 'Volcano cross section exam', 'An assessment to test pupils’ vocabulary on the different types of volcanoes and their features. ', 6, 3) }}
+	</div>
 
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      text
-		    </strong>
-            <img src="/public/images/exam2.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Volcano labelling exam</a></h3>
-								<p>An assessment to test whole-class knowledge of shield, dome, and strato volcanoes.</p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano16" name="class" type="radio" value="volcano16">
-                    <label class="govuk-label govuk-radios__label" for="volcano16">
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <strong class="govuk-tag govuk-phase-banner__content__tag">
-		      text
-		    </strong>
-            <img src="/public/images/exam3.jpg" style="width:100%" alt="">
-            <div class="card-wrapper">
-                <h3 class='govuk-heading-s'><a href="preview">Volcano cross section exam</a></h3>
-								<p>An assessment to test pupils’ vocabulary on the different types of volcanoes and their features. </p>
-                <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="volcano17" name="class" type="radio" value="volcano17">
-                    <label class="govuk-label govuk-radios__label" for="volcano17">
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-<br>
-
+</div>
 
 <a class="govuk-button" href="/unit/lesson-outline#lesson">Save selected content to lesson</a>
 
 
-
-
-
-<br>
-
 {% endblock %}
-
-
-
-
