@@ -567,3 +567,7 @@ h3.lesson-number-small {
   background-repeat: no-repeat;
   background-position: 100% 50%;
 }
+
+.highlighted {
+  background-color: lighten(govuk-colour('yellow'), 25);
+}
