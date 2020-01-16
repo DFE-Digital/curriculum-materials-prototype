@@ -153,7 +153,38 @@ Lesson contents: types of volcano
 	<p>You can choose one resource to replace the suggested one.</p>
 
     <div class="grid">
-		{{ slide('video 1min 30s', 'etna.jpg', 'Etna Erupts', 'A visual exercise in which pupils watch a video of Mount Kilauea, Hawaii erupting in 2019', 1, 1, true) }}
+		<div class="slide">
+			<header>
+				<span class="govuk-tag govuk-!-margin-bottom-1">
+					9 hours
+				</span>
+			</header>
+
+			<section>
+				<img src="/public/images/etna.jpg" style="width:100%" alt="">
+			</section>
+
+			<section class="card-wrapper">
+				<h3 class='govuk-heading-s'><a href="preview">Paul's special slide</a></h3>
+				<p>Edit this</p>
+			</section>
+
+			<footer>
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset" aria-describedby="volcano1">
+						<div class="govuk-radios">
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="1_0" name="1" type="radio" value="0" checked>
+								<label class="govuk-label govuk-radios__label" for="1_0">
+								</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</footer>
+		</div>
+
+		{{ slide('video 1min 30s', 'etna.jpg', 'Etna Erupts', 'A visual exercise in which pupils watch a video of Mount Kilauea, Hawaii erupting in 2019', 1, 1) }}
 		{{ slide('video 1min', 'flow.jpg', 'Lava flow from vent on Kilaeua', 'A visual exercise in which pupils watch a video of Mount Kilauea and note what they notice about the vent. ', 1, 2) }}
 	</div>
 
