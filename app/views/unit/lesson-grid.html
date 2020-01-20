@@ -110,8 +110,6 @@ Lesson contents: types of volcano
 	image,
 	title,
 	synopsis,
-	synopsis_2,
-	synopsis_3,
 	rowNumber,
 	optionNumber,
 	checked=false
@@ -131,9 +129,9 @@ Lesson contents: types of volcano
 
 			<section class="card-wrapper">
 				<h3 class='govuk-heading-s'>{{ title }}</h3>
-				<p>{{ synopsis }}</p>
-				<p>Pupils apply their prior knowledge of the different types of volcanoes, focussing on the effects of volcanic eruptions. </p>
-				<p>Ask pupils to watch the video carefully, noting down as many words as they can about what they observe. Remind them of their last lesson to help them. Follow up with a discussion to check answers and test vocabulary.</p>
+				{% for item in synopsis %}	
+					<p>{{item}}</p>
+				{% endfor %}
 			  <p><a class="govuk-link" href="#">Preview teacher resources</a></p>
 				<p><a class="govuk-link" href="#">Preview pupil resources</a></p>
 				<p><a class="govuk-link" href="#">Preview video</a></p>
@@ -200,8 +198,19 @@ Lesson contents: types of volcano
 			</footer>
 		</div>
 
-		{{ slide('pair reading - 5 minutes', 'icon-pair-reading.png', 'Description', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada fames ac turpis egestas integer eget aliquet nibh. Nibh ipsum consequat nisl vel pretium lectus quam id leo.', 1, 1) }}
-		{{ slide('whole class - 10 minutes', 'icon-whole.png', 'Description', 'Diam sollicitudin tempor id eu nisl nunc. Aliquam vestibulum morbi blandit cursus. Arcu dictum varius duis at consectetur lorem. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Nullam ac tortor vitae purus. ', 1, 2) }}
+		{{ slide(
+			'pair reading - 5 minutes',
+			'icon-pair-reading.png',
+			'Description',
+			[
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+				'Malesuada fames ac turpis egestas integer eget aliquet nibh. Nibh ipsum consequat nisl vel pretium lectus quam id leo.'
+			],
+			1,
+			1)
+		}}
+
+		{{ slide('whole class - 10 minutes', 'icon-whole.png', 'Description', ['Diam sollicitudin tempor id eu nisl nunc. Aliquam vestibulum morbi blandit cursus. Arcu dictum varius duis at consectetur lorem. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Nullam ac tortor vitae purus.'], 1, 2) }}
 	</div>
 
 
@@ -209,11 +218,9 @@ Lesson contents: types of volcano
 	<p>Only one resource is available here. It is pre-selected for you.</p>
 
     <div class="grid">
-		{{ slide('image and text', 'dormant.jpg', 'Active, dormant and extinct volcanoes', 'A worksheet explaining the differences between active, dormant, and extinct volcanoes.', 2, 1, true) }}
-		<!--
-		{{ slide('image and text', 'active.jpg', 'Active volcano', 'A worksheet to enable pupils to determine and understand what defines an active volcano.', 2, 2) }}
-		{{ slide('image and text', 'extinct.jpg', 'Extinct volcano', 'A worksheet to enable pupils to determine and understand what defines an extinct volcano.', 2, 3) }}
-    -->
+		{{ slide('image and text', 'dormant.jpg', 'Active, dormant and extinct volcanoes', ['A worksheet explaining the differences between active, dormant, and extinct volcanoes.'], 2, 1, true) }}
+		{{ slide('image and text', 'active.jpg', 'Active volcano', ['A worksheet to enable pupils to determine and understand what defines an active volcano.'], 2, 2) }}
+		{{ slide('image and text', 'extinct.jpg', 'Extinct volcano', ['A worksheet to enable pupils to determine and understand what defines an extinct volcano.'], 2, 3) }}
 		</div>
 
 
@@ -221,9 +228,9 @@ Lesson contents: types of volcano
 	<p>You can choose one resource to replace the suggested one.</p>
 
     <div class="grid">
-		{{ slide('image and text', 'shield-strato-dome.jpg', 'Shield, dome and strato volcanoes', 'A worksheet task to distinguish between shield, dome, and strato volcanoes.', 3, 1, true) }}
-		{{ slide('image and text', '06-volcanocross.jpg', 'Volcano types crossword', 'A crossword to cement the vocabulary pupils should have acquired relating to the different types of volcanoes. ', 3, 2) }}
-		{{ slide('image and text', 'types-of-volcano.jpg', 'How to distinguish volcanoes', 'A diagram to be annotated by pupils with their knowledge of different volcano types.', 3, 3) }}
+		{{ slide('image and text', 'shield-strato-dome.jpg', 'Shield, dome and strato volcanoes', ['A worksheet task to distinguish between shield, dome, and strato volcanoes.'], 3, 1, true) }}
+		{{ slide('image and text', '06-volcanocross.jpg', 'Volcano types crossword', ['A crossword to cement the vocabulary pupils should have acquired relating to the different types of volcanoes.'], 3, 2) }}
+		{{ slide('image and text', 'types-of-volcano.jpg', 'How to distinguish volcanoes', ['A diagram to be annotated by pupils with their knowledge of different volcano types.'], 3, 3) }}
     </div>
 
 
@@ -231,18 +238,18 @@ Lesson contents: types of volcano
 	<p>You can choose one resource to replace the suggested one.</p>
 
     <div class="grid">
-		{{ slide('image and text', 'model.jpg', 'Make a volcano', 'A practical exercise in which pupils work in groups, using a chemistry set, to create a model volcano.', 4, 1, true) }}
-		{{ slide('image and text', 'feature.jpg', 'Learn volcano features', 'A practical exercise in which pupils work in groups to create an annotated poster of a volcano. ', 4, 2) }}
-		{{ slide('image and text', 'chemistry.jpg', 'Volcano chemistry set', 'A practical exercise in which pupils work in groups to label a diagram of a volcano chemistry set.', 4, 3) }}
+		{{ slide('image and text', 'model.jpg', 'Make a volcano', ['A practical exercise in which pupils work in groups, using a chemistry set, to create a model volcano.'], 4, 1, true) }}
+		{{ slide('image and text', 'feature.jpg', 'Learn volcano features', ['A practical exercise in which pupils work in groups to create an annotated poster of a volcano.'], 4, 2) }}
+		{{ slide('image and text', 'chemistry.jpg', 'Volcano chemistry set', ['A practical exercise in which pupils work in groups to label a diagram of a volcano chemistry set.'], 4, 3) }}
     </div>
 
     <h1 class="govuk-heading-m" id="activity5">Part 5</h1>
 	<p>You can choose one resource to replace the suggested one.</p>
 
     <div class="grid">
-		{{ slide('image', 'unlabelled2.jpg', 'Unlabelled volcano diagram', 'A reading exercise in which pupils work in groups to condense their knowledge of volcano features.', 5, 1, true) }}
-		{{ slide('image', 'cross-section.jpg', 'Volcano illustrated cross section', 'A reading exercise in which pupils work in groups to test each other’s knowledge of volcano types.', 5, 2) }}
-		{{ slide('image', 'colour-in.jpg', 'Volcano label activity', 'A reading exercise in which pupils work in groups to create a diagram of a designated volcano type.', 5, 3) }}
+		{{ slide('image', 'unlabelled2.jpg', 'Unlabelled volcano diagram', ['A reading exercise in which pupils work in groups to condense their knowledge of volcano features.'], 5, 1, true) }}
+		{{ slide('image', 'cross-section.jpg', 'Volcano illustrated cross section', ['A reading exercise in which pupils work in groups to test each other’s knowledge of volcano types.'], 5, 2) }}
+		{{ slide('image', 'colour-in.jpg', 'Volcano label activity', ['A reading exercise in which pupils work in groups to create a diagram of a designated volcano type.'], 5, 3) }}
 	</div>
 
 
@@ -250,11 +257,9 @@ Lesson contents: types of volcano
 	<p>Only one resource is available here. It is pre-selected for you.</p>
 
     <div class="grid">
-		{{ slide('image', 'unlabelled2.jpg', 'Volcano chemistry exam', 'An assessment to test whole-class knowledge of the different types of volcanoes.', 6, 1, true) }}
-		<!--
-		{{ slide('image', 'exam2.jpg', 'Volcano labelling exam', 'An assessment to test whole-class knowledge of shield, dome, and strato volcanoes.', 6, 2) }}
-		{{ slide('image', 'exam3.jpg', 'Volcano cross section exam', 'An assessment to test pupils’ vocabulary on the different types of volcanoes and their features. ', 6, 3) }}
-    -->
+		{{ slide('image', 'unlabelled2.jpg', 'Volcano chemistry exam', ['An assessment to test whole-class knowledge of the different types of volcanoes.'], 6, 1, true) }}
+		{{ slide('image', 'exam2.jpg', 'Volcano labelling exam', ['An assessment to test whole-class knowledge of shield, dome, and strato volcanoes.'], 6, 2) }}
+		{{ slide('image', 'exam3.jpg', 'Volcano cross section exam', ['An assessment to test pupils’ vocabulary on the different types of volcanoes and their features.'], 6, 3) }}
 	</div>
 
 </div>
