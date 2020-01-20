@@ -110,40 +110,51 @@ Lesson contents: types of volcano
 	image,
 	title,
 	synopsis,
+	synopsis_2,
+	synopsis_3,
 	rowNumber,
 	optionNumber,
 	checked=false
 	) %}
-	<div class="slide">
-		<header>
-			<span class="govuk-tag">
-				{{ length }}
-			</span>
-		</header>
 
-		<section>
-			<img src="/public/images/{{ image }}" style="width:100%" alt="">
-		</section>
+	
+		<div class="slide">
+			<header>
+				<span class="govuk-tag govuk-!-margin-bottom-1">
+					{{ length }}
+				</span>
+			</header>
 
-		<section class="card-wrapper">
-			<h3 class='govuk-heading-s'><a href="preview">{{ title }}</a></h3>
-			<p>{{ synopsis }}</p>
-		</section>
+			<section>
+				<img src="/public/images/practical.png" style="width:100%" alt="">
+			</section>
 
-		<footer>
-			<div class="govuk-form-group">
-				<fieldset class="govuk-fieldset" aria-describedby="volcano1">
-					<div class="govuk-radios">
-						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="{{ rowNumber }}_{{ optionNumber }}" name="{{ rowNumber }}" type="radio" value="{{ optionNumber }}" {% if checked %}checked{% endif %}>
-							<label class="govuk-label govuk-radios__label" for="{{ rowNumber }}_{{ optionNumber }}">
-							</label>
+			<section class="card-wrapper">
+				<h3 class='govuk-heading-s'>{{ title }}</h3>
+				<p>{{ synopsis }}</p>
+				<p>Pupils apply their prior knowledge of the different types of volcanoes, focussing on the effects of volcanic eruptions. </p>
+				<p>Ask pupils to watch the video carefully, noting down as many words as they can about what they observe. Remind them of their last lesson to help them. Follow up with a discussion to check answers and test vocabulary.</p>
+			  <p><a class="govuk-link" href="#">Preview teacher resources</a></p>
+				<p><a class="govuk-link" href="#">Preview pupil resources</a></p>
+				<p><a class="govuk-link" href="#">Preview video</a></p>
+			</section>
+
+			<footer>
+				<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset" aria-describedby="volcano1">
+						<div class="govuk-radios">
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="{{ rowNumber }}_{{ optionNumber }}" name="{{ rowNumber }}" type="radio" value="{{ optionNumber }}" {% if checked %}checked{% endif %}>
+								<label class="govuk-label govuk-radios__label" for="{{ rowNumber }}_{{ optionNumber }}">
+								</label>
+							</div>
 						</div>
-					</div>
-				</fieldset>
-			</div>
-		</footer>
-	</div>
+					</fieldset>
+				</div>
+			</footer>
+		</div>
+	
+	
 {% endmacro %}
 
 
