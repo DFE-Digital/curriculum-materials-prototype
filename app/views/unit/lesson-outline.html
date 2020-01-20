@@ -204,6 +204,7 @@ The effects of a volcanic eruption can continue to develop over a series of days
   </div>
 </details>
 
+
 	<div class="govuk-grid-column-full-width">
 		{% from "table/macro.njk" import govukTable %}
 		{{ govukTable({
@@ -217,47 +218,37 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		      text: "Lesson component"
 		    },
 		    {
-		      text: "Description"
-		    },
+		      text: ""
+		    },				
 		    {
-		      text: "Thumbnail"
+		      text: "Description"
 		    },
 		    {
 		      text: "Time"
 		    },
 		    {
-		      text: "Edit"
+		      text: "Alternative component"
 		    }
 		  ],
 		  rows: [
-		    [
+				[
 		      {
 		       html: "<h3 class='lesson-number'>1</h3>"
-		      },				
+		      },						
 		      {
-		       html: "<a href='/unit/lesson-grid#activity1'>Practical</a>"
+		        html: "<a href='/unit/lesson-grid#activity2'>Practical</a>"
 		      },
 		      {
-		        text: "A video of Mount Kilauea, Hawaii (an active, shield volcano) erupting in 2019.
-
-Pupils apply their prior knowledge of the different types of volcanoes, focussing on the effects of volcanic eruptions... Read more
-
- "
+		        html: "<img src='/public/images/thumb-pair-reading.png' style='width:100px' alt=''>"
+		      },					
+		      {
+		        text: "A video of Mount Kilauea, Hawaii (an active, shield volcano) erupting in 2019. Pupils apply their prior knowledge of the different types of volcanoes, focussing on the effects of volcanic eruptions... Read more"
 		      },
 		      {
-		        html: "<img src='/public/images/etna.jpg' style='width:100px' alt=''>"
+		        text: "10 min"
 		      },
 		      {
-		        text: "5 min"
-		      },
-		      {
-		        html: "<a href='/unit/lesson-grid#activity1'>Change resource</a>"
-		      },
-		      {
-		        text: ""
-		      },
-		      {
-
+		        html: "<a href=''>Pair reading</a><br><p><a href=''>Worksheet</a>"
 		      }
 		    ],
 		    [
@@ -268,10 +259,10 @@ Pupils apply their prior knowledge of the different types of volcanoes, focussin
 		        html: "<a href='/unit/lesson-grid#activity2'>Pair reading</a>"
 		      },
 		      {
-		        text: "Both pupils read an activity sheet explaining the differences between active, dormant, and extinct volcanoes. Together they should work to correctly label the images of the different volcanoes presented."
-		      },
+		        html: "<img src='/public/images/thumb-pair-reading.png' style='width:100px' alt=''>"
+		      },					
 		      {
-		        html: "<img src='/public/images/dormant.jpg' style='width:100px' alt=''>"
+		        text: "Both pupils read an activity sheet explaining the differences between active, dormant, and extinct volcanoes. Together they should work to correctly label the images of the different volcanoes presented."
 		      },
 		      {
 		        text: "10 min"
@@ -288,16 +279,16 @@ Pupils apply their prior knowledge of the different types of volcanoes, focussin
 		        html: "<a href='/unit/lesson-grid#activity3'>Worksheet</a>"
 		      },
 		      {
-		        text: "Pupils should work alone to complete a worksheet to distinguish between shield, dome, and strato volcanoes. This involves a crossword and diagram for labelling. "
-		      },
+		        html: "<img src='/public/images/thumb-worksheet.png' style='width:100px' alt=''>"
+		      },					
 		      {
-		        html: "<img src='/public/images/shield-strato-dome.jpg' style='width:100px' alt=''>"
+		        text: "Pupils should work alone to complete a worksheet to distinguish between shield, dome, and strato volcanoes. This involves a crossword and diagram for labelling. "
 		      },
 		      {
 		        text: "5 min"
 		      },
 		      {
-		        html: "<a href='/unit/lesson-grid#activity3'>Change resource</a>"
+		        html: "<a href=''>Pair reading</a><br><p><a href=''>Worksheet</a>"
 		      },
 		      {
 		        text: ""
@@ -311,16 +302,16 @@ Pupils apply their prior knowledge of the different types of volcanoes, focussin
 		        html: "<a href='/unit/lesson-grid#activity4'>Practical</a>"
 		      },
 		      {
-		        text: "A practical activity in which pupils work in groups, using a chemistry set, to create a model volcano. Models should clearly present volcano features."
-		      },
+		        html: "<img src='/public/images/thumb-practical.png' style='width:100px' alt=''>"
+		      },					
 		      {
-		        html: "<img src='/public/images/model.jpg' style='width:100px' alt=''>"
+		        text: "A practical activity in which pupils work in groups, using a chemistry set, to create a model volcano. Models should clearly present volcano features."
 		      },
 		      {
 		        text: "30 min"
 		      },
 		      {
-		        html: "<a href='/unit/lesson-grid#activity4'>Change resource</a>"
+		        html: "<a href=''>Pair reading</a><br><p><a href=''>Worksheet</a>"
 		      },
 		      {
 		        text: ""
@@ -334,16 +325,16 @@ Pupils apply their prior knowledge of the different types of volcanoes, focussin
 		        html: "<a href='/unit/lesson-grid#activity5'>Group reading</a>"
 		      },
 		      {
-		        text: "A reading activity in which pupils work in groups to condense their knowledge of volcano features, labelling detailed illustrations and diagrams of volcanoes. "
-		      },
-		      {
 		        html: "<img src='/public/images/unlabelled2.jpg' style='width:100px' alt=''>"
+		      },					
+		      {
+		        text: "A reading activity in which pupils work in groups to condense their knowledge of volcano features, labelling detailed illustrations and diagrams of volcanoes. "
 		      },
 		      {
 		        text: "5 min"
 		      },
 		      {
-		        html: "<a href='/unit/lesson-grid#activity5'>Change resource</a>"
+		        html: "<a href=''>Pair reading</a><br><p><a href=''>Worksheet</a>"
 		      },
 		      {
 		        text: ""
@@ -357,10 +348,10 @@ Pupils apply their prior knowledge of the different types of volcanoes, focussin
 		        html: "<a href='/unit/lesson-grid#activity6'>Whole class</a>"
 		      },
 		      {
-		        text: "An assessment to test whole-class knowledge of, and ability to distinguish between, types of volcanoes. Pupils should work alone to complete the test, which encompasses labelling, a chemistry exam, and a cross section exam."
-		      },
+		        html: "<img src='/public/images/thumb-whole-class.png' style='width:100px' alt=''>"
+		      },					
 		      {
-		        html: "<img src='/public/images/exam.jpg' style='width:100px' alt=''>"
+		        text: "An assessment to test whole-class knowledge of, and ability to distinguish between, types of volcanoes. Pupils should work alone to complete the test, which encompasses labelling, a chemistry exam, and a cross section exam."
 		      },
 		      {
 		        text: "5 min"
