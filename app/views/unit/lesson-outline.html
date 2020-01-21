@@ -104,7 +104,7 @@
 
 <h3 class='govuk-heading-s'>Objective: to learn the types of volcano</h3>
 
-<p>By the end of the lesson, pupils should:</p> 
+<p>By the end of the lesson, pupils should know:</p> 
 
     <ul class="govuk-list govuk-list--bullet">
     <li>know the characteristics of different types of volcanoes, and distinguish one type from another based on its eruption style</li>
@@ -114,7 +114,7 @@
 <h3 class='govuk-heading-m'>Core knowledge for all pupils</h3>
 
 
-		<p class="govuk-body">By the end of the lesson, pupils should:</p>
+		<p class="govuk-body">By the end of the lesson, pupils should know:</p>
 			
       <ul class="govuk-list govuk-list--bullet">
         <li>volcanoes occur at a destructive plate boundary</li>
@@ -125,7 +125,7 @@
 
 <h3 class='govuk-heading-m'>Vocabulary for this learning objective</h3>
 
-		<p class="govuk-body">Pupils should know the words:</p>
+		<p class="govuk-body">By the end of the lesson, pupils should know the words:</p>
 			
       <ul class="govuk-list govuk-list--bullet">
         <li>cone</li>
@@ -207,35 +207,43 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		{% from "table/macro.njk" import govukTable %}
 		{{ govukTable({
 		  caption: "",
-		  firstCellIsHeader: true,
 		  head: [
 		    {
-		      text: ""				
+		      text: "",
+					classes: "table-header-colour"								
 		    },			
 		    {
-		      text: "Learning method"
+		      text: "Learning method",
+					classes: "table-header-colour"	
 		    },			
 		    {
-		      text: "Description"
+		      text: "Description",
+					classes: "table-header-colour"	
 		    },
 		    {
-		      text: "Approximate time"
+		      text: "Approximate time",
+					classes: "table-header-colour"	
 		    },
 		    {
-		      text: "Alternative learning methods"
+		      text: "Alternative learning methods",
+					classes: "table-header-colour"	
 		    },
 		    {
-		      text: "Change learning method"
+		      text: "Change learning method",
+					classes: "table-header-colour"	
 		    }					
 		  ],
 		  rows: [
 				[
 		      {
-		       html: "<h3 class='lesson-number'>1</h3>"
+		       html: "<h3 class='lesson-number'>1</h3>",
+						classes: "table-header-identifier table-header-colour"	
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:75px' alt=''><strong>Practical</strong><br><a href='/unit/lesson-grid#activity1'>Preview</a>"
-		      },					
+		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:75px' alt=''><strong>Practical</strong><br><a href='/unit/lesson-grid#activity1'>Preview</a>",
+						classes: "table-header-identifier"	
+		      
+					},					
 		      {
           html: 'A video of Mount Kilauea, Hawaii (an active, shield volcano) erupting in 2019.
             <div class="read-more-container">
@@ -259,10 +267,12 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		    ],
 		    [
 		      {
-		       html: "<h3 class='lesson-number'>2</h3>"
+		       html: "<h3 class='lesson-number'>2</h3>",
+					classes: "table-header-identifier table-header-colour"						 
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-pair-inv.png' style='width:75px' alt=''><strong>Pair reading</strong><br><a href='/unit/lesson-grid#activity2'>Preview</a>"
+		        html: "<img src='/public/images/thumb-pair-inv.png' style='width:75px' alt=''><strong>Pair reading</strong><br><a href='/unit/lesson-grid#activity2'>Preview</a>",
+						classes: "table-header-identifier"	
 		      },					
 		      {
 		        text: "Both pupils read an activity sheet explaining the differences between active, dormant, and extinct volcanoes. Together they should work to correctly label the images of the different volcanoes presented."
@@ -273,16 +283,18 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		      {
 		      },
 		      {
-		        html: "No alternative",
+		        html: "No alternatives",
 						classes: "grey-text-helper"
 		      }					
 		    ],
 		    [
 		      {
-		       html: "<h3 class='lesson-number'>3</h3>"
+		      html: "<h3 class='lesson-number'>3</h3>",
+					classes: "table-header-identifier table-header-colour"						 
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-worksheet-inv.png' style='width:75px' alt=''><strong>Worksheet</strong><br><a href='/unit/lesson-grid#activity3'>Preview</a>"
+		      	html: "<img src='/public/images/thumb-worksheet-inv.png' style='width:75px' alt=''><strong>Worksheet</strong><br><a href='/unit/lesson-grid#activity3'>Preview</a>",
+						classes: "table-header-identifier"	
 		      },				
 		      {
 		        text: "Pupils should work alone to complete a worksheet to distinguish between shield, dome, and strato volcanoes. This involves a crossword and diagram for labelling. "
@@ -302,10 +314,12 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		    ],
 		    [
 		      {
-		       html: "<h3 class='lesson-number'>4</h3>"
+		       html: "<h3 class='lesson-number'>4</h3>",
+					classes: "table-header-identifier table-header-colour"						 
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:75px' alt=''><strong>Practical</strong><br><a href='/unit/lesson-grid#activity1'>Preview</a>"
+		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:75px' alt=''><strong>Practical</strong><br><a href='/unit/lesson-grid#activity1'>Preview</a>",
+						classes: "table-header-identifier"	
 		      },				
 		      {
 		        text: "A practical activity in which pupils work in groups, using a chemistry set, to create a model volcano. Models should clearly present volcano features."
@@ -325,10 +339,12 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		    ],
 		    [
 		      {
-		       html: "<h3 class='lesson-number'>5</h3>"
+		       html: "<h3 class='lesson-number'>5</h3>",
+					classes: "table-header-identifier table-header-colour"							 
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-group-inv.png' style='width:75px' alt=''><strong>Group reading</strong><br><a href='/unit/lesson-grid#activity5'>Preview</a>"
+		        html: "<img src='/public/images/thumb-group-inv.png' style='width:75px' alt=''><strong>Group reading</strong><br><a href='/unit/lesson-grid#activity5'>Preview</a>",
+						classes: "table-header-identifier"	
 		      },				
 		      {
 		        text: "A reading activity in which pupils work in groups to condense their knowledge of volcano features, labelling detailed illustrations and diagrams of volcanoes. "
@@ -348,10 +364,12 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		    ],
 		    [
 		      {
-		       html: "<h3 class='lesson-number'>6</h3>"
+		       html: "<h3 class='lesson-number'>6</h3>",
+					classes: "table-header-identifier table-header-colour"						 
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-whole-inv.png' style='width:75px' alt=''><strong>Whole class</strong><br><a href='/unit/lesson-grid#activity6'>Preview</a>"
+		        html: "<img src='/public/images/thumb-whole-inv.png' style='width:75px' alt=''><strong>Whole class</strong><br><a href='/unit/lesson-grid#activity6'>Preview</a>",
+						classes: "table-header-identifier"	
 		      },			
 		      {
 		        text: "An assessment to test whole-class knowledge of, and ability to distinguish between, types of volcanoes. Pupils should work alone to complete the test, which encompasses labelling, a chemistry exam, and a cross section exam."
@@ -362,7 +380,7 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		      {
 		      },
 					{
-		        html: "No alternative",
+		        html: "No alternatives",
 						classes: "grey-text-helper"
 					}
 		    ]

@@ -597,5 +597,10 @@ h3.lesson-number-small {
 }
 
 .table-header-colour {
-	background-color: gray;
+	background-color: #d3f4f1;
+}
+
+tbody > tr > .table-header-identifier {
+	text-align: center;
+	padding: 20px 20px;
 }
