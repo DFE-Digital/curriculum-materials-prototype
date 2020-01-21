@@ -102,11 +102,9 @@
 </h1>
 
 
-<h1 class="govuk-heading-m">Lesson Summary</h1>
-
 <h3 class='govuk-heading-s'>Objective: to learn the types of volcano</h3>
 
-<p>By the end of the lesson pupils should:</p> 
+<p>By the end of the lesson, pupils should:</p> 
 
     <ul class="govuk-list govuk-list--bullet">
     <li>know the characteristics of different types of volcanoes, and distinguish one type from another based on its eruption style</li>
@@ -116,7 +114,7 @@
 <h3 class='govuk-heading-m'>Core knowledge for all pupils</h3>
 
 
-		<p class="govuk-body">Pupils should know that:</p>
+		<p class="govuk-body">By the end of the lesson, pupils should:</p>
 			
       <ul class="govuk-list govuk-list--bullet">
         <li>volcanoes occur at a destructive plate boundary</li>
@@ -140,10 +138,10 @@
 
 
 
-<h3 class='govuk-heading-m'>Misconceptions to address</h3>
+<h3 class='govuk-heading-m'>Common misconceptions </h3>
 
 
-		<p class="govuk-body">The following misconceptions should be addressed:</p>
+		<p class="govuk-body">The following misconceptions are common:</p>
 			
       <ul class="govuk-list govuk-list--bullet">
         <li>all volcanoes erupt violently (this misconception arises from media coverage which is biased by location and death tolls)</li>
@@ -155,9 +153,7 @@
 
 <h3 class='govuk-heading-m'>Building on previous knowledge</h3>
 
-		<p class="govuk-body"><strong>Vocabulary</p>
-
-		<p class="govuk-body">Pupils should already know:</p>
+		<p class="govuk-body">Pupils should already know the following concepts and vocabulary: </p>
 			
       <ul class="govuk-list govuk-list--bullet">
         <li>lava: red-hot liquid rock</li>
@@ -166,17 +162,11 @@
       </ul>
 
 
-<h3 class='govuk-heading-m' id="lesson">Lesson Contents</h3>
 
-<p class="govuk-body">There are 6 parts to this lesson. If you'd like to make changes, you can search for alternative resources.  </p>
+<h3 class='govuk-heading-m'>Core knowledge for teachers</h3>
 
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Core knowledge for teachers
-    </span>
-  </summary>
-  <div class="govuk-details__text">
+<p class="govuk-body">Teachers should know:</p>
+
 <p>		
 The impacts of volcanic eruptions are categorised into primary and secondary effects, as well as: social, economic, and environmental.
 <p>
@@ -201,9 +191,17 @@ Effects that impact the economy of a location or people’s access to income.
 Effects that impact the natural world (for example, nature or the topography of the landscape).
 <p>
 The effects of a volcanic eruption can continue to develop over a series of days or sometimes weeks depending on the timeline and strength of the eruption.
-  </div>
-</details>
 
+
+
+<h3 class='govuk-heading-m' id="lesson">Lesson Contents</h3>
+
+<p class="govuk-body">This lesson has been sequenced in a suggested order. If you'd like to make changes, you can search for alternative resources.  </p>
+
+
+<h3 class='govuk-heading-m' id="scaffolding">Scaffolding</h3>
+
+<p class="govuk-body">Plans and resources include scaffolding where necessary to meet the needs of all pupils.</p>
 
 	<div class="govuk-grid-column-full-width">
 		{% from "table/macro.njk" import govukTable %}
@@ -225,7 +223,10 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		    },
 		    {
 		      text: "Alternative component"
-		    }
+		    },
+		    {
+		      text: "Change"
+		    }					
 		  ],
 		  rows: [
 				[
@@ -233,7 +234,7 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		       html: "<h3 class='lesson-number'>1</h3>"
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:100px' alt=''>Practical<br><a href='/unit/lesson-grid#activity1'>Preview</a>"
+		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:75px' alt=''><strong>Practical</strong><br><a href='/unit/lesson-grid#activity1'>Preview</a>"
 		      },					
 		      {
           html: 'A video of Mount Kilauea, Hawaii (an active, shield volcano) erupting in 2019.
@@ -250,15 +251,18 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		        html: "<strong>10 min</strong>"
 		      },
 		      {
-		        html: '<ul class="govuk-list"><li>Pair reading</li><br><li>Worksheet</li><li><a href="/unit/lesson-grid#activity1">Select alternative</a></li></ul>'
-		      }
+		        html: '<ul class="govuk-list"><li>Pair reading</li><br><li>Worksheet</li></ul>'
+		      },
+		      {
+		        html: '<a href="/unit/lesson-grid#activity3">Select alternative</a>'
+		      }					
 		    ],
 		    [
 		      {
 		       html: "<h3 class='lesson-number'>2</h3>"
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-pair-inv.png' style='width:100px' alt=''>Pair reading<br><a href='/unit/lesson-grid#activity2'>Preview</a>"
+		        html: "<img src='/public/images/thumb-pair-inv.png' style='width:75px' alt=''><strong>Pair reading</strong><br><a href='/unit/lesson-grid#activity2'>Preview</a>"
 		      },					
 		      {
 		        text: "Both pupils read an activity sheet explaining the differences between active, dormant, and extinct volcanoes. Together they should work to correctly label the images of the different volcanoes presented."
@@ -267,15 +271,18 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		        html: "<strong>10 min</strong>"
 		      },
 		      {
-		        text: "No alternative"
-		      }
+		      },
+		      {
+		        html: "No alternative",
+						classes: "grey-text-helper"
+		      }					
 		    ],
 		    [
 		      {
 		       html: "<h3 class='lesson-number'>3</h3>"
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-worksheet-inv.png' style='width:100px' alt=''>Worksheet<br><a href='/unit/lesson-grid#activity3'>Preview</a>"
+		        html: "<img src='/public/images/thumb-worksheet-inv.png' style='width:75px' alt=''><strong>Worksheet</strong><br><a href='/unit/lesson-grid#activity3'>Preview</a>"
 		      },				
 		      {
 		        text: "Pupils should work alone to complete a worksheet to distinguish between shield, dome, and strato volcanoes. This involves a crossword and diagram for labelling. "
@@ -284,8 +291,11 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		        html: "<strong>5 min</strong>"
 		      },
 		      {
-		        html: '<ul class="govuk-list"><li><a href="">Pair reading</a></li><br><li><a href="">Practical</a></li></ul>'
+		        html: '<ul class="govuk-list"><li>Pair reading</li><br><li>Practical</li></ul>'
 		      },
+		      {
+		        html: '<a href="/unit/lesson-grid#activity3">Select alternative</a>'
+		      },	
 		      {
 		        text: ""
 		      }
@@ -295,7 +305,7 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		       html: "<h3 class='lesson-number'>4</h3>"
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:100px' alt=''>Practical<br><a href='/unit/lesson-grid#activity1'>Preview</a>"
+		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:75px' alt=''><strong>Practical</strong><br><a href='/unit/lesson-grid#activity1'>Preview</a>"
 		      },				
 		      {
 		        text: "A practical activity in which pupils work in groups, using a chemistry set, to create a model volcano. Models should clearly present volcano features."
@@ -304,8 +314,11 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		        html: "<strong>30 min</strong>"
 		      },
 		      {
-		        html: '<ul class="govuk-list"><li><a href="">Pair reading</a></li><br><li><a href="">Worksheet</a></li></ul>'
+		        html: '<ul class="govuk-list"><li>Pair reading</li><br><li>Worksheet</li></ul>'
 		      },
+		      {
+		        html: '<a href="/unit/lesson-grid#activity3">Select alternative</a>'
+		      },		
 		      {
 		        text: ""
 		      }
@@ -315,7 +328,7 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		       html: "<h3 class='lesson-number'>5</h3>"
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-group-inv.png' style='width:100px' alt=''>Group reading<br><a href='/unit/lesson-grid#activity5'>Preview</a>"
+		        html: "<img src='/public/images/thumb-group-inv.png' style='width:75px' alt=''><strong>Group reading</strong><br><a href='/unit/lesson-grid#activity5'>Preview</a>"
 		      },				
 		      {
 		        text: "A reading activity in which pupils work in groups to condense their knowledge of volcano features, labelling detailed illustrations and diagrams of volcanoes. "
@@ -324,8 +337,11 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		        html: "<strong>5 min</strong>"
 		      },
 		      {
-		        html: '<ul class="govuk-list"><li><a href="">Worksheet</a></li></ul>'
+		        html: '<ul class="govuk-list"><li>Pair reading</li></ul>'
 		      },
+		      {
+		        html: '<a href="/unit/lesson-grid#activity3">Select alternative</a>'
+		      },		
 		      {
 		        text: ""
 		      }
@@ -335,7 +351,7 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		       html: "<h3 class='lesson-number'>6</h3>"
 		      },						
 		      {
-		        html: "<img src='/public/images/thumb-whole-inv.png' style='width:100px' alt=''>Whole class<br><a href='/unit/lesson-grid#activity6'>Preview</a>"
+		        html: "<img src='/public/images/thumb-whole-inv.png' style='width:75px' alt=''><strong>Whole class</strong><br><a href='/unit/lesson-grid#activity6'>Preview</a>"
 		      },			
 		      {
 		        text: "An assessment to test whole-class knowledge of, and ability to distinguish between, types of volcanoes. Pupils should work alone to complete the test, which encompasses labelling, a chemistry exam, and a cross section exam."
@@ -344,8 +360,11 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		        html: "<strong>10 min</strong>"
 		      },
 		      {
-		        text: "No alternative"
-		      }
+		      },
+					{
+		        html: "No alternative",
+						classes: "grey-text-helper"
+					}
 		    ]
 		  ]
 		}) }}
