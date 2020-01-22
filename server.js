@@ -218,6 +218,9 @@ if (useAutoStoreData === 'true') {
   }
 }
 
+// Serve static files
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Clear all data in session if you open /prototype-admin/clear-data
 app.post('/prototype-admin/clear-data', function (req, res) {
   req.session.data = {}
