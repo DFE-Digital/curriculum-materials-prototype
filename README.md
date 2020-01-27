@@ -1,4 +1,4 @@
-# Curriculum Materials Alpha Prototype
+# Access curriculum resources Alpha Prototype
 
 ## About
 
