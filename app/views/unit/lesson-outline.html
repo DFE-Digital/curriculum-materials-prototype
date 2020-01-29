@@ -96,6 +96,9 @@
 {% endblock %}
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
 <span class="govuk-caption-xl">1 hour</span>
 <h1 class="govuk-heading-xl">
   Lesson 1: types of volcano
@@ -200,7 +203,8 @@ The effects of a volcanic eruption can continue to develop over a series of days
 
 
 
-
+	</div> <!-- end twothirds column-->
+</div> <!-- end row -->
 
 	<div class="govuk-grid-column-full-width">
 		{% from "table/macro.njk" import govukTable %}
@@ -387,6 +391,8 @@ The effects of a volcanic eruption can continue to develop over a series of days
 <a href="/unit" button class="govuk-button govuk-button" data-module="govuk-button">
   Plan the next lesson
 </button></a>
+
+
 
 
 
