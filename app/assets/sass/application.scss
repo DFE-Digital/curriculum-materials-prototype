@@ -609,3 +609,9 @@ tbody > tr > .table-header-identifier {
 .govuk-tag {
 	background-color: gray;
 }
+
+#lesson-outline-container {
+	th:last-of-type; {
+		min-width: 120px;
+	}
+}
