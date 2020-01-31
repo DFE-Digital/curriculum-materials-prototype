@@ -88,13 +88,38 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full">
 
 <span class="govuk-caption-xl">1 hour</span>
 <h1 class="govuk-heading-xl">
   Lesson 1: types of volcano
 </h1>
 
+
+
+
+<div class="govuk-tabs" data-module="tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#learning">
+        Learning
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#lesson-contents">
+        Lesson contents
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#downloads">
+        Downloads
+      </a>
+    </li>
+  </ul>
+  <section class="govuk-tabs__panel" id="learning">
 
 <h3 class='govuk-heading-m'>Objective: to learn the types of volcano</h3>
 
@@ -186,7 +211,11 @@ Effects that impact the natural world (for example, nature or the topography of 
 <p>
 The effects of a volcanic eruption can continue to develop over a series of days or sometimes weeks depending on the timeline and strength of the eruption.
 
-
+  </section>
+	
+	
+	
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="lesson-contents">
 
 <h3 class='govuk-heading-l' id="lesson">Lesson Contents</h3>
 
@@ -194,10 +223,7 @@ The effects of a volcanic eruption can continue to develop over a series of days
 
 
 
-	</div> <!-- end twothirds column-->
-</div> <!-- end row -->
 
-	<div class="govuk-grid-column-full-width" id="lesson-outline-container">
 		{% from "table/macro.njk" import govukTable %}
 		{{ govukTable({
 		  caption: "",
@@ -343,8 +369,12 @@ The effects of a volcanic eruption can continue to develop over a series of days
 		  ]
 		}) }}
 
-</div>
-<br>
+
+
+  </section>
+	
+	
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="downloads">
 
 <h3 class='govuk-heading-m'>Download this lesson plan and its resources</h3>
 
@@ -360,10 +390,11 @@ The effects of a volcanic eruption can continue to develop over a series of days
 <p><img src='/public/images/icon-download.png' style='width:30px' alt=''><a class="govuk-link" href="">Download pupil resources</a></p> 
 
 
-<hr class="govuk-section-break govuk-section-break--visible">
-<br>
-<br>
 
+
+  </section>
+
+</div>
 <h3 class='govuk-heading-m'>Plan the next lesson</h3>
 
 
@@ -373,157 +404,6 @@ The effects of a volcanic eruption can continue to develop over a series of days
 <a href="/unit" button class="govuk-button govuk-button" data-module="govuk-button">
   Plan the next lesson
 </button></a>
-
-
-
-<div class="govuk-tabs" data-module="tabs">
-  <h2 class="govuk-tabs__title">
-    Contents
-  </h2>
-  <ul class="govuk-tabs__list">
-    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-      <a class="govuk-tabs__tab" href="#past-day">
-        Past day
-      </a>
-    </li>
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#past-week">
-        Past week
-      </a>
-    </li>
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#past-month">
-        Past month
-      </a>
-    </li>
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#past-year">
-        Past year
-      </a>
-    </li>
-  </ul>
-  <section class="govuk-tabs__panel" id="past-day">
-    <h2 class="govuk-heading-l">Past day</h2>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Case manager</th>
-          <th scope="col" class="govuk-table__header">Cases opened</th>
-          <th scope="col" class="govuk-table__header">Cases closed</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">David Francis</td>
-          <td class="govuk-table__cell">3</td>
-          <td class="govuk-table__cell">0</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Paul Farmer</td>
-          <td class="govuk-table__cell">1</td>
-          <td class="govuk-table__cell">0</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Rita Patel</td>
-          <td class="govuk-table__cell">2</td>
-          <td class="govuk-table__cell">0</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </section>
-  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
-    <h2 class="govuk-heading-l">Past week</h2>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Case manager</th>
-          <th scope="col" class="govuk-table__header">Cases opened</th>
-          <th scope="col" class="govuk-table__header">Cases closed</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">David Francis</td>
-          <td class="govuk-table__cell">24</td>
-          <td class="govuk-table__cell">18</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Paul Farmer</td>
-          <td class="govuk-table__cell">16</td>
-          <td class="govuk-table__cell">20</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Rita Patel</td>
-          <td class="govuk-table__cell">24</td>
-          <td class="govuk-table__cell">27</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </section>
-  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
-    <h2 class="govuk-heading-l">Past month</h2>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Case manager</th>
-          <th scope="col" class="govuk-table__header">Cases opened</th>
-          <th scope="col" class="govuk-table__header">Cases closed</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">David Francis</td>
-          <td class="govuk-table__cell">98</td>
-          <td class="govuk-table__cell">95</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Paul Farmer</td>
-          <td class="govuk-table__cell">122</td>
-          <td class="govuk-table__cell">131</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Rita Patel</td>
-          <td class="govuk-table__cell">126</td>
-          <td class="govuk-table__cell">142</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </section>
-  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
-    <h2 class="govuk-heading-l">Past year</h2>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Case manager</th>
-          <th scope="col" class="govuk-table__header">Cases opened</th>
-          <th scope="col" class="govuk-table__header">Cases closed</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">David Francis</td>
-          <td class="govuk-table__cell">1380</td>
-          <td class="govuk-table__cell">1472</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Paul Farmer</td>
-          <td class="govuk-table__cell">1129</td>
-          <td class="govuk-table__cell">1083</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Rita Patel</td>
-          <td class="govuk-table__cell">1539</td>
-          <td class="govuk-table__cell">1265</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </section>
-</div>
-
 
 
 
