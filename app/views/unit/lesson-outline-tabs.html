@@ -1,0 +1,533 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/dfe-sign-in/username",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
+      {
+        href: "#",
+        text: "Year 3"
+      },
+      {
+        href: "#",
+        text: "Year 4"
+      },
+      {
+        href: "#",
+        text: "Year 5"
+      },
+      {
+        href: "/geography",
+        text: "Year 6",
+        active: true
+      },
+      {
+        href: "/dfe-sign-in/username",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Plan lesson 4 - Curriculum materials alpha - Department for Education
+
+
+
+<!--
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="/geography" data-topnav="Get started">Geography</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/geography" data-topnav="Styles">History</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/geography" data-topnav="Components">Science</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/geography" data-topnav="Components">All subjects</a>
+    </li>
+  </ul>
+</nav>
+-->
+
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 6",
+    href: "/keystage3-geography"
+  },
+  {
+    text: "Geography",
+    href: "/geography"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 1"
+  }
+  ]
+}) }}
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-xl">1 hour</span>
+<h1 class="govuk-heading-xl">
+  Lesson 1: types of volcano
+</h1>
+
+
+<h3 class='govuk-heading-m'>Objective: to learn the types of volcano</h3>
+
+<p>By the end of the lesson, pupils should know:</p> 
+
+    <ul class="govuk-list govuk-list--bullet">
+    <li>know the characteristics of different types of volcanoes, and distinguish one type from another based on its eruption style</li>
+    <li>be able to locate volcanoes on a map using grid coordinates</li>
+		</ul>
+			
+<h3 class='govuk-heading-m'>Core knowledge for all pupils</h3>
+
+
+		<p class="govuk-body">By the end of the lesson, pupils should know:</p>
+			
+      <ul class="govuk-list govuk-list--bullet">
+        <li>volcanoes occur at a destructive plate boundary</li>
+        <li>a lava flow is molten rock only</li>
+        <li>a pyroclastic flow is a mixture of molten rock, ash and gases</li>				
+      </ul>
+
+
+<h3 class='govuk-heading-m'>Vocabulary for this learning objective</h3>
+
+		<p class="govuk-body">By the end of the lesson, pupils should know the words:</p>
+			
+      <ul class="govuk-list govuk-list--bullet">
+        <li>cone</li>
+        <li>vent</li>
+        <li>magma chamber</li>
+        <li>dome</li>
+        <li>shield</li>
+        <li>strato</li>								
+      </ul>
+
+
+
+<h3 class='govuk-heading-m'>Common misconceptions </h3>
+
+
+		<p class="govuk-body">The following misconceptions are common:</p>
+			
+      <ul class="govuk-list govuk-list--bullet">
+        <li>all volcanoes erupt violently (this misconception arises from media coverage which is biased by location and death tolls)</li>
+        <li>if a volcano doesn’t erupt for a hundred years, it’s extinct (in fact, the volcano is probably just dormant)</li>
+        <li>volcanoes only form on land, not under water (actually, there are numerous oceanic fault lines with volcanoes forming along these without breaking the surface of the water)</li>
+        <li>magma comes from deep within the Earth’s mantle (this comes from textbooks’ saying that the magma is ‘deep’ down - in reality, virtually all magma originates in the upper portion of the mantle and crust because of plate friction)</li>					
+      </ul>
+
+
+<h3 class='govuk-heading-m'>Building on previous knowledge</h3>
+
+		<p class="govuk-body">Pupils should already know the following concepts and vocabulary: </p>
+			
+      <ul class="govuk-list govuk-list--bullet">
+        <li>lava: red-hot liquid rock</li>
+        <li>volcano: a mountain that erupts, or has erupted</li>
+        <li>volcanic eruption: an explosion or outpouring of lava, rock or as from a volcano</li>							
+      </ul>
+
+
+
+<h3 class='govuk-heading-m'>Core knowledge for teachers</h3>
+
+<p class="govuk-body">Teachers should know:</p>
+
+<p>		
+The impacts of volcanic eruptions are categorised into primary and secondary effects, as well as: social, economic, and environmental.
+<p>
+<strong>Primary effects</strong>
+<p>
+Direct impacts of a volcanic hazard (for example, deaths and destruction).
+<p>
+<strong>Secondary effects</strong>
+<p>
+The result of another effect, usually a primary effect (for example, homelessness).
+<p>
+<strong>Social effects</strong>
+<p>
+Effects that impact people.
+<p>
+<strong>Economic effects</strong>
+<p>
+Effects that impact the economy of a location or people’s access to income.
+<p>
+<strong>Environmental effects</strong>
+<p>
+Effects that impact the natural world (for example, nature or the topography of the landscape).
+<p>
+The effects of a volcanic eruption can continue to develop over a series of days or sometimes weeks depending on the timeline and strength of the eruption.
+
+
+
+<h3 class='govuk-heading-l' id="lesson">Lesson Contents</h3>
+
+<p class="govuk-body">This lesson has been sequenced in a suggested order. If you'd like to make changes, you can search for alternative resources.  </p>
+
+
+
+	</div> <!-- end twothirds column-->
+</div> <!-- end row -->
+
+	<div class="govuk-grid-column-full-width" id="lesson-outline-container">
+		{% from "table/macro.njk" import govukTable %}
+		{{ govukTable({
+		  caption: "",
+		  head: [
+		    {
+		      text: "",
+					classes: "table-header-colour"								
+		    },			
+		    {
+		      text: "Learning method",
+					classes: "table-header-colour"	
+		    },			
+		    {
+		      text: "Description",
+					classes: "table-header-colour"	
+		    },
+		    {
+		      text: "Alternative learning methods",
+					classes: "table-header-colour"	
+		    },
+		    {
+		      text: "Preview or change learning method",
+					classes: "table-header-colour"	
+		    }					
+		  ],
+		  rows: [
+				[
+		      {
+		       html: "<h3 class='lesson-number'>1</h3>",
+						classes: "table-header-identifier table-header-colour"	
+		      },						
+		      {
+		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:75px' alt=''><strong>Practical</strong><br><br><img src='/public/images/thumb-whole-inv.png' style='width:75px' alt=''><strong>Whole class</strong><br><br><strong class='govuk-tag app-task-list__task-completed' id='prep'>extra prep</strong></div>",
+						classes: "table-header-identifier"
+					},					
+		      {
+          html: 'Pupils demonstrate independent thinking, applying their prior knowledge of volcanoes and focussing on the effects of volcanic eruptions. Ask pupils to watch the video carefully, noting as many words as they can about what they observe. Remind them of their last lesson to help them. Follow up with a discussion to assess answers and vocabulary. Use further questioning to ask pupils for an example of a socio-economic impact. What could happen as a result of what they have observed in the video? The eruption may result in lava flows and ash, for example, making visibility poor and leaving people injured.<br><br><strong>Approximately 10 minutes</strong><br>3 File formats: .pdf .doc .mov'				
+		      },
+		      {
+		        html: '<ul class="govuk-list"><li>Pair reading</li><br><li>Worksheet</li></ul>'
+		      },
+		      {
+		        html: '<img src="/public/images/etna.jpg" style="width:100%" alt=""><a href="/unit/lesson-grid#activity1">Preview</a><br><br><br><a href="/unit/lesson-grid#activity1">Change method</a>'
+		      }			
+		    ],
+		    [
+		      {
+		       html: "<h3 class='lesson-number'>2</h3>",
+					classes: "table-header-identifier table-header-colour"						 
+		      },						
+		      {
+		        html: "<img src='/public/images/thumb-pair-inv.png' style='width:75px' alt=''><strong>Pair</strong><br><br><img src='/public/images/thumb-reading-inv.png' style='width:75px' alt=''><strong>Reading</strong><br><br><strong class='govuk-tag app-task-list__task-completed' id='prep'>printing required</strong></div>",
+						classes: "table-header-identifier"	
+		      },					
+		      {
+		        html: "Both pupils read an activity sheet explaining the differences between active, dormant, and extinct volcanoes. Together they should work to correctly label the images of the different volcanoes presented.<br><br><strong>Approximately 10 minutes</strong><br>File format: .doc "
+		      },
+		      {
+		        html: "No alternatives",
+						classes: "grey-text-helper"
+		      },						
+		      {
+		        html: '<img src="/public/images/thumb-reading.png" style="width:100%" alt=""><a href="/unit/lesson-grid#activity1">Preview</a>'						
+		      }			
+		    ],
+		    [
+		      {
+		      html: "<h3 class='lesson-number'>3</h3>",
+					classes: "table-header-identifier table-header-colour"						 
+		      },						
+		      {
+		      	html: "<img src='/public/images/thumb-writing-inv.png' style='width:75px' alt=''><strong>Worksheet</strong><br><br><img src='/public/images/thumb-individual-inv.png' style='width:75px' alt=''><strong>Individual</strong><br><br><strong class='govuk-tag app-task-list__task-completed' id='prep'>printing required</strong></div>",
+						classes: "table-header-identifier"	
+		      },				
+		      {
+		        html: "Pupils should work alone to complete a worksheet to distinguish between shield, dome, and strato volcanoes. This involves a crossword and diagram for labelling.<br><br><strong>Approximately 5 minutes</strong><br>File format: .doc "
+		      },
+		      {
+		        html: '<ul class="govuk-list"><li>Pair reading</li><br><li>Practical</li></ul>'
+		      },
+		      {
+		        html: '<img src="/public/images/06-volcanocross.jpg" style="width:100%" alt=""><a href="/unit/lesson-grid#activity3">Preview</a><br><br><a href="/unit/lesson-grid#activity3">Change method</a>'
+		      }
+		    ],
+		    [
+		      {
+		       html: "<h3 class='lesson-number'>4</h3>",
+					classes: "table-header-identifier table-header-colour"						 
+		      },						
+		      {
+		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:75px' alt=''><strong>Practical</strong><br><br><img src='/public/images/thumb-group-inv.png' style='width:75px' alt=''><strong>Group</strong><br><br><strong class='govuk-tag app-task-list__task-completed' id='prep'>extra prep</strong>",
+						classes: "table-header-identifier"	
+		      },				
+		      {
+		        html: "A practical activity in which pupils work in groups, using a chemistry set, to create a model volcano. Models should clearly present volcano features.<br><br><strong>Approximately 30 minutes</strong>"
+		      },
+		      {
+		        html: '<ul class="govuk-list"><li>Pair reading</li><br><li>Worksheet</li></ul>'
+		      },
+		      {
+		        html: '<img src="/public/images/model.jpg" style="width:100%" alt=""><a href="/unit/lesson-grid#activity4">Preview</a><br><br><a href="/unit/lesson-grid#activity4">Change method</a>'
+		      }
+		    ],
+		    [
+		      {
+		       html: "<h3 class='lesson-number'>5</h3>",
+					classes: "table-header-identifier table-header-colour"							 
+		      },						
+		      {
+		        html: "<img src='/public/images/thumb-reading-inv.png' style='width:75px' alt=''><strong>Reading</strong><br><br><img src='/public/images/thumb-group-inv.png' style='width:75px' alt=''><strong>Group</strong></div>",
+						classes: "table-header-identifier"	
+		      },				
+		      {
+		        html: "A reading activity in which pupils work in groups to condense their knowledge of volcano features, labelling detailed illustrations and diagrams of volcanoes.<br><br><strong>Approximately 5 minutes</strong><br>File format: .mp3 "
+		      },
+		      {
+		        html: '<ul class="govuk-list"><li>Pair reading</li></ul>'
+		      },
+		      {
+		        html: '<img src="/public/images/cross-section.jpg" style="width:100%" alt=""><a href="/unit/lesson-grid#activity5">Preview</a><br><br><a href="/unit/lesson-grid#activity5">Change method</a>'
+		      }
+		    ],
+		    [
+		      {
+		       html: "<h3 class='lesson-number'>6</h3>",
+					classes: "table-header-identifier table-header-colour"						 
+		      },						
+		      {
+		        html: "<img src='/public/images/thumb-formative-inv.png' style='width:75px' alt=''><strong>Formative assessment</strong><br><br><img src='/public/images/thumb-whole-inv.png' style='width:75px' alt=''><strong>Whole class</strong>",
+						classes: "table-header-identifier"	
+		      },			
+		      {
+		        html: "An assessment to test whole-class knowledge of, and ability to distinguish between, types of volcanoes. Pupils should work alone to complete the test, which encompasses labelling, a chemistry exam, and a cross section exam.<br><br><strong>Approximately 10 minutes</strong><br>File format: .ppt "
+		      },
+					{
+		        html: "No alternatives",
+						classes: "grey-text-helper"
+					},					
+		      {
+		        html: '<img src="/public/images/thumb-exam.png" style="width:100%" alt=""><a href="/unit/lesson-grid#activity1">Preview</a>'						
+		      }
+		    ]
+		  ]
+		}) }}
+
+</div>
+<br>
+
+<h3 class='govuk-heading-m'>Download this lesson plan and its resources</h3>
+
+
+<p class="govuk-body">You can download this lesson plan and the resources you’ll need to teach the lesson. </p>
+
+<br>
+
+<p><img src='/public/images/icon-download.png' style='width:30px' alt=''><a class="govuk-link" href="">Download lesson plan</a></p>
+
+<p><img src='/public/images/icon-download.png' style='width:30px' alt=''><a class="govuk-link" href="">Download teacher resources</a></p> 
+
+<p><img src='/public/images/icon-download.png' style='width:30px' alt=''><a class="govuk-link" href="">Download pupil resources</a></p> 
+
+
+<hr class="govuk-section-break govuk-section-break--visible">
+<br>
+<br>
+
+<h3 class='govuk-heading-m'>Plan the next lesson</h3>
+
+
+<p class="govuk-body">Once you’ve downloaded this lesson plan and all its resources, you can continue to plan the next lesson. </p>
+
+
+<a href="/unit" button class="govuk-button govuk-button" data-module="govuk-button">
+  Plan the next lesson
+</button></a>
+
+
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#past-day">
+        Past day
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        Past week
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-month">
+        Past month
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-year">
+        Past year
+      </a>
+    </li>
+  </ul>
+  <section class="govuk-tabs__panel" id="past-day">
+    <h2 class="govuk-heading-l">Past day</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Case manager</th>
+          <th scope="col" class="govuk-table__header">Cases opened</th>
+          <th scope="col" class="govuk-table__header">Cases closed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">David Francis</td>
+          <td class="govuk-table__cell">3</td>
+          <td class="govuk-table__cell">0</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Paul Farmer</td>
+          <td class="govuk-table__cell">1</td>
+          <td class="govuk-table__cell">0</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Rita Patel</td>
+          <td class="govuk-table__cell">2</td>
+          <td class="govuk-table__cell">0</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+    <h2 class="govuk-heading-l">Past week</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Case manager</th>
+          <th scope="col" class="govuk-table__header">Cases opened</th>
+          <th scope="col" class="govuk-table__header">Cases closed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">David Francis</td>
+          <td class="govuk-table__cell">24</td>
+          <td class="govuk-table__cell">18</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Paul Farmer</td>
+          <td class="govuk-table__cell">16</td>
+          <td class="govuk-table__cell">20</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Rita Patel</td>
+          <td class="govuk-table__cell">24</td>
+          <td class="govuk-table__cell">27</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+    <h2 class="govuk-heading-l">Past month</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Case manager</th>
+          <th scope="col" class="govuk-table__header">Cases opened</th>
+          <th scope="col" class="govuk-table__header">Cases closed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">David Francis</td>
+          <td class="govuk-table__cell">98</td>
+          <td class="govuk-table__cell">95</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Paul Farmer</td>
+          <td class="govuk-table__cell">122</td>
+          <td class="govuk-table__cell">131</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Rita Patel</td>
+          <td class="govuk-table__cell">126</td>
+          <td class="govuk-table__cell">142</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+    <h2 class="govuk-heading-l">Past year</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Case manager</th>
+          <th scope="col" class="govuk-table__header">Cases opened</th>
+          <th scope="col" class="govuk-table__header">Cases closed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">David Francis</td>
+          <td class="govuk-table__cell">1380</td>
+          <td class="govuk-table__cell">1472</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Paul Farmer</td>
+          <td class="govuk-table__cell">1129</td>
+          <td class="govuk-table__cell">1083</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Rita Patel</td>
+          <td class="govuk-table__cell">1539</td>
+          <td class="govuk-table__cell">1265</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+</div>
+
+
+
+
+{% endblock %}
+
+
+
