@@ -484,6 +484,47 @@ $govuk-global-styles: true;
   }
 }
 
+.responsive-grid {
+  border-bottom: 1px solid $govuk-border-colour;
+  grid-gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  .responsive-slide {
+    display: flex;
+
+    .info {
+      flex-grow: 1;
+    }
+
+    @include govuk-media-query($until: desktop) {                                                                                                                                                  
+      .thumbnail {
+        display: none;
+      }
+    }
+
+    @include govuk-media-query($until: tablet) {                                                                                                                                                  
+      .synopsis > p:not(:first-child) {
+        display: none;
+      }
+    }
+
+    @include govuk-media-query($until: mobile) {                                                                                                                                                  
+      .synopsis {
+        display: none;
+      }
+    }
+
+    .thumbnail {
+      > img {
+        min-width: 150px;
+        max-width: 150px;
+        height: auto;
+      }
+    }
+  }
+}
+
 .red {
 	border: 1px dotted red;
 }
