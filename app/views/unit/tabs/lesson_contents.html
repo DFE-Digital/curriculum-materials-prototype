@@ -1,0 +1,137 @@
+<h3 class='govuk-heading-l'>Understand and choose the lesson contents </h3>
+
+<p class="govuk-body">This lesson has been sequenced in a suggested order. If you'd like to make changes, you can search for alternative resources.  </p>
+
+
+		{% from "table/macro.njk" import govukTable %}
+		{{ govukTable({
+		  caption: "",
+		  head: [
+		    {
+		      text: "",
+					classes: "table-header-colour"								
+		    },			
+		    {
+		      text: "Activity",
+					classes: "table-header-colour"	
+		    },			
+		    {
+		      text: "Teaching this activity",
+					classes: "table-header-colour table-description-column"
+		    },
+		    {
+		      text: "Change activity",
+					classes: "table-header-colour"	
+		    }					
+		  ],
+		  rows: [
+				[
+		      {
+		       html: "<h3 class='lesson-number'>1</h3>",
+						classes: "table-header-identifier table-header-colour"	
+		      },						
+		      {
+		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:75px' alt=''><strong>Practical</strong><br><br><img src='/public/images/thumb-whole-inv.png' style='width:75px' alt=''><strong>Whole class</strong></div>",
+						classes: "table-header-identifier"
+					},					
+		      {
+            html: "Pupils demonstrate independent thinking, applying their prior knowledge of volcanoes and focussing on the effects of volcanic eruptions. Ask pupils to watch the video carefully, noting as many words as they can about what they observe. Remind them of their last lesson to help them. Follow up with a discussion to assess answers and vocabulary. Use further questioning to ask pupils for an example of a socio-economic impact. What could happen as a result of what they have observed in the video? The eruption may result in lava flows and ash, for example, making visibility poor and leaving people injured.<br><br><strong>Approximately 10 minutes</strong><br>3 File formats: .pdf .doc .mov <a href='/unit/lesson-grid#activity1'>Preview</a><br><br><strong class='govuk-tag' id='prep'>extra prep</strong>",
+						classes: "table-description-column"				
+		      },
+		      {
+		        html: '<ul class="govuk-list"><li><strong>Pair reading available</strong></li><br><li><strong>Worksheet available</strong></li></ul><a href="/unit/lesson-grid#activity1">Change activity</a>'
+		      }			
+		    ],
+		    [
+		      {
+		       html: "<h3 class='lesson-number'>2</h3>",
+					classes: "table-header-identifier table-header-colour"
+		      },						
+		      {
+		        html: "<img src='/public/images/thumb-pair-inv.png' style='width:75px' alt=''><strong>Pair</strong><br><br><img src='/public/images/thumb-reading-inv.png' style='width:75px' alt=''><strong>Reading</strong></div>",
+						classes: "table-header-identifier"	
+		      },					
+		      {
+		        html: "Both pupils read an activity sheet explaining the differences between active, dormant, and extinct volcanoes. Together they should work to correctly label the images of the different volcanoes presented.<br><br><strong>Approximately 10 minutes</strong><br>File format: .doc <a href='/unit/lesson-grid#activity1'>Preview</a><br><br><strong class='govuk-tag' id='prep'>printing required</strong>",
+						classes: "table-description-column"		
+		      },					
+		      {
+		        html: "No alternatives",
+						classes: "grey-text-helper"				
+		      }			
+		    ],
+		    [
+		      {
+		      html: "<h3 class='lesson-number'>3</h3>",
+					classes: "table-header-identifier table-header-colour"
+		      },						
+		      {
+		      	html: "<img src='/public/images/thumb-writing-inv.png' style='width:75px' alt=''><strong>Worksheet</strong><br><br><img src='/public/images/thumb-individual-inv.png' style='width:75px' alt=''><strong>Individual</strong></div>",
+						classes: "table-header-identifier"	
+		      },				
+		      {
+		        html: "Pupils should work alone to complete a worksheet to distinguish between shield, dome, and strato volcanoes. This involves a crossword and diagram for labelling.<br><br><strong>Approximately 5 minutes</strong><br>File format: .doc <a href='/unit/lesson-grid#activity1'>Preview</a><br><br><strong class='govuk-tag' id='prep'>printing required</strong> ",
+						classes: "table-description-column"								
+		      },
+		      {
+		        html: '<ul class="govuk-list"><li><strong>Pair reading available</strong></li><br><li><strong>Practical available</strong></li></ul><a href="/unit/lesson-grid#activity1">Change activity</a>'
+		      }
+		    ],
+		    [
+		      {
+		       html: "<h3 class='lesson-number'>4</h3>",
+					classes: "table-header-identifier table-header-colour"
+		      },						
+		      {
+		        html: "<img src='/public/images/thumb-practical-inv.png' style='width:75px' alt=''><strong>Practical</strong><br><br><img src='/public/images/thumb-group-inv.png' style='width:75px' alt=''><strong>Group</strong>",
+						classes: "table-header-identifier"	
+		      },				
+		      {
+		        html: "A practical activity in which pupils work in groups, using a chemistry set, to create a model volcano. Models should clearly present volcano features.<br><br><strong>Approximately 30 minutes</strong><br><br><strong class='govuk-tag' id='prep'>extra prep</strong>",
+						classes: "table-description-column"								
+		      },
+		      {
+		        html: '<ul class="govuk-list"><li><strong>Pair reading available</strong></li><br><li><strong>Worksheet available</strong></li></ul><a href="/unit/lesson-grid#activity1">Change activity</a>'
+		      }
+		    ],
+		    [
+		      {
+		       html: "<h3 class='lesson-number'>5</h3>",
+					classes: "table-header-identifier table-header-colour"
+		      },						
+		      {
+		        html: "<img src='/public/images/thumb-reading-inv.png' style='width:75px' alt=''><strong>Reading</strong><br><br><img src='/public/images/thumb-group-inv.png' style='width:75px' alt=''><strong>Group</strong></div>",
+						classes: "table-header-identifier"	
+		      },				
+		      {
+		        html: "A reading activity in which pupils work in groups to condense their knowledge of volcano features, labelling detailed illustrations and diagrams of volcanoes.<br><br><strong>Approximately 5 minutes</strong><br>File format: .mp3 <a href='/unit/lesson-grid#activity1'>Preview</a>",
+						classes: "table-description-column"								
+		      },
+		      {
+			  html: '<ul class="govuk-list"><li><strong>Pair reading available</strong></li><br><a href="/unit/lesson-grid#activity1">Change activity</a></ul>'
+		      }
+		    ],
+		    [
+		      {
+		       html: "<h3 class='lesson-number'>6</h3>",
+					classes: "table-header-identifier table-header-colour"
+		      },						
+		      {
+		        html: "<img src='/public/images/thumb-formative-inv.png' style='width:75px' alt=''><strong>Formative assessment</strong><br><br><img src='/public/images/thumb-whole-inv.png' style='width:75px' alt=''><strong>Whole class</strong>",
+						classes: "table-header-identifier"	
+		      },			
+		      {
+		        html: "An assessment to test whole-class knowledge of, and ability to distinguish between, types of volcanoes. Pupils should work alone to complete the test, which encompasses labelling, a chemistry exam, and a cross section exam.<br><br><strong>Approximately 10 minutes</strong><br>File format: .ppt <a href='/unit/lesson-grid#activity1'>Preview</a>",
+						classes: "table-description-column"								
+		      },				
+		      {
+		        html: "No alternatives",
+						classes: "grey-text-helper"					
+		      }
+		    ]
+		  ]
+		}) }}
+
+<a href="/unit/lesson-outline-tabs#downloads" button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  <strong>3 -</strong> Downloads
+</a>
