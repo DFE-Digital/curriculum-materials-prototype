@@ -492,9 +492,15 @@ $govuk-global-styles: true;
 
   .responsive-slide {
     display: flex;
+		
+		.radio {
+			padding-top: 0.05rem;
+		}
 
     .info {
       flex-grow: 1;
+			padding: 0.5rem;
+			
     }
 
     @include govuk-media-query($until: desktop) {                                                                                                                                                  
