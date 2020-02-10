@@ -1,15 +1,15 @@
 $(document).ready(function() {
-  $(".slide .govuk-radios__input").each(function(i, e) {
+  $(".highlight-on-select-slide .govuk-radios__input").each(function(i, e) {
     if ($(e).is(':checked')) {
-      $(this).parents(".slide").addClass("highlighted");
+      $(this).parents(".highlight-on-select-slide").addClass("highlighted");
     }
   });
 
-  $(".slide .govuk-radios__input").change(function() {
-    $(this).parents(".grid").children(".slide").removeClass("highlighted");
+  $(".highlight-on-select-slide .govuk-radios__input").change(function() {
+    $(this).parents(".responsive-grid").children(".highlight-on-select-slide").removeClass("highlighted");
 
     if ($(this).is(':checked')) {
-      $(this).parents(".slide").addClass("highlighted");
+      $(this).parents(".highlight-on-select-slide").addClass("highlighted");
     }
   });
 });

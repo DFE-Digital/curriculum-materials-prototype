@@ -636,8 +636,11 @@ h3.lesson-number-small {
 }
 
 .highlighted {
-  background-color: lighten(govuk-colour('yellow'), 30);
-	border: 3px solid gray
+  h3 {
+    text-decoration: underline;
+    background-color: #ffdd00;
+    display: table;
+  }
 }
 
 .grey-text-helper {
