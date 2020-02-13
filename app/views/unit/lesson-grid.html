@@ -131,7 +131,10 @@ Lesson contents: The Battle of Hastings
 			</div>
 		</div>
 		<div class="info">
-			<h3 class='govuk-heading-s'>{{ title }}</h3>{%if badge %}{{badge}}{%endif%}
+      <div class="heading">
+        <h3 class='govuk-heading-s'>{{ title }}</h3>
+        {%if badge %}{{badge | safe}}{%endif%}
+      </div>
 			<div class="synopsis">
 				{% for item in synopsis %}	
 					<p>{{item}}</p>
