@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/index",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Access curriculum resources alpha - prototype - Department for Education
+{% endblock %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "button/macro.njk" import govukButton %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Which year group would you like to view?</h1>
+
+	
+	    <h1 class="govuk-heading-m">How curriculum content is sequenced throughout the key stage </h1>	
+		
+			<p>Our history curriculum allows year 7 pupils to retain powerful knowledge, with challenging opportunities to build upon prior knowledge embedded throughout. It is carefully designed and sequenced so that knowledge and vocabulary will be stored in pupils’ long-term memories.</p>
+			<p>We want our history curriculum to inspire children to learn more about Geography beyond the classroom, using the knowledge and vocabulary acquired in year 7 confidently and fluently to form judgements and arguments, or to solve problems later in life.</p>
+		
+		
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Key stage 3 history
+      </h1>
+    </legend>
+	<p>Select a year group to view its full history curriculum, access resources, and plan lessons.</p>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="year-1" name="year" type="radio" value="Year 7">
+        <label class="govuk-label govuk-radios__label" for="year-select-1">
+          Year 7
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="year-2" name="year" type="radio" value="Year 8">
+        <label class="govuk-label govuk-radios__label" for="year-select-2">
+          Year 8
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="year-3" name="year" type="radio" value="Year 9">
+        <label class="govuk-label govuk-radios__label" for="year-select-3">
+          Year 9
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+			
+
+<a class="govuk-button" href="/history">Continue</a>									
+
+
+  </div>
+{% endblock %}
