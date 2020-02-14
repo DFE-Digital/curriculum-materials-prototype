@@ -8,7 +8,6 @@ const path = require('path');
 router.get('/preview-teacher-resource', function(request, response) {
   const filename = 'Battle_of_Hastings-Preview.pdf';
   const filepath = path.join(__dirname, "assets", "resources", filename)
-  console.log(filepath)
 
   let data = fs.readFileSync(filepath);
   response.setHeader('Content-type', 'application/pdf');
