@@ -492,6 +492,17 @@ $govuk-global-styles: true;
 
   .responsive-slide {
     display: flex;
+
+    .heading {
+      h3 {
+        display: inline-block;
+      }
+      strong.govuk-tag {
+        margin-left: 15px;
+        padding-top: 3px;
+        padding-bottom: 2px;
+      }
+    }
 		
 		.radio {
 			padding-top: 0.05rem;
