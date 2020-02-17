@@ -1,0 +1,180 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/dfe-sign-in/username",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
+      {
+        href: "#",
+        text: "Year 3"
+      },
+      {
+        href: "#",
+        text: "Year 4"
+      },
+      {
+        href: "#",
+        text: "Year 5"
+      },
+      {
+        href: "/dashboard",
+        text: "Year 6",
+        active: true
+      },
+      {
+        href: "/dfe-sign-in/username",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Plan lesson 4 - Access curriculum resources alpha - Department for Education
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+{% from "input/macro.njk" import govukInput %}
+{% from "radios/macro.njk" import govukRadios %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+{% block beforeContent %}
+<!--
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Geography</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">History</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Science</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">All subjects</a>
+    </li>
+  </ul>
+</nav>
+-->
+
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 6",
+    href: "/geography"
+  },
+  {
+    text: "Geography",
+    href: "/geography"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 1"
+  }
+  ]
+}) }}
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+      <h1 class="govuk-heading-xl">
+Lesson contents: The Battle of Hastings
+</h1>
+
+
+
+
+{% macro slide(
+	length,
+	image,
+	title,
+	synopsis,
+	rowNumber,
+	optionNumber,
+	checked=false,
+	badge=false
+	) %}
+
+	<div class="responsive-slide highlight-on-select-slide">
+		<div class="radio">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="volcano1">
+					<div class="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="{{ rowNumber }}_{{ optionNumber }}" name="{{ rowNumber }}" type="radio" value="{{ optionNumber }}" {% if checked %}checked{% endif %}>
+							<label class="govuk-label govuk-radios__label" for="{{ rowNumber }}_{{ optionNumber }}">
+							</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div class="info">
+      <div class="heading">
+        <h3 class='govuk-heading-s'>{{ title }}</h3>
+        {%if badge %}{{badge | safe}}{%endif%}
+      </div>
+			<div class="synopsis">
+				{% for item in synopsis %}	
+					<p>{{item}}</p>
+				{% endfor %}
+			</div>
+			<div>
+				<ul class="govuk-list">
+					<li><a href='#'>Preview teacher resources</a></li>
+					<li><a href='#'>Preview pupil resources</a></li>
+				</ul>
+			</div>		
+		</div>
+
+		<div class="thumbnail">
+			<img src="/public/images/{{ image }}" style="width:100%" alt="">
+		</div>
+	</div>
+	
+{% endmacro %}
+
+
+<div class="govuk-grid-column-full-width">
+
+		 <h1 class="govuk-heading-m" id="activity1">Activity 1 options. Approximately 5 minutes.</h1>
+
+<p>You can keep the selected activity or choose an alternative. When you've saved your changes, the lesson plan will be updated.</p>
+
+    <div class="responsive-grid">
+
+		{{ slide('image and text', 'thumb-reading-inv.png', 'Reading', ['For this lesson, students need to know the events of the battle in chronological order. The teacher uses maps on slides 6 and 7 to remind students what led up to the battle. Students then read the Word document “description of the Battle of Hastings” either as a group taking it in turns to read aloud or independently.'], 2, 1, true, "<strong class='govuk-tag' id='prep'>printing required</strong>") }}
+		{{ slide('image and text', 'thumb-writing-inv.png', 'Writing', ['This video clip serves to both recap events leading up to the battle and outline what happened on 14th October at Hastings. If the teacher stops the video several times, students can be asked to bullet point any information they think would help them to answer the key enquiry question for the lesson.'], 2, 2) }}
+		{{ slide('image and text', 'thumb-drawing.png', 'Drawing', ['For students who are, for example, at an early stage of learning English, there is a storyboard worksheet with simple steps that take them through the events of the battle which they can then illustrate with appropriate images to demonstrate understanding.'], 2, 3, false, "<strong class='govuk-tag' id='prep'>printing required</strong>") }}
+
+	</div>
+	
+
+
+</div>
+
+<a class="govuk-button" href="/unit/lesson-outline-stepped#lesson-contents">Save lesson changes</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="/unit/lesson-outline#lesson-contents" button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+   Cancel
+</a>
+
+
+
+{% endblock %}
