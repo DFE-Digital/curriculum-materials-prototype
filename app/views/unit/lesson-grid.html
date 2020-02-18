@@ -3,7 +3,7 @@
 
 {% block header %}
   {{ govukHeader({
-    homepageUrl: "/dfe-sign-in/username",
+    homepageUrl: "/",
     serviceName: "Access curriculum resources",
     serviceUrl: "#",
     containerClasses: "govuk-width-container",
@@ -50,38 +50,16 @@
 
 {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
 {% block beforeContent %}
-<!--
-<nav class="app-navigation govuk-clearfix">
-  <ul class="app-navigation__list govuk-width-container">
-
-    <li class="app-navigation--current-page">
-      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Geography</a>
-    </li>
-
-    <li>
-      <a class="govuk-link" href="/unit/year" data-topnav="Styles">History</a>
-    </li>
-
-    <li>
-      <a class="govuk-link" href="/unit/year" data-topnav="Components">Science</a>
-    </li>
-
-    <li>
-      <a class="govuk-link" href="/unit/year" data-topnav="Components">All subjects</a>
-    </li>
-  </ul>
-</nav>
--->
 
 {{ govukBreadcrumbs({
   items: [
   {
-    text: "Year 6",
-    href: "/geography"
+    text: "Year 7",
+    href: "/keystage3-history"
   },
   {
-    text: "Geography",
-    href: "/geography"
+    text: "History",
+    href: "/history"
   },
   {
     text: "Summer 2",
