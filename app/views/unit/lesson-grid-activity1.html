@@ -110,7 +110,8 @@ Lesson contents: The Battle of Hastings
 	rowNumber,
 	optionNumber,
 	checked=false,
-	badge=false
+	badge=false,
+	activity_type
 	) %}
 
 	<div class="responsive-slide highlight-on-select-slide">
@@ -129,8 +130,9 @@ Lesson contents: The Battle of Hastings
 		</div>
 		<div class="info">
       <div class="heading">
-        <h3 class='govuk-heading-s'>{{ title }}</h3>
+        <h3 class='govuk-heading-m'>{{ title }}</h3>
         {%if badge %}{{badge | safe}}{%endif%}
+        <span class="govuk-caption-m">{{ activity_type }}</span>
       </div>
 			<div class="synopsis">
 				{% for item in synopsis %}	
@@ -163,18 +165,19 @@ Lesson contents: The Battle of Hastings
 		{{ slide(
 			'pair reading - 5 minutes',
 			'thumb-do-it-now.png',
-			"Do it now: key words",
+			"Matching key words with definitions",
 			[
 				'As students enter the room, direct them to try and match up each key word with the correct definition. They should write the number with the correct letter in their books. Feed back and show correct responses.'
 			],
 			1,
 			1,
 			true,
-			"<strong class='govuk-tag' id='prep'>extra prep</strong>")
+			"<strong class='govuk-tag' id='prep'>extra prep</strong>",
+			"Do it now: key words")
 		}}
 
-		{{ slide('whole class - 10 minutes', 'thumb-do-it-now.png', 'Do it now: questions', ['As students enter the room, direct them to answer the questions on the board either in their books or in pairs. Feed back and reveal correct responses. '], 1, 2, false) }}
-		{{ slide('whole class - 10 minutes', 'thumb-do-it-now.png', 'Do it now: anagrams', ['As students enter the room, direct them to try and solve the anagrams on the board which are all keywords they will have come across in previous lessons. Feedback and reveal correct responses. '], 1, 3, false, "<strong class='govuk-tag' id='prep'>extra prep</strong>") }}
+		{{ slide('whole class - 10 minutes', 'thumb-do-it-now.png', 'Answering questions from the board', ['As students enter the room, direct them to answer the questions on the board either in their books or in pairs. Feed back and reveal correct responses. '], 1, 2, false, "", "Do it now: questions") }}
+		{{ slide('whole class - 10 minutes', 'thumb-do-it-now.png', 'Solving anagrams from the board', ['As students enter the room, direct them to try and solve the anagrams on the board which are all keywords they will have come across in previous lessons. Feedback and reveal correct responses. '], 1, 3, false, "<strong class='govuk-tag' id='prep'>extra prep</strong>", "Do it now: anagrams") }}
 
 	</div>
 	

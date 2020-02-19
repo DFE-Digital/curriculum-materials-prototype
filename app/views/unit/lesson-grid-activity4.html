@@ -110,7 +110,8 @@ Lesson contents: The Battle of Hastings
 	rowNumber,
 	optionNumber,
 	checked=false,
-	badge=false
+	badge=false,
+	activity_type
 	) %}
 
 	<div class="responsive-slide highlight-on-select-slide">
@@ -129,8 +130,9 @@ Lesson contents: The Battle of Hastings
 		</div>
 		<div class="info">
       <div class="heading">
-        <h3 class='govuk-heading-s'>{{ title }}</h3>
+        <h3 class='govuk-heading-m'>{{ title }}</h3>
         {%if badge %}{{badge | safe}}{%endif%}
+        <span class="govuk-caption-m">{{ activity_type }}</span>
       </div>
 			<div class="synopsis">
 				{% for item in synopsis %}	
@@ -161,8 +163,8 @@ Lesson contents: The Battle of Hastings
 
     <div class="responsive-grid">
 
-		{{ slide('image and text', 'thumb-card-sort.png', 'Card sort', ['Students can work individually, in pairs or in groups for this activity. Instructions for the activity are on slide 9. Students decide which statements on the cards are irrelevant to answering the question “Why did William win the Battle of Hastings?” and discard them. Then they categorise the cards under different headings. Higher attainers can be encouraged to come up with their own category headings or think of alternatives to the one you give them.'], 4, 1, true, "<strong class='govuk-tag' id='prep'>extra prep</strong>") }}
-		{{ slide('image and text', 'thumb-reading-inv.png', 'Reading', ['Instead of completing this activity as a card sort, students can instead use the card sort worksheet to highlight different categories of reason William was able to achieve victory in different colours. They should include a key to show which category is represented by which colour.'], 4, 2, false, "<strong class='govuk-tag' id='prep'>printing required</strong>") }}
+		{{ slide('image and text', 'thumb-card-sort.png', 'Understanding why William won the Battle of Hastings', ['Students can work individually, in pairs or in groups for this activity. Instructions for the activity are on slide 9. Students decide which statements on the cards are irrelevant to answering the question “Why did William win the Battle of Hastings?” and discard them. Then they categorise the cards under different headings. Higher attainers can be encouraged to come up with their own category headings or think of alternatives to the one you give them.'], 4, 1, true, "<strong class='govuk-tag' id='prep'>extra prep</strong>", "Card sort") }}
+		{{ slide('image and text', 'thumb-reading-inv.png', 'Categorising the reasons William achieved victory', ['Instead of completing this activity as a card sort, students can instead use the card sort worksheet to highlight different categories of reason William was able to achieve victory in different colours. They should include a key to show which category is represented by which colour.'], 4, 2, false, "<strong class='govuk-tag' id='prep'>printing required</strong>", "Reading") }}
 
 	</div>
 	
