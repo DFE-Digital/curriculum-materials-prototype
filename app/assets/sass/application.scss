@@ -171,10 +171,6 @@ $govuk-global-styles: true;
   font-size: 1rem;
   line-height: 1.25;
 }
-@media (min-width: 40.0625em){ .js-enabled .govuk-tabs__panel{border-left:none;border-right:none;}}
-.app-mobile-nav__subnav > li.current-page a {
-  border-left: 4px solid #005ea5;
-}
 
 .js-enabled .app-mobile-nav__subnav--active {
   display: block;
