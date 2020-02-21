@@ -744,3 +744,34 @@ ol.step-by-step-navigation {
     }
   }
 }
+
+#lesson-contents-tabs {
+	.govuk-tabs__tab--selected,
+	.govuk-tabs__panel {
+		background-color: #f0f9ff;
+	}
+	
+	.govuk-tabs__list {
+		border-bottom: 1px solid black;
+	}
+	
+	.govuk-tabs__panel {
+		border: 1px solid black;
+		border-top: 0;
+	}
+	
+	.govuk-tabs__tab--selected {
+		border: 1px solid black;
+		border-bottom: 0;
+	}
+	
+	td.table-activity-column,
+	td.table-header-identifier,
+	td.table-description-column {
+		background-color: white;
+	}
+}
+
+#govuk-table__cell {
+			background-color: #ffffff;
+}
