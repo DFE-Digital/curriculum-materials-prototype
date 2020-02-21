@@ -110,8 +110,7 @@ Lesson contents: The Battle of Hastings
 	rowNumber,
 	optionNumber,
 	checked=false,
-	badge=false,
-	activity_type
+	badge=false
 	) %}
 
 	<div class="responsive-slide highlight-on-select-slide">
@@ -130,9 +129,8 @@ Lesson contents: The Battle of Hastings
 		</div>
 		<div class="info">
       <div class="heading">
-        <h3 class='govuk-heading-m'>{{ title }}</h3>
+        <h3 class='govuk-heading-s'>{{ title }}</h3>
         {%if badge %}{{badge | safe}}{%endif%}
-        <span class="govuk-caption-m">{{ activity_type }}</span>
       </div>
 			<div class="synopsis">
 				{% for item in synopsis %}	
@@ -163,9 +161,9 @@ Lesson contents: The Battle of Hastings
 
     <div class="responsive-grid">
 
-		{{ slide('image and text', 'thumb-reading-inv.png', 'Understanding the events of the battle in chronological order', ['For this lesson, students need to know the events of the battle in chronological order. The teacher uses maps on slides 6 and 7 to remind students what led up to the battle. Students then read the Word document “description of the Battle of Hastings” either as a group taking it in turns to read aloud or independently.'], 2, 1, "Reading", true, "<strong class='govuk-tag' id='prep'>printing required</strong>") }}
-		{{ slide('image and text', 'thumb-writing-inv.png', 'Watching a video recap of the battle and note-taking', ['This video clip serves to both recap events leading up to the battle and outline what happened on 14th October at Hastings. If the teacher stops the video several times, students can be asked to bullet point any information they think would help them to answer the key enquiry question for the lesson.'], 2, 2, "Writing", true, "<strong class='govuk-tag' id='prep'>printing required</strong>") }}
-		{{ slide('image and text', 'thumb-drawing.png', 'Drawing the events of the battle as a storyboard', ['For students who are, for example, at an early stage of learning English, there is a storyboard worksheet with simple steps that take them through the events of the battle which they can then illustrate with appropriate images to demonstrate understanding.'], 2, 3, "Drawing", true,  "<strong class='govuk-tag' id='prep'>printing required</strong>") }}
+		{{ slide('image and text', 'thumb-reading-inv.png', 'Reading', ['For this lesson, students need to know the events of the battle in chronological order. The teacher uses maps on slides 6 and 7 to remind students what led up to the battle. Students then read the Word document “description of the Battle of Hastings” either as a group taking it in turns to read aloud or independently.'], 2, 1, true, "<strong class='govuk-tag' id='prep'>printing required</strong>") }}
+		{{ slide('image and text', 'thumb-writing-inv.png', 'Writing', ['This video clip serves to both recap events leading up to the battle and outline what happened on 14th October at Hastings. If the teacher stops the video several times, students can be asked to bullet point any information they think would help them to answer the key enquiry question for the lesson.'], 2, 2) }}
+		{{ slide('image and text', 'thumb-drawing.png', 'Drawing', ['For students who are, for example, at an early stage of learning English, there is a storyboard worksheet with simple steps that take them through the events of the battle which they can then illustrate with appropriate images to demonstrate understanding.'], 2, 3, false, "<strong class='govuk-tag' id='prep'>printing required</strong>") }}
 
 	</div>
 	

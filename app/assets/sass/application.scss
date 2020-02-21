@@ -171,10 +171,7 @@ $govuk-global-styles: true;
   font-size: 1rem;
   line-height: 1.25;
 }
-@media (min-width: 40.0625em){ .js-enabled .govuk-tabs__panel{border-left:none;border-right:none;}}
-.app-mobile-nav__subnav > li.current-page a {
-  border-left: 4px solid #005ea5;
-}
+
 
 .js-enabled .app-mobile-nav__subnav--active {
   display: block;
@@ -667,7 +664,7 @@ h3.lesson-number-small {
 }
 
 .table-header-colour {
-	background-color: #d3f4f1;
+	background-color: #cce9ff;
 }
 
 .table-description-column {padding-left: 20px;}
@@ -740,4 +737,35 @@ ol.step-by-step-navigation {
       border: none;
     }
   }
+}
+
+#lesson-contents-tabs {
+	.govuk-tabs__tab--selected,
+	.govuk-tabs__panel {
+		background-color: #f0f9ff;
+	}
+	
+	.govuk-tabs__list {
+		border-bottom: 1px solid black;
+	}
+	
+	.govuk-tabs__panel {
+		border: 1px solid black;
+		border-top: 0;
+	}
+	
+	.govuk-tabs__tab--selected {
+		border: 1px solid black;
+		border-bottom: 0;
+	}
+	
+	td.table-activity-column,
+	td.table-header-identifier,
+	td.table-description-column {
+		background-color: white;
+	}
+}
+
+#govuk-table__cell {
+			background-color: #ffffff;
 }
