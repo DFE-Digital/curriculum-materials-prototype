@@ -3,7 +3,7 @@
 
 {% block header %}
   {{ govukHeader({
-    homepageUrl: "/dfe-sign-in/username",
+    homepageUrl: "/",
     serviceName: "Access curriculum resources",
     serviceUrl: "#",
     containerClasses: "govuk-width-container",
@@ -38,31 +38,6 @@
 {% endblock %}
 {% block pageTitle %}
   Plan lesson 4 - Curriculum materials alpha - Department for Education
-
-
-
-<!--
-<nav class="app-navigation govuk-clearfix">
-  <ul class="app-navigation__list govuk-width-container">
-
-    <li class="app-navigation--current-page">
-      <a class="govuk-link" href="/geography" data-topnav="Get started">Geography</a>
-    </li>
-
-    <li>
-      <a class="govuk-link" href="/geography" data-topnav="Styles">History</a>
-    </li>
-
-    <li>
-      <a class="govuk-link" href="/geography" data-topnav="Components">Science</a>
-    </li>
-
-    <li>
-      <a class="govuk-link" href="/geography" data-topnav="Components">All subjects</a>
-    </li>
-  </ul>
-</nav>
--->
 
 {{ govukBreadcrumbs({
   items: [

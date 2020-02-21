@@ -3,7 +3,7 @@
 
 {% block header %}
   {{ govukHeader({
-    homepageUrl: "/dfe-sign-in/username",
+    homepageUrl: "/",
     serviceName: "Access curriculum resources",
     serviceUrl: "#",
     containerClasses: "govuk-width-container",
@@ -50,38 +50,16 @@
 
 {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
 {% block beforeContent %}
-<!--
-<nav class="app-navigation govuk-clearfix">
-  <ul class="app-navigation__list govuk-width-container">
-
-    <li class="app-navigation--current-page">
-      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Geography</a>
-    </li>
-
-    <li>
-      <a class="govuk-link" href="/unit/year" data-topnav="Styles">History</a>
-    </li>
-
-    <li>
-      <a class="govuk-link" href="/unit/year" data-topnav="Components">Science</a>
-    </li>
-
-    <li>
-      <a class="govuk-link" href="/unit/year" data-topnav="Components">All subjects</a>
-    </li>
-  </ul>
-</nav>
--->
 
 {{ govukBreadcrumbs({
   items: [
   {
-    text: "Year 6",
-    href: "/geography"
+    text: "Year 7",
+    href: "/keystage3-history"
   },
   {
-    text: "Geography",
-    href: "/geography"
+    text: "History",
+    href: "/history"
   },
   {
     text: "Summer 2",
@@ -109,12 +87,13 @@ Lesson contents: The Battle of Hastings
 {% macro slide(
 	length,
 	image,
-	title,
+	activity_type,
 	synopsis,
 	rowNumber,
 	optionNumber,
 	checked=false,
-	badge=false
+	badge=false,
+	title=''
 	) %}
 
 	<div class="responsive-slide highlight-on-select-slide">
@@ -133,8 +112,9 @@ Lesson contents: The Battle of Hastings
 		</div>
 		<div class="info">
       <div class="heading">
-        <h3 class='govuk-heading-s'>{{ title }}</h3>
+        <h3 class='govuk-heading-m'>{{ title }}</h3>
         {%if badge %}{{badge | safe}}{%endif%}
+        <span class="govuk-caption-m">{{ activity_type }}</span>
       </div>
 			<div class="synopsis">
 				{% for item in synopsis %}	
@@ -174,11 +154,12 @@ Lesson contents: The Battle of Hastings
 			1,
 			1,
 			true,
-			"<strong class='govuk-tag' id='prep'>extra prep</strong>")
+			"<strong class='govuk-tag' id='prep'>extra prep</strong>",
+	  		"Matching key words with definitions")
 		}}
 
-		{{ slide('whole class - 10 minutes', 'thumb-do-it-now.png', 'Do it now: questions', ['As students enter the room, direct them to answer the questions on the board either in their books or in pairs. Feed back and reveal correct responses. '], 1, 2, false) }}
-		{{ slide('whole class - 10 minutes', 'thumb-do-it-now.png', 'Do it now: anagrams', ['As students enter the room, direct them to try and solve the anagrams on the board which are all keywords they will have come across in previous lessons. Feedback and reveal correct responses. '], 1, 3, false, "<strong class='govuk-tag' id='prep'>extra prep</strong>") }}
+		{{ slide('whole class - 10 minutes', 'thumb-do-it-now.png', 'Do it now: questions', ['As students enter the room, direct them to answer the questions on the board either in their books or in pairs. Feed back and reveal correct responses. '], 1, 2, false, "", "Answering questions from the board") }}
+		{{ slide('whole class - 10 minutes', 'thumb-do-it-now.png', 'Do it now: anagrams', ['As students enter the room, direct them to try and solve the anagrams on the board which are all keywords they will have come across in previous lessons. Feedback and reveal correct responses. '], 1, 3, false, "<strong class='govuk-tag' id='prep'>extra prep</strong>", "Solving anagrams from the board") }}
 
 	</div>
 	
@@ -188,9 +169,9 @@ Lesson contents: The Battle of Hastings
 	<p>You can keep the selected activity or choose an alternative.</p>
 
     <div class="responsive-grid">
-		{{ slide('image and text', 'thumb-reading-inv.png', 'Reading', ['For this lesson, students need to know the events of the battle in chronological order. The teacher uses maps on slides 6 and 7 to remind students what led up to the battle. Students then read the Word document “description of the Battle of Hastings” either as a group taking it in turns to read aloud or independently.'], 2, 1, true, "<strong class='govuk-tag' id='prep'>printing required</strong>") }}
-		{{ slide('image and text', 'thumb-writing-inv.png', 'Writing', ['This video clip serves to both recap events leading up to the battle and outline what happened on 14th October at Hastings. If the teacher stops the video several times, students can be asked to bullet point any information they think would help them to answer the key enquiry question for the lesson.'], 2, 2) }}
-		{{ slide('image and text', 'thumb-drawing.png', 'Drawing', ['For students who are, for example, at an early stage of learning English, there is a storyboard worksheet with simple steps that take them through the events of the battle which they can then illustrate with appropriate images to demonstrate understanding.'], 2, 3, false, "<strong class='govuk-tag' id='prep'>printing required</strong>") }}
+		{{ slide('image and text', 'thumb-reading-inv.png', 'Reading', ['For this lesson, students need to know the events of the battle in chronological order. The teacher uses maps on slides 6 and 7 to remind students what led up to the battle. Students then read the Word document “description of the Battle of Hastings” either as a group taking it in turns to read aloud or independently.'], 2, 1, true, "<strong class='govuk-tag' id='prep'>printing required</strong>", "Understanding the events of the battle in chronological order") }}
+		{{ slide('image and text', 'thumb-writing-inv.png', 'Writing', ['This video clip serves to both recap events leading up to the battle and outline what happened on 14th October at Hastings. If the teacher stops the video several times, students can be asked to bullet point any information they think would help them to answer the key enquiry question for the lesson.'], 2, 2, "", "", "Watching a video recap of the battle and note-taking") }}
+		{{ slide('image and text', 'thumb-drawing.png', 'Drawing', ['For students who are, for example, at an early stage of learning English, there is a storyboard worksheet with simple steps that take them through the events of the battle which they can then illustrate with appropriate images to demonstrate understanding.'], 2, 3, false, "<strong class='govuk-tag' id='prep'>printing required</strong>", "Drawing the events of the battle as a storyboard") }}
     </div>
 
 
@@ -208,8 +189,8 @@ Lesson contents: The Battle of Hastings
 	<p>You can keep the selected activity or choose an alternative.</p>
 
     <div class="responsive-grid">
-		{{ slide('image and text', 'thumb-card-sort.png', 'Card sort', ['Students can work individually, in pairs or in groups for this activity. Instructions for the activity are on slide 9. Students decide which statements on the cards are irrelevant to answering the question “Why did William win the Battle of Hastings?” and discard them. Then they categorise the cards under different headings. Higher attainers can be encouraged to come up with their own category headings or think of alternatives to the one you give them.'], 4, 1, true, "<strong class='govuk-tag' id='prep'>extra prep</strong>") }}
-		{{ slide('image and text', 'thumb-reading-inv.png', 'Reading', ['Instead of completing this activity as a card sort, students can instead use the card sort worksheet to highlight different categories of reason William was able to achieve victory in different colours. They should include a key to show which category is represented by which colour.'], 4, 2, false, "<strong class='govuk-tag' id='prep'>printing required</strong>") }}
+		{{ slide('image and text', 'thumb-card-sort.png', 'Card sort', ['Students can work individually, in pairs or in groups for this activity. Instructions for the activity are on slide 9. Students decide which statements on the cards are irrelevant to answering the question “Why did William win the Battle of Hastings?” and discard them. Then they categorise the cards under different headings. Higher attainers can be encouraged to come up with their own category headings or think of alternatives to the one you give them.'], 4, 1, true, "<strong class='govuk-tag' id='prep'>extra prep</strong>", "Understanding why William won the Battle of Hastings") }}
+		{{ slide('image and text', 'thumb-reading-inv.png', 'Reading', ['Instead of completing this activity as a card sort, students can instead use the card sort worksheet to highlight different categories of reason William was able to achieve victory in different colours. They should include a key to show which category is represented by which colour.'], 4, 2, false, "<strong class='govuk-tag' id='prep'>printing required</strong>", "Categorising the reasons William achieved victory") }}
     </div>
 
 
@@ -220,7 +201,7 @@ Lesson contents: The Battle of Hastings
 
 
     <div class="responsive-grid">
-		{{ slide('image', 'thumb-teacher.png', 'Teacher instruction', ['Show students example paragraphs and get them to verbally feed back on what they think is wrong with the first one. Then show the better paragraph, and use questioning to get students to identify what is better about this piece of writing before you show them the complete annotated version.'], 5, 1, true) }}
+		{{ slide('image', 'thumb-teacher.png', 'Teacher instruction', ['Show students example paragraphs and get them to verbally feed back on what they think is wrong with the first one. Then show the better paragraph, and use questioning to get students to identify what is better about this piece of writing before you show them the complete annotated version.'], 5, 1, true, "", "Understanding how to construct paragraphs") }}
 	</div>
 	
     <h1 class="govuk-heading-m" id="activity6">Activity 6</h1>
@@ -228,7 +209,7 @@ Lesson contents: The Battle of Hastings
 	<p>Only one activity is available.</p>
 
     <div class="responsive-grid">
-		{{ slide('image', 'thumb-writing-inv.png', 'Writing', ['Students attempt their own paragraphs. Starter sentences can be displayed on the slide for students who need more support.'], 6, 1, true) }}
+		{{ slide('image', 'thumb-writing-inv.png', 'Writing', ['Students attempt their own paragraphs. Starter sentences can be displayed on the slide for students who need more support.'], 6, 1, true, "", "Students write their own paragraphs" ) }}
 	</div>	
 	
 
@@ -237,7 +218,8 @@ Lesson contents: The Battle of Hastings
 	<p> Only one activity is available.</p>
 
     <div class="responsive-grid">
-		{{ slide('image', 'thumb-worksheet-inv.png', 'Peer assessment', ['Ask students to use the checklist on the slide to feed back on the work of the person next to them. They can either award a mark for each element of the checklist that is present, or write a “what went well” and an “even better if” for their partner.'], 7, 1, true) }}
+		{{ slide('image', 'thumb-worksheet-inv.png', 'Peer assessment', ['Ask students to use the checklist on the slide to feed back on the work of the person next to them. They can either award a mark for each element of the checklist that is present, or write a “what went well” and an “even better if” for their partner.'], 7, 1, true, "", "Students assess a partner's paragraph") }}
+
 	</div>	
 	
     <h1 class="govuk-heading-m" id="activity6">Activity 8</h1>
@@ -245,7 +227,7 @@ Lesson contents: The Battle of Hastings
 	<p>Only one activity is available.</p>
 
     <div class="responsive-grid">
-		{{ slide('image', 'thumb-whole-inv.png', 'Whole-class plenary', ['Ask a student to read out their paragraph and either offer feedback or get other students to offer verbal feedback.'], 8, 1, true) }}
+		{{ slide('image', 'thumb-whole-inv.png', 'Whole-class plenary', ['Ask a student to read out their paragraph and either offer feedback or get other students to offer verbal feedback.'], 8, 1, true, "", "Students share their paragraphs") }}
 
 	</div>	
 

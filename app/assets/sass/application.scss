@@ -171,10 +171,6 @@ $govuk-global-styles: true;
   font-size: 1rem;
   line-height: 1.25;
 }
-@media (min-width: 40.0625em){ .js-enabled .govuk-tabs__panel{border-left:none;border-right:none;}}
-.app-mobile-nav__subnav > li.current-page a {
-  border-left: 4px solid #005ea5;
-}
 
 .js-enabled .app-mobile-nav__subnav--active {
   display: block;
@@ -490,6 +486,14 @@ $govuk-global-styles: true;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
 
+  h3 {
+    margin-bottom: 0;
+  }
+
+  .govuk-caption-m {
+    margin-bottom: 0.6rem;
+  }
+
   .responsive-slide {
     display: flex;
 
@@ -662,7 +666,14 @@ h3.lesson-number-small {
 	background-color: #d3f4f1;
 }
 
-.table-description-column {padding-left: 20px;}
+.table-description-column {
+  padding-left: 20px;
+
+  h3 {
+    margin-top: 0.4rem;
+    padding-top: 0;
+  }
+}
 
 tbody > tr > .table-header-identifier {
 	text-align: center;
