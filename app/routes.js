@@ -6,12 +6,13 @@ const path = require('path');
 // Add your routes here - above the module.exports line
 
 router.get('/preview-teacher-resource', function(request, response) {
-  const filename = 'Battle_of_Hastings-Preview.pdf';
+  const filename = 'slide_1_keyword_match_up.odp';
   const filepath = path.join(__dirname, "assets", "resources", filename)
+  const contentType = 'application/vnd.oasis.opendocument.presentation';
 
   let data = fs.readFileSync(filepath);
-  response.setHeader('Content-type', 'application/pdf');
-  response.setHeader('Content-disposition', 'inline; filename="' + filename + '"');
+  response.setHeader('Content-Type', contentType);
+  response.setHeader('Content-Disposition', 'inline; filename="' + filename + '"');
   response.send(data);
 });
 
