@@ -677,6 +677,24 @@ tbody > tr > .table-header-identifier {
 	background-color: gray;
 }
 
+.govuk-tag-doc {
+	background-color: #1555a0;
+	font-size:16px;
+	color: #fff;
+}
+
+.govuk-tag-video {
+	background-color: #91201a;
+	font-size:16px;
+	color: #fff;
+}
+
+.govuk-tag-audio {
+	background-color: #006435;
+	font-size:16px;
+	color: #fff;
+}
+
 #lesson-outline-container {
 	th:last-of-type {
 		min-width: 120px;
