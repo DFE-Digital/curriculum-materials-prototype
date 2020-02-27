@@ -1,0 +1,621 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
+      {
+        href: "#",
+        text: "Year 3"
+      },
+      {
+        href: "#",
+        text: "Year 4"
+      },
+      {
+        href: "#",
+        text: "Year 5"
+      },
+      {
+        href: "#",
+        text: "Year 6",
+        active: true
+      },
+      {
+        href: "/",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Plan lesson 4 - Access curriculum resources alpha - Department for Education
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+{% from "input/macro.njk" import govukInput %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Geography</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">History</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Science</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">All subjects</a>
+    </li>
+  </ul>
+</nav>
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 7",
+    href: "/dashboard"
+  },
+  {
+    text: "Geography",
+    href: "/unit/year"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 4"
+  }
+  ]
+}) }}
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+      <h1 class="govuk-heading-xl">
+  <!--<span class="govuk-caption-xl">Unit 2 - Volcanoes, earthquakes and plates</span>-->
+  Plan lesson 1
+</h1>
+
+<h3 class='govuk-heading-m'><a href='objective-1'>Objective: to learn the types of volcano</a></h3>
+    <p>To know the characterstics of different types of volcanoes, and distinguish one type from another based on its eruption style.</P>
+      <p>To locate volcanoes on a map using grid coordinates.</p>
+
+{% set objectives %}
+
+
+<div class="govuk-grid-row govuk-!-margin-bottom-6">
+  <h2 class="govuk-heading-l">Lesson overview</h2>
+  <div class="govuk-grid-column-one-half">
+    <h3>Core knowledge for all pupils</h3>
+    <ul>
+      <li>volcanoes occur at a destructive plate boundary</li>
+      <li>a lava flow is molten rock only</li>
+      <li>a pyroclastic flow is a mixture of molten rock, ash and gases</li>
+</ul>
+
+    <h3>Vocabulary for this learning objective</h3>
+
+    <ul>
+      <li>cone</li>
+      <li>vent</li>
+      <li>magma chamber</li>
+      <li>dome</li>
+      <li>shield</li>
+      <li>strato</li>
+    </ul>
+
+  </div>
+
+</div>
+<div class="govuk-grid-row govuk-!-margin-bottom-9">
+<h2 class="govuk-heading-l">Misconceptions to address</h2>
+<p>The following common misconceptions that pupils have should be considered when planning this lesson:</p>
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        text: "All volcanoes erupt violently"
+      },
+      content: {
+        html: "<p class='govuk-body'>This misconception arises from media coverage which is biased by location and death tolls.
+</p>"
+      }
+    },
+    {
+      heading: {
+        text: "If a volcano doesn’t erupt for a hundred years, it’s extinct"
+      },
+      content: {
+        html: "<p class='govuk-body'>In fact, the volcano is probably just dormant.</p>"
+      }
+    },
+      {
+      heading: {
+        text: "Volcanoes only form on land, not underwater"
+      },
+      content: {
+        html: "<p class='govuk-body'>Actually, there are numerous oceanic fault lines with volcanoes forming along these without breaking the surface of the water.</p>"
+      }
+    },
+      {
+      heading: {
+        text: "Magma comes from deep within the Earth’s mantle"
+      },
+      content: {
+        html: "<p class='govuk-body'>This comes from textbooks’ saying that the magma is ‘deep’ down - in reality, virtually all magma originates in the upper portion of the mantle and crust because of plate friction.</p>"
+      }
+    }
+  ]
+}) }}
+</div>
+<h2 class="govuk-heading-l">Building on previous knowledge</h2>
+<div class="govuk-grid-row govuk-!-margin-bottom-9">
+  <div class="govuk-grid-column-one-half">
+<h3 class="govuk-heading-m">Vocabulary</h3>
+<p>Pupils should already know:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>lava: red-hot liquid rock</li>
+  <li>volcano: a mountain that erupts, or has erupted</li>
+  <li>volcanic eruption: an explosion or outpouring of lava, rock or as from a volcano</li>
+</ul>
+</ul>
+</div>
+</div>
+  <h2 class="govuk-heading-l">Downloads</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="">Background knowledge to teach this lesson effectively (PDF, 78KB)</a></li>
+  </ul>
+{% endset -%}
+
+
+{% set content %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <p class="govuk-body">Use only the filters to show only the content you want</p>
+        <div class="search-box">
+
+
+          {{ govukInput({
+            label: {
+              text: "Search"
+            },
+            id: "event-name",
+            name: "event-name"
+          }) }}
+
+        </div>
+
+        {{ govukCheckboxes({
+          idPrefix: "content-type",
+          name: "content-type",
+          classes: "govuk-checkboxes--small",
+          fieldset: {
+            legend: {
+              text: "Content type",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "audio",
+              text: "Audio"
+            },
+            {
+              value: "video",
+              text: "Video"
+            },
+            {
+              value: "image",
+              text: "Image"
+            },
+            {
+              value: "slide",
+              text: "Slide"
+            },
+            {
+              value: "text",
+              text: "Text"
+            }
+          ]
+        }) }}
+        {{ govukCheckboxes({
+          idPrefix: "element-type",
+          name: "element-type",
+          classes: "govuk-checkboxes--small",
+          fieldset: {
+            legend: {
+              text: "Lesson element type",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "activity",
+              text: "Activity"
+            },
+            {
+              value: "learning",
+              text: "Assessment for learning"
+            },
+            {
+              value: "enrichment",
+              text: "Enrichment"
+            },
+            {
+              value: "scaffold",
+              text: "Scaffolded activities for SEN"
+            },
+            {
+              value: "stretch",
+              text: "Stretch activities"
+            },
+            {
+              value: "eal",
+              text: "Works for EAL"
+            }
+          ]
+        }) }}
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+
+        <p class="govuk-body"><span class="govuk-!-font-size-36 govuk-!-font-weight-bold">37</span> results shown</p>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <div class="card">
+              <img src="/public/images/01-lava-flow.jpg" style="width:100%" alt="">
+              <div class="card-wrapper">
+            <h3 class='govuk-heading-m'><a href="preview">Lava flow from vent on Kilaeua</a></h3>
+            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">image</a></p>
+            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
+            </div>
+            </div>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <div class="card">
+              <img src="/public/images/02-Volcano-unlabelled.jpg" style="width:100%" alt="">
+              <div class="card-wrapper">
+            <h3 class='govuk-heading-m'><a href="preview">Unlabelled volcano cross-section diagram</a></h3>
+            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">image</a>, <a href="#" class="govuk-link">activity</a></p>
+            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <div class="card">
+              <img src="/public/images/etna.jpg" style="width:100%" alt="">
+              <div class="card-wrapper">
+            <h3 class='govuk-heading-m'><a href="preview">Etna erupts</a></h3>
+            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">image</a></p>
+            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
+            </div>
+            </div>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <div class="card">
+              <img src="/public/images/04-exit-ticket.jpg" style="width:100%" alt="">
+              <div class="card-wrapper">
+            <h3 class='govuk-heading-m'><a href="preview">Volcano types exit ticket</a></h3>
+            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">image</a>, <a href="#" class="govuk-link">text</a>, <a href="#" class="govuk-link">activity</a></p>
+            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <div class="card">
+              <img src="/public/images/active-dormant-extinct.jpg" style="width:100%" alt="">
+              <div class="card-wrapper">
+            <h3 class='govuk-heading-m'><a href="preview">Active, dormant and extinct volcanoes</a></h3>
+            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">slides</a>, <a href="#" class="govuk-link">scaffolded</a></p>
+            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
+            </div>
+            </div>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <div class="card">
+              <img src="/public/images/06-volcanocross.jpg" style="width:100%" alt="">
+              <div class="card-wrapper">
+            <h3 class='govuk-heading-m'><a href="preview">Volcano types crossword</a></h3>
+            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">assessment</a>, <a href="#" class="govuk-link">stretch activities</a>, <a href="#" class="govuk-link">Image</a></p>
+            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <div class="card">
+              <img src="/public/images/07-volcano_recipe.jpg" style="width:100%" alt="">
+              <div class="card-wrapper">
+            <h3 class='govuk-heading-m'><a href="preview">Homemade volcano instructions</a></h3>
+            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">enrichment</a>, <a href="#" class="govuk-link">scaffolded</a>, <a href="#" class="govuk-link">activity</a></p>
+            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
+            </div>
+            </div>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <div class="card">
+              <img src="/public/images/types-of-volcano.jpg" style="width:100%" alt="">
+              <div class="card-wrapper">
+                <h3 class='govuk-heading-m'><a href="preview">How to distinguish volcanoes</a></h3>
+                <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">slides</a>, <a href="#" class="govuk-link">scaffolded</a></p>
+                <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <div class="card">
+              <img src="/public/images/shield-strato-dome.jpg" style="width:100%" alt="">
+              <div class="card-wrapper">
+            <h3 class='govuk-heading-m'><a href="preview">Shield, dome and strato volcanoes</a></h3>
+            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">slides</a>, <a href="#" class="govuk-link">scaffolded</a></p>
+            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
+            </div>
+            </div>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <div class="card">
+              <img src="/public/images/10-destruction.jpg" style="width:100%" alt="">
+              <div class="card-wrapper">
+            <h3 class='govuk-heading-m'><a href="preview">Lava flow from Kilauea</a></h3>
+            <p class="govuk-body govuk-!-font-size-16"><a href="#" class="govuk-link">image</a></p>
+            <a href="#" class="govuk-link add-to-lesson">Add to lesson</a>
+            </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <nav class="page-numbers-container pagination-container" aria-label="Pagination">
+        <div class="next">
+          <a href="#" rel="next">
+            Next <span class="hidden-mobile">page</span>
+          </a>
+        </div><div class="pagination"><ul class="list-inline">
+      <li class="active"><a href="#"><span class="visuallyhidden">Page </span>1</a></li>
+      <li><a href="#"><span class="visuallyhidden">Page </span>2</a></li>
+      <li><a href="#"><span class="visuallyhidden">Page </span>3</a></li>
+      <li><a href="#"><span class="visuallyhidden">Page </span>4</a></li>
+      </ul></div>
+      </nav>
+      </div>
+
+
+    </div>
+{% endset -%}
+
+{% set outline %}
+<p>You have added 7 teaching materials to this lesson.
+<p><a href="/unit/lesson#content">Add more materials</a></p>
+<div class="govuk-grid-row">
+{% from "table/macro.njk" import govukTable %}
+{{ govukTable({
+  caption: "",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Order"
+    },
+    {
+      text: "Name"
+    },
+    {
+      text: ""
+    },
+    {
+      text: "Tags"
+    },
+    {
+      text: ""
+    }
+  ],
+  rows: [
+    [
+      {
+       text: "1"
+      },
+      {
+        text: "Etna erupting"
+      },
+      {
+        html: "<img src='/public/images/etna.jpg' style='width:100px' alt=''>"
+      },
+      {
+        text: "image"
+      },
+      {
+        html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
+      },
+      {
+        text: ""
+      },
+      {
+
+      }
+    ],
+    [
+      {
+        text: "2"
+      },
+      {
+        text: "Active, dormant and extinct volcanoes"
+      },
+      {
+        html: "<img src='/public/images/active-dormant-extinct.jpg' style='width:100px' alt=''>"
+      },
+      {
+        text: "slides, scaffolded"
+      },
+      {
+        html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
+      },
+      {
+        text: ""
+      }
+    ],
+    [
+      {
+        text: "3"
+      },
+      {
+        text: "Shield, dome and strato volcanoes"
+      },
+      {
+        html: "<img src='/public/images/shield-strato-dome.jpg' style='width:100px' alt=''>"
+      },
+      {
+        text: "slides, scaffolded"
+      },
+      {
+        html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
+      },
+      {
+        text: ""
+      }
+    ],
+    [
+      {
+        text: "4"
+      },
+      {
+        text: "How to distinguish volcanoes"
+      },
+      {
+        html: "<img src='/public/images/types-of-volcano.jpg' style='width:100px' alt=''>"
+      },
+      {
+        text: "slides, scaffolded"
+      },
+      {
+        html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
+      },
+      {
+        text: ""
+      }
+    ],
+    [
+      {
+        text: "5"
+      },
+      {
+        text: "'Make a volcano' instructions"
+      },
+      {
+        html: "<img src='/public/images/07-volcano_recipe.jpg' style='width:100px' alt=''>"
+      },
+      {
+        text: "enrichment, scaffolded, activity"
+      },
+      {
+        html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
+      },
+      {
+        text: ""
+      }
+    ],
+    [
+      {
+        text: "6"
+      },
+      {
+        text: "Unlabelled volcano cross-section diagram"
+      },
+      {
+        html: "<img src='/public/images/02-Volcano-unlabelled.jpg' style='width:100px' alt=''>"
+      },
+      {
+        text: "image, activity"
+      },
+      {
+        html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
+      },
+      {
+        text: ""
+      }
+    ],
+    [
+      {
+        text: "7"
+      },
+      {
+        text: "Volcano types exit ticket"
+      },
+      {
+        html: "<img src='/public/images/04-exit-ticket.jpg' style='width:100px' alt=''>"
+      },
+      {
+        text: "image, text, activity"
+      },
+      {
+        html: "<a href='#'><img src='/public/images/reorder-icon.svg' style='width:35px' alt='Move up / down'></a>"
+      },
+      {
+        text: ""
+      }
+    ]
+  ]
+}) }}
+</div>
+{% from "button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Download lesson"
+}) }}
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Lesson objectives",
+      id: "objectives",
+      panel: {
+        html: objectives
+      }
+    },
+    {
+      label: "Teaching materials",
+      id: "content",
+      panel: {
+        html: content
+      }
+    },
+    {
+      label: "Lesson outline",
+      id: "outline",
+      panel: {
+        html: outline
+      }
+    }
+  ]
+}) }}
+{% endblock %}

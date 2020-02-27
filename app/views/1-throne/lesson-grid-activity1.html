@@ -1,0 +1,188 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
+      {
+        href: "#",
+        text: "Year 3"
+      },
+      {
+        href: "#",
+        text: "Year 4"
+      },
+      {
+        href: "#",
+        text: "Year 5"
+      },
+      {
+        href: "/dashboard",
+        text: "Year 6",
+        active: true
+      },
+      {
+        href: "/dfe-sign-in/username",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Plan lesson 4 - Access curriculum resources alpha - Department for Education
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+{% from "input/macro.njk" import govukInput %}
+{% from "radios/macro.njk" import govukRadios %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+{% block beforeContent %}
+
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 7",
+    href: "/keystage3-history"
+  },
+  {
+    text: "History",
+    href: "/history"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 1"
+  }
+  ]
+}) }}
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+      <h1 class="govuk-heading-xl">
+Lesson contents: The Battle of Hastings
+</h1>
+
+<p class="govuk-body">There are 8 parts to this lesson. If you want to change the lesson contents, you can choose from the alternative activities available.</p> 
+<p>When you've saved your changes, the lesson plan will be updated.</p>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+{% macro slide(
+	length,
+	image,
+	activity_type,
+	synopsis,
+	rowNumber,
+	optionNumber,
+	checked=false,
+	badge=false,
+	title=''
+	) %}
+
+	<div class="responsive-slide highlight-on-select-slide">
+		<div class="radio">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="volcano1">
+					<div class="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="{{ rowNumber }}_{{ optionNumber }}" name="{{ rowNumber }}" type="radio" value="{{ optionNumber }}" {% if checked %}checked{% endif %}>
+							<label class="govuk-label govuk-radios__label" for="{{ rowNumber }}_{{ optionNumber }}">
+							</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div class="info">
+      <div class="heading">
+        <h3 class='govuk-heading-m'>{{ title }}</h3>
+        {%if badge %}{{badge | safe}}{%endif%}
+        <span class="govuk-caption-m">{{ activity_type }}</span>
+      </div>
+			<div class="synopsis">
+				{% for item in synopsis %}	
+					<p>{{item}}</p>
+				{% endfor %}
+			</div>	
+		</div>
+
+		<div class="thumbnail">
+			<img src="/public/images/{{ image }}" style="width:100%" alt="">
+		</div>
+	</div>
+	
+{% endmacro %}
+
+
+<div class="govuk-grid-column-full-width">
+
+		 <h1 class="govuk-heading-m" id="activity1">Activity 1 options</h1>
+<p>Approximately 5 minutes.</p>
+<p>You can keep the selected activity or choose an alternative.</p>
+
+    <div class="responsive-grid">
+		{{ slide(
+			'pair reading - 5 minutes',
+			'thumb-do-it-now.png',
+			"Do it now: key words",
+			[
+				'As students enter the room, direct them to try and match up each key word with the correct definition. They should write the number with the correct letter in their books. Feed back and show correct responses.'
+			],
+			1,
+			1,
+			true,
+			"<strong class='govuk-tag' id='prep'>extra prep</strong>",
+	  		"Matching key words with definitions")
+		}}
+
+		{{ slide('whole class - 10 minutes', 'thumb-do-it-now.png', 'Do it now: questions', ['As students enter the room, direct them to answer the questions on the board either in their books or in pairs. Feed back and reveal correct responses. '], 1, 2, false, "", "Answering questions from the board") }}
+		{{ slide('whole class - 10 minutes', 'thumb-do-it-now.png', 'Do it now: anagrams', ['As students enter the room, direct them to try and solve the anagrams on the board which are all keywords they will have come across in previous lessons. Feedback and reveal correct responses. '], 1, 3, false, "<strong class='govuk-tag' id='prep'>extra prep</strong>", "Solving anagrams from the board") }}
+
+	</div>
+	
+	
+
+</div>
+
+<a class="govuk-button" href="/unit/lesson-outline#lesson-contents">Save lesson changes</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="/unit/lesson-outline#lesson-contents" button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+   Cancel
+</a>
+
+<!--
+
+    <h1 class="govuk-heading-m" id="activity5">Part 5</h1>
+	<p>Approximately 5 minutes. You can choose one resource to replace the suggested one.</p>
+
+    <div class="responsive-grid">
+		{{ slide('image', 'unlabelled2.jpg', 'Unlabelled volcano diagram', ['A reading exercise in which pupils work in groups to condense their knowledge of volcano features.'], 5, 1, true) }}
+		{{ slide('image', 'cross-section.jpg', 'Volcano illustrated cross section', ['A reading exercise in which pupils work in groups to test each other’s knowledge of volcano types.'], 5, 2) }}
+		{{ slide('image', 'colour-in.jpg', 'Volcano label activity', ['A reading exercise in which pupils work in groups to create a diagram of a designated volcano type.'], 5, 3) }}
+	</div>
+
+
+    <h1 class="govuk-heading-m" id="activity6">Part 6</h1>
+	<p>Approximately 10 minutes. Only one resource is available here. It is pre-selected for you.</p>
+
+    <div class="responsive-grid">
+		{{ slide('image', 'unlabelled2.jpg', 'Volcano chemistry exam', ['An assessment to test whole-class knowledge of the different types of volcanoes.'], 6, 1, true) }}
+	</div>
+-->
+
+{% endblock %}

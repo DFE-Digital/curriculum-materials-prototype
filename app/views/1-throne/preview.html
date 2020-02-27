@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
+      {
+        href: "#",
+        text: "Year 3"
+      },
+      {
+        href: "#",
+        text: "Year 4"
+      },
+      {
+        href: "#",
+        text: "Year 5"
+      },
+      {
+        href: "/dashboard",
+        text: "Year 7",
+        active: true
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Lava flow from Kilauea: pPreview  - Access curriculum resources alpha - Department for Education
+{% endblock %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% block beforeContent %}
+
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 7",
+    href: "/keystage3-history"
+  },
+  {
+    text: "History",
+    href: "/history"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 4"
+  }
+  ]
+}) }}
+<a class="govuk-back-link" href="/unit/lesson-grid">Back</a> {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+	<div class="govuk-inset-text">
+    <h1 class="govuk-heading-l">What is this resource?</h1>
+    <p>A video of Mount Kilauea, Hawaii (an active, shield volcano) erupting in 2019.</p>
+    <h2 class="govuk-heading-m">About Mount Kilauea</h2>
+    <p>Mount Kilauea is one of the world’s most active volcanoes. It is a shield volcano that makes up the southeastern side of Hawaii. Kilauea has had more than 60 recorded eruptions in the current cycle and has been erupting on a continuous basis since 1983.</p>
+    <p>On the 3 May 2018, the volcano erupted dramatically. The eruption spewed lava into residential subdivisions in the Puna district, prompting evacuations.</p>
+
+    <h1 class="govuk-heading-m">Teaching with this resource</h2>
+
+<p>Pupils apply their prior knowledge of the different types of volcanoes, focussing on the effects of volcanic eruptions.</p>
+
+<p>Ask pupils to watch the video carefully, noting down as many words as they can about what they observe. Remind them of their last lesson to help them. Follow up with a discussion to check answers and test vocabulary.</p>
+
+            <img src="/public/images/flow-video.jpg" width="80%" alt="">
+    </div>		
+
+   </div>
+	    </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+		<br>
+		<br>		
+    </div>
+    </div>
+
+<a class="govuk-button" href="/unit/lesson-grid">Back to resources</a>
+   </div>
+	
+{% endblock %}

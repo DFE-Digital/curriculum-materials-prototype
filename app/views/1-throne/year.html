@@ -1,0 +1,208 @@
+
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/dfe-sign-in/username",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
+      {
+        href: "#",
+        text: "Year 3"
+      },
+      {
+        href: "#",
+        text: "Year 4"
+      },
+      {
+        href: "#",
+        text: "Year 5"
+      },
+      {
+        href: "/dashboard",
+        text: "Year 6",
+        active: true
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Year 6 geography - Access curriculum resources alpha - Department for Education
+{% endblock %}
+
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "button/macro.njk" import govukButton %}
+{% from "select/macro.njk" import govukSelect %}
+
+{% block beforeContent %}
+
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Geography</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">History</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">Science</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">All subjects</a>
+    </li>
+  </ul>
+</nav>
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Year 6",
+      href: "/dashboard"
+    },
+    {
+      text: "Geography",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-xl">Year 6 geography curriculum</h1>
+<p>The locational, topographical and meteorological knowledge developed earlier in the Key Stage acts as a great foundation for the knowledge and skills to be built in future years. Themes developed over the course of multiple units include the water cycle, climate and change, urbanisation and migration, environmental interactions, global perspectives, and landscape systems.</P>
+<p>Pupils will focus on their map skills, and learn to record and communicate their fieldwork using a range of methods, in different contexts across the year.</p>
+  <p><a href="#"><p>See the full Key Stage 2 geography curriculum</a></p>
+  <p><a href="/dashboard"><p>See the full year 6 curriculum</a></p>
+  </div>
+  </div>
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="card" style="background-color:#f8f8f8;border-bottom:4px solid #005ea5;position:relative;margin-top:20px;">
+      <p class="tag card-tag govuk-!-font-weight-bold" style="background-color:#85994b;padding:8px 20px;color:#fff;">Autumn 1</p>
+      <div class="card-wrapper" style="padding:0 20px 20px;">
+
+      <h3 class="govuk-heading-m"><a href="/unit" class="govuk-link">Map skills</a></h3>
+      <p class="govuk-body govuk-!-font-size-16">Introducing the core map-reading concepts and map-making skills to underpin units in the rest of the year.</p>
+<ul class="govuk-list govuk-list--bullet govuk-!-font-size-16"><li>Physical map features</li>
+<li>Human map features</li>
+<li>Grid references</li>
+<li>Compass points</li>
+<li>Scale and distance</li>
+<li>Latitude, longitude and projection</li>
+</ul>
+<a href="/unit" class="govuk-link">Review unit</a>
+<p class="tag card-tag govuk-!-font-weight-bold" style="position:absolute;top:0px;right:0px;background:#005ea5;color:#ffffff;padding:4px;">Taught</p>
+    </div>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div class="card" style="background-color:#f8f8f8;border-bottom:4px solid #005ea5;position:relative;margin-top:20px;">
+      <p class="tag card-tag govuk-!-font-weight-bold" style="background-color:#85994b;padding:8px 20px;color:#fff;">Autumn 2</p>
+      <div class="card-wrapper" style="padding:0 20px 20px;">
+
+      <h3 class="govuk-heading-m"><a href="/unit" class="govuk-link">Rivers and oceans</a></h3>
+      <p class="govuk-body govuk-!-font-size-16">A physical geography unit focussed on processes involving water, but also building on learnt map skills.</p>
+<ul class="govuk-list govuk-list--bullet govuk-!-font-size-16"><li>Physical map features</li>
+<li>Water cycle</li>
+<li>River features (map skills)</li>
+<li>What happens at estuaries?</li>
+<li>Coastal erosion</li>
+<li>Continental shelf</li>
+<li>Oceans and currents</li>
+</ul>
+<a href="/unit" class="govuk-link">Review unit</a>
+<p class="tag card-tag govuk-!-font-weight-bold" style="position:absolute;top:0px;right:0px;background:#005ea5;color:#ffffff;padding:4px;">Taught</p>
+    </div>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div class="card" style="background-color:#f8f8f8;border-bottom:4px solid #005ea5;position:relative;margin-top:20px;">
+      <p class="tag card-tag govuk-!-font-weight-bold" style="background-color:#85994b;padding:8px 20px;color:#fff;">Spring 1</p>
+      <div class="card-wrapper" style="padding:0 20px 20px;">
+
+      <h3 class="govuk-heading-m"><a href="/unit" class="govuk-link">Ecosystems</a></h3>
+      <p class="govuk-body govuk-!-font-size-16">This unit links water cycle and river knowledge, map skills and human factors to explore ecosystems in general and rainforests in particular.</p>
+<ul class="govuk-list govuk-list--bullet govuk-!-font-size-16"><li>Physical map features</li>
+<li>What is an ecosystem?</li>
+<li>Global ecosystems</li>
+<li>What's in a rainforest?</li>
+<li>Where are rainforests? (map skills)</li>
+<li>Humans and the rainforest</li>
+<li>Do rainforests have a future?</li>
+</ul>
+<a href="/unit" class="govuk-link">Review unit</a>
+<p class="tag card-tag govuk-!-font-weight-bold" style="position:absolute;top:0px;right:0px;background:#005ea5;color:#ffffff;padding:4px;">Taught</p>
+    </div>
+    </div>
+  </div>
+  <hr class="govuk-section-break govuk-section-break--l">
+  <div class="govuk-grid-column-one-third">
+    <div class="card" style="background-color:#f8f8f8;border-bottom:4px solid #005ea5;position:relative;margin-top:20px;">
+      <p class="tag card-tag govuk-!-font-weight-bold" style="background-color:#2b8cc4;padding:8px 20px;color:#fff;">Spring 2</p>
+      <div class="card-wrapper" style="padding:0 20px 20px;">
+      <h3 class="govuk-heading-m"><a href="/unit" class="govuk-link">Development</a></h3>
+      <p class="govuk-body govuk-!-font-size-16">Introducing the human geography concept of development, considering the factors that cause differences of development and their effects.</p>
+<ul class="govuk-list govuk-list--bullet govuk-!-font-size-16"><li>Physical map features</li>
+<li>What is development?</li>
+<li>Demographic transitions (map skills)</li>
+<li>The development gap</li>
+<li>What causes the gap</li>
+<li>Trade and aid</li>
+<li>South Africa and Mozambique</li>
+</ul>
+<a href="/unit" class="govuk-link">Update lessons</a>
+<p class="tag card-tag govuk-!-font-weight-bold" style="position:absolute;top:0px;right:0px;background:#005ea5;color:#ffffff;padding:4px;">Planned</p>
+    </div>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div class="card" style="background-color:#f8f8f8;border-bottom:4px solid #005ea5;position:relative;margin-top:20px;">
+      <p class="tag card-tag govuk-!-font-weight-bold" style="background-color:#2b8cc4;padding:8px 20px;color:#fff;">Summer 1</p>
+      <div class="card-wrapper" style="padding:0 20px 20px;">
+      <h3 class="govuk-heading-m"><a href="/unit" class="govuk-link">Africa</a></h3>
+      <p class="govuk-body govuk-!-font-size-16">Interleaving the knowledge and skills learnt throughout the year to explore the continent of Africa.</p>
+<ul class="govuk-list govuk-list--bullet govuk-!-font-size-16"><li>Physical map features</li>
+<li>Countries and landmarks</li>
+<li>Population and culture</li>
+<li>Welcome to Lagos</li>
+<li>Africa's landscape</li>
+<li>The savannah nomads</li>
+</ul>
+<a href="/unit" class="govuk-link">Update lessons</a>
+<p class="tag card-tag govuk-!-font-weight-bold" style="position:absolute;top:0px;right:0px;background:#005ea5;color:#ffffff;padding:4px;">Planned</p>
+    </div>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div class="card" style="background-color:#f8f8f8;border-bottom:4px solid #005ea5;position:relative;margin-top:20px;">
+      <p class="tag card-tag govuk-!-font-weight-bold" style="background-color:#df3034;padding:8px 20px;color:#fff;">Summer 2</p>
+      <div class="card-wrapper" style="padding:0 20px 20px;">
+
+      <h3 class="govuk-heading-m"><a href="/unit" class="govuk-link">Volcanoes, earthquakes and plates</a></h3>
+      <p class="govuk-body govuk-!-font-size-16">A unit focussed on the physical processes that create and destroy our landscape - and their effects on humans.</p>
+<ul class="govuk-list govuk-list--bullet govuk-!-font-size-16"><li>Physical map features</li>
+<li>Earth's layers</li>
+<li>The plates</li>
+<li>Why earthquakes happen</li>
+<li>The types of volcanoes</li>
+<li>Volcano locations (map skills)</li>
+<li>Earthquake and volcano damage</li>
+</ul>
+<a href="/unit" class="govuk-link">Plan lessons</a>
+<p class="tag card-tag govuk-!-font-weight-bold" style="position:absolute;top:0px;right:0px;background:#005ea5;color:#ffffff;padding:4px;">Unplanned</p>
+    </div>
+    </div>
+  </div>
+	
+{% endblock %}
