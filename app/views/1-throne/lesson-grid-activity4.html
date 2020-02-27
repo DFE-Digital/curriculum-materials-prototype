@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
+      {
+        href: "#",
+        text: "Year 3"
+      },
+      {
+        href: "#",
+        text: "Year 4"
+      },
+      {
+        href: "#",
+        text: "Year 5"
+      },
+      {
+        href: "/dashboard",
+        text: "Year 6",
+        active: true
+      },
+      {
+        href: "/dfe-sign-in/username",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Plan lesson 4 - Access curriculum resources alpha - Department for Education
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+{% from "input/macro.njk" import govukInput %}
+{% from "radios/macro.njk" import govukRadios %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+{% block beforeContent %}
+
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 7",
+    href: "/keystage3-history"
+  },
+  {
+    text: "History",
+    href: "/history"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 1"
+  }
+  ]
+}) }}
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+      <h1 class="govuk-heading-xl">
+Lesson contents: The Battle of Hastings
+</h1>
+
+<p class="govuk-body">There are 8 parts to this lesson. If you want to change the lesson contents, you can choose from the alternative activities available.</p> 
+<p>When you've saved your changes, the lesson plan will be updated.</p>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+{% macro slide(
+	length,
+	image,
+	activity_type,
+	synopsis,
+	rowNumber,
+	optionNumber,
+	checked=false,
+	badge=false,
+	title=''
+	) %}
+
+	<div class="responsive-slide highlight-on-select-slide">
+		<div class="radio">
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" aria-describedby="volcano1">
+					<div class="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="{{ rowNumber }}_{{ optionNumber }}" name="{{ rowNumber }}" type="radio" value="{{ optionNumber }}" {% if checked %}checked{% endif %}>
+							<label class="govuk-label govuk-radios__label" for="{{ rowNumber }}_{{ optionNumber }}">
+							</label>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div class="info">
+      <div class="heading">
+        <h3 class='govuk-heading-m'>{{ title }}</h3>
+        {%if badge %}{{badge | safe}}{%endif%}
+        <span class="govuk-caption-m">{{ activity_type }}</span>
+      </div>
+			<div class="synopsis">
+				{% for item in synopsis %}	
+					<p>{{item}}</p>
+				{% endfor %}
+			</div>	
+		</div>
+
+		<div class="thumbnail">
+			<img src="/public/images/{{ image }}" style="width:100%" alt="">
+		</div>
+	</div>
+	
+{% endmacro %}
+
+
+<div class="govuk-grid-column-full-width">
+
+    <h1 class="govuk-heading-m" id="activity4">Activity 4 options</h1>
+	<p>Approximately 15 minutes.</p>
+	<p>You can keep the selected activity or choose an alternative.</p>
+
+    <div class="responsive-grid">
+		{{ slide('image and text', 'thumb-card-sort.png', 'Card sort', ['Students can work individually, in pairs or in groups for this activity. Instructions for the activity are on slide 9. Students decide which statements on the cards are irrelevant to answering the question “Why did William win the Battle of Hastings?” and discard them. Then they categorise the cards under different headings. Higher attainers can be encouraged to come up with their own category headings or think of alternatives to the one you give them.'], 4, 1, true, "<strong class='govuk-tag' id='prep'>extra prep</strong>", "Understanding why William won the Battle of Hastings") }}
+		{{ slide('image and text', 'thumb-reading-inv.png', 'Reading', ['Instead of completing this activity as a card sort, students can instead use the card sort worksheet to highlight different categories of reason William was able to achieve victory in different colours. They should include a key to show which category is represented by which colour.'], 4, 2, false, "<strong class='govuk-tag' id='prep'>printing required</strong>", "Categorising the reasons William achieved victory") }}
+    </div>
+
+	
+	
+
+</div>
+
+<a class="govuk-button" href="/unit/lesson-outline#lesson-contents">Save lesson changes</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="/unit/lesson-outline#lesson-contents" button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+   Cancel
+</a>
+
+
+
+{% endblock %}

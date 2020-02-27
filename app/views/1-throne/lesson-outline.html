@@ -1,0 +1,119 @@
+
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/dfe-sign-in/username",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "#",
+      text: "All Key Stage 2"
+    },
+      {
+        href: "#",
+        text: "Year 3"
+      },
+      {
+        href: "#",
+        text: "Year 4"
+      },
+      {
+        href: "#",
+        text: "Year 5"
+      },
+      {
+        href: "/geography",
+        text: "Year 6",
+        active: true
+      },
+      {
+        href: "/dfe-sign-in/username",
+        text: "Sign out"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Plan lesson 4 - Curriculum materials alpha - Department for Education
+
+
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 6",
+    href: "/keystage3-geography"
+  },
+  {
+    text: "Geography",
+    href: "/geography"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 1"
+  }
+  ]
+}) }}
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+<span class="govuk-caption-l">1 hour</span>
+<span class="govuk-caption-m">Medieval realms</span>
+<h1 class="govuk-heading-xl">
+ Lesson 1: The Battle of Hastings
+</h1>
+<p>You can understand and prepare for this lesson in 3 steps: understand the aims of the lesson, choose the activities and resources you'd like to teach, and download everything when you're ready.</p>
+
+
+<div id="lesson-contents-tabs" class="govuk-tabs" data-module="tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#learning">
+        <strong>1. </strong> Knowledge overview
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#lesson-contents">
+        <strong>2. </strong> Lesson plan
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#downloads">
+        <strong>3. </strong> Download resources
+      </a>
+    </li>
+  </ul>
+
+  <!-- note these sections have been moved to their own files, you'll find them
+	   in unit/tabs/whatever.html. This keeps everything smaller and makes it easier to
+	   keep neat and tidy!
+  -->
+  <section class="govuk-tabs__panel" id="learning">
+	  {% include 'unit/tabs/learning.html' %}
+  </section>
+
+	
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="lesson-contents">
+	  {% include 'unit/tabs/lesson-contents.html' %}
+  </section>
+	
+	
+  <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="downloads">
+	  {% include 'unit/tabs/downloads.html' %}
+  </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Lesson page
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+
+{% block beforeContent %}
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
+
+    <li class="app-navigation--current-page">
+      <a class="govuk-link" href="/unit/year" data-topnav="Get started">Year 6</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Styles">Year 5</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Year 4</a>
+    </li>
+
+    <li>
+      <a class="govuk-link" href="/unit/year" data-topnav="Components">Year 3</a>
+    </li>
+  </ul>
+</nav>
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/dashboard"
+    },
+    {
+      text: "Section",
+      href: "#"
+    },
+    {
+      text: "Subsection"
+    }
+  ]
+}) }}
+  <a class="govuk-back-link" href="/unit/lesson">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+  <span class="govuk-caption-xl">Volcanoes, earthquakes and plates</span>
+  Objective: to learn the types of volcano
+</h1>
+<ul class='govuk-list govuk-list--bullet'>
+<li>To know the characterstics of different types of volcanoes, and distinguish one type from another based on its eruption style.</li>
+<li>To locate volcanoes on a map using grid coordinates.</li>
+</ul>
+</div>
+</div>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+{% from "panel/macro.njk" import govukPanel %}
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="blue-panel" style="padding:40px;background-color:#005ea5;color:#fff;">
+<h3 class="govuk-heading-m" style="color:#fff;">Supports KS2 NC Geography</h3>
+<ul class="govuk-list govuk-list--bullet" style="color:#fff;">
+<li>locational knowledge</li>
+<li>physical geography and plate tectonics</li>
+</ul>
+</div>
+</div>
+</div>
+<img src="/public/images/objective.jpg" style="width:100%" alt="">
+
+
+
+
+
+
+{% endblock %}
