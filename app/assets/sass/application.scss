@@ -172,6 +172,7 @@ $govuk-global-styles: true;
   line-height: 1.25;
 }
 
+
 .js-enabled .app-mobile-nav__subnav--active {
   display: block;
 }
@@ -481,7 +482,7 @@ $govuk-global-styles: true;
 }
 
 .responsive-grid {
-  border-bottom: 1px solid $govuk-border-colour;
+  //border-bottom: 1px solid $govuk-border-colour;
   grid-gap: 1.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
@@ -662,18 +663,10 @@ h3.lesson-number-small {
 	color: gray;
 }
 
-.table-header-colour {
-	background-color: #d3f4f1;
-}
 
-.table-description-column {
-  padding-left: 20px;
 
-  h3 {
-    margin-top: 0.4rem;
-    padding-top: 0;
-  }
-}
+
+.table-description-column {padding-left: 20px;}
 
 tbody > tr > .table-header-identifier {
 	text-align: center;
@@ -682,6 +675,24 @@ tbody > tr > .table-header-identifier {
 
 .govuk-tag {
 	background-color: gray;
+}
+
+.govuk-tag-doc {
+	background-color: #1555a0;
+	font-size:16px;
+	color: #fff;
+}
+
+.govuk-tag-video {
+	background-color: #91201a;
+	font-size:16px;
+	color: #fff;
+}
+
+.govuk-tag-audio {
+	background-color: #006435;
+	font-size:16px;
+	color: #fff;
 }
 
 #lesson-outline-container {
@@ -743,4 +754,55 @@ ol.step-by-step-navigation {
       border: none;
     }
   }
+}
+
+#lesson-contents-tabs {
+	
+	.govuk-tabs__tab {
+	  background-color: #ececec;
+	}
+	
+	.govuk-tabs__tab.govuk-tabs__tab--selected,
+	.govuk-tabs__panel {
+		background-color: #f0f9ff;
+	}
+	
+	.govuk-tabs__list {
+		border-bottom: 1px solid black;
+	}
+	
+	.govuk-tabs__panel {
+		border: 1px solid black;
+		border-top: 0;
+	}
+	
+	.govuk-tabs__tab--selected {
+		border: 1px solid black;
+		border-bottom: 0;
+	}
+	
+	td.table-activity-column,
+	td.table-header-identifier,
+	td.table-description-column {
+		background-color: white;
+	}
+	
+	td.govuk-table__cell.table-header-identifier.table-header-colour {
+		background-color: #cce9ff;
+		background-color: #cce9ff;
+	}
+	
+	td.govuk-table__cell.table-header-identifier.table-header-colour {
+		background-color: #cce9ff;
+		background-color: #cce9ff;
+	}	
+
+	td.govuk-table__cell.table-header-identifier.table-header-colour-blue.table-header-colour-blue {
+		background-color: #cce9ff;
+		background-color: #cce9ff;
+	}
+}
+
+#govuk-table__cell {
+			background-color: #ffffff;
 }
