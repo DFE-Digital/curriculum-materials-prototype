@@ -678,21 +678,27 @@ tbody > tr > .table-header-identifier {
 }
 
 .govuk-tag-doc {
-	background-color: #1555a0;
+	border: 1px solid #1555a0;
+	padding: 0.1rem;
+	background-color: white;
 	font-size:16px;
-	color: #fff;
+	color: #1555a0;
 }
 
 .govuk-tag-video {
-	background-color: #91201a;
+	border: 1px solid #1555a0;
+	padding: 0.1rem;
+	background-color: white;
 	font-size:16px;
-	color: #fff;
+	color: #1555a0;
 }
 
 .govuk-tag-audio {
-	background-color: #006435;
+	border: 1px solid #1555a0;
+	padding: 0.1rem;
+	background-color: white;
 	font-size:16px;
-	color: #fff;
+	color: #1555a0;
 }
 
 #lesson-outline-container {
