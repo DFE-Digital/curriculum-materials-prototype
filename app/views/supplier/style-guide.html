@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/dfe-sign-in/username",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+ Style guide
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+{% from "input/macro.njk" import govukInput %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 6",
+    href: "/keystage3-geography"
+  },
+  {
+    text: "Geography",
+    href: "/geography"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 1"
+  }
+  ]
+}) }}
+
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">
+			Style guide
+		</h1>
+  </div>
+</div>
+
+
+<p>Intro paragraph</p>
+
+
+
+<ol class="step-by-step-navigation" id="1">
+  <li class="navigation-step">
+		<h4 class='govuk-heading-m'>Style title</h4>
+			<p>Description text</p>
+
+  <li class="navigation-step" id="2">
+		<h4 class='govuk-heading-m'>Style title</h4>
+			<p>Description text</p>
+		</li>
+
+  <li class="navigation-step" id="3">
+		<h4 class='govuk-heading-m'>Style title</h4>
+			<p>Description text</p>
+		</li>	
+
+  <li class="navigation-step" id="4">
+		<h4 class='govuk-heading-m'>Style title</h4>
+			<p>Description text</p>
+		</li>
+
+  <li class="navigation-step" id="5">
+		<h4 class='govuk-heading-m'>Style title</h4>
+			<p>Description text</p>
+		</li>
+
+  <li class="navigation-step" id="6">
+		<h4 class='govuk-heading-m'>Style title</h4>
+			<p>Description text</p>
+		</li>	
+
+  <li class="navigation-step" id="7">
+		<h4 class='govuk-heading-m'>Style title</h4>
+			<p>Description text</p>
+		</li>	
+		
+  <li class="navigation-step" id="8">
+		<h4 class='govuk-heading-m'>Style title</h4>
+			<p>Description text</p>
+		</li>
+
+  <li class="navigation-step" id="9">
+		<h4 class='govuk-heading-m'>Style title</h4>
+			<p>Description text</p>
+		</li>	
+
+  <li class="navigation-step" id="10">
+		<h4 class='govuk-heading-m'>Style title</h4>
+			<p>Description text</p>
+		</li>			
+
+<p class="govuk-body">The next bit </p>
+
+<a href="enter-ccp" button class="govuk-button govuk-button" data-module="govuk-button">
+  Continue
+</a>
+{% endblock %}

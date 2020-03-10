@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/dfe-sign-in/username",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+ Style guide
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+{% from "input/macro.njk" import govukInput %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 6",
+    href: "/keystage3-geography"
+  },
+  {
+    text: "Geography",
+    href: "/geography"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 1"
+  }
+  ]
+}) }}
+
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">
+			Key stage guidance
+		</h1>
+  </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    Intro text
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+	<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+	  Attach files
+	</button>
+</div>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    Hint text
+  </label>
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
+</div>		
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    Mark down guidance
+  </label>
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
+</div>
+
+
+<a href="select-year" button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+  Continue
+</a>
+
+<a href="select-year" button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Skip
+</a>
+
+{% endblock %}

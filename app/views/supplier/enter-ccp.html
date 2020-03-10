@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/dfe-sign-in/username",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+ Style guide
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+{% from "input/macro.njk" import govukInput %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 6",
+    href: "/keystage3-geography"
+  },
+  {
+    text: "Geography",
+    href: "/geography"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 1"
+  }
+  ]
+}) }}
+
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">
+			Welcome, Heathfield High School
+		</h1>
+  </div>
+</div>
+
+
+ <h1 class="govuk-heading-m">Enter your CCP subject</h1>
+
+<div class="govuk-form-group">
+										<select id="sunject" class="govuk-select" name="subject">
+											<option selected>Choose a subject</option>
+											<optgroup label="Primary:">
+												<option value="primary">Primary school - all early years subjects</option>
+											</optgroup>
+											<optgroup label="Secondary, sixth form and college:">
+												<option value="art">Art and design</option>
+												<option value="biology">Biology</option>
+												<option value="business">Business studies</option>
+												<option value="chemistry">Chemistry</option>
+												<option value="citizenship">Citizenship</option>
+												<option value="classics">Classics</option>
+												<option value="computing">Computing</option>
+												<option value="design">Design and technology</option>
+												<option value="drama">Drama</option>
+												<option value="economics">Economics</option>
+												<option value="english">English</option>
+												<option value="french">French</option>
+												<option value="geography">Geography</option>
+												<option value="health">Health and social care</option>
+												<option value="history">History</option>
+												<option value="languages">Languages (other)</option>
+												<option value="maths">Maths</option>
+												<option value="media">Media Studies</option>
+												<option value="music">Music</option>
+												<option value="pe">Physical Education (PE)</option>
+												<option value="physics">Physics</option>
+												<option value="physicsmaths">Physics with maths</option>
+												<option value="psychology">psychology</option>
+												<option value="re">Religious education</option>
+												<option value="social">Social sciences</option>
+												<option value="spanish">Spanish</option>
+												<option value="vocational">Vocational health</option>
+											<optgroup>
+										</select>
+</div>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Enter year group
+      </h1>
+    </legend>
+	<p>Select a year group to build its full history curriculum, access resources, and prepare lessons.</p>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="year-1" name="year" type="radio" value="Year 7">
+        <label class="govuk-label govuk-radios__label" for="year-select-1">
+          Year 7
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="year-2" name="year" type="radio" value="Year 8">
+        <label class="govuk-label govuk-radios__label" for="year-select-2">
+          Year 8
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="year-3" name="year" type="radio" value="Year 9">
+        <label class="govuk-label govuk-radios__label" for="year-select-3">
+          Year 9
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>		
+
+
+
+<a href="provider-rationale" button class="govuk-button govuk-button" data-module="govuk-button">
+  Continue
+</a>
+{% endblock %}
