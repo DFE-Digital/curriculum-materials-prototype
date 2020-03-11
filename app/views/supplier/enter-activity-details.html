@@ -1,0 +1,220 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/dfe-sign-in/username",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+ Style guide
+{% endblock %}
+{% from "button/macro.njk" import govukButton %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "inset-text/macro.njk" import govukInsetText %}
+{% from "accordion/macro.njk" import govukAccordion %}
+{% from "tabs/macro.njk" import govukTabs %}
+{% from "table/macro.njk" import govukTable %}
+{% from "input/macro.njk" import govukInput %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukBreadcrumbs({
+  items: [
+  {
+    text: "Year 6",
+    href: "/keystage3-geography"
+  },
+  {
+    text: "Geography",
+    href: "/geography"
+  },
+  {
+    text: "Summer 2",
+    href: "/unit"
+  },
+  {
+    text: "Lesson 1"
+  }
+  ]
+}) }}
+
+<a href="/unit" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">
+			Enter activity details
+		</h1>
+  </div>
+</div>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <span id="waste-hint" class="govuk-hint">
+      Is this the reccommended activity?
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Default
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    Activity title
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+	
+  <label class="govuk-label" for="more-detail">
+    Activity description
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>	
+	
+	<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+	  Attach files
+	</button>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Preparation 
+      </h1>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="year-1" name="year" type="radio" value="Year 7">
+        <label class="govuk-label govuk-radios__label" for="year-select-1">
+          Extra prep
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="year-2" name="year" type="radio" value="Year 8">
+        <label class="govuk-label govuk-radios__label" for="year-select-2">
+          Printing required
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="year-3" name="year" type="radio" value="Year 9">
+        <label class="govuk-label govuk-radios__label" for="year-select-3">
+          Materials required
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    Is there any other preparation needed?
+  </label>
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
+</div>		
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-3">
+    Approximate time to teach the lesson
+  </label>
+  <input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text">
+</div>
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Teaching method
+      </h1>
+    </legend>
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          Do it now
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          Teacher instruction
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          Reading
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Verbal recap
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-5" name="organisation" type="checkbox" value="card">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-5">
+          Card sort
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-6" name="organisation" type="checkbox" value="writing">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-6">
+          Writing
+        </label>
+      </div>		
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-7" name="organisation" type="checkbox" value="peer">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-7">
+          Peer assessment
+        </label>
+      </div>	
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-8" name="organisation" type="checkbox" value="whole">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-8">
+          Whole class
+        </label>
+      </div>	
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-9" name="organisation" type="checkbox" value="plenary">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-9">
+          Plenary
+        </label>
+      </div>																	
+    </div>
+  </fieldset>
+</div>
+
+
+<a href="preview" button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+  Continue
+</a>
+
+<a href="preview" button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Skip
+</a>
+
+{% endblock %}
