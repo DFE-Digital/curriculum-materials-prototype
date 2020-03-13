@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% from 'header/macro.njk' import govukHeader %}
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/index",
+    serviceName: "Access curriculum resources",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    ]
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Access curriculum resources alpha - prototype - Department for Education
+{% endblock %}
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "button/macro.njk" import govukButton %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Your lesson is ready to be downloaded</h1>
+
+	<img src="/public/images/download-done.png" style="width:175px" alt="">
+<br>
+<br>
+
+		
+<p class="govuk-body">This lesson consists of:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+<br>
+	
+		
+
+			
+
+<a class="govuk-button" href="#">Download lesson plan and resources</a>									
+
+
+  </div>
+{% endblock %}
